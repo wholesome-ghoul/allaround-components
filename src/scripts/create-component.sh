@@ -16,6 +16,9 @@ fi
 CAPITALIZED_COMPONENT_NAME="${COMPONENT_NAME^}"
 
 mkdir -p $DIRECTORY_PATH/src
+
+cp LICENSE $DIRECTORY_PATH
+
 cd $DIRECTORY_PATH
 
 SRC="src"
@@ -23,38 +26,26 @@ SRC="src"
 mkdir tests
 
 CYPRESS="tests/$CAPITALIZED_COMPONENT_NAME.spec.tsx"
-STORY="$SRC/$CAPITALIZED_COMPONENT_NAME.stories.mdx"
-COMPONENT="$SRC/$CAPITALIZED_COMPONENT_NAME"
-STYLED_COMPONENT="$SRC/Styled$CAPITALIZED_COMPONENT_NAME"
-INDEX="$SRC/index.ts"
-TYPES="$SRC/types.ts"
-STYLES="$SRC/style.module.scss"
-STYLE_TYPES="$SRC/style.module.d.ts"
-TSCONFIG="$SRC/tsconfig.json"
+STORY="$CAPITALIZED_COMPONENT_NAME.stories.mdx"
+COMPONENT="$CAPITALIZED_COMPONENT_NAME"
+STYLED_COMPONENT="Styled$CAPITALIZED_COMPONENT_NAME"
+INDEX="index.ts"
+TYPES="types.ts"
+STYLES="style.module.scss"
+STYLE_TYPES="style.module.d.ts"
+TSCONFIG="tsconfig.json"
 PACKAGE_JSON="package.json"
 
-cp LICENSE $DIRECTORY_PATH
+touch $SRC/$STYLES
 
-touch $CYPRESS \
-  $STORY \
-  $COMPONENT.tsx \
-  $STYLED_COMPONENT.tsx \
-  $INDEX \
-  $TYPES \
-  $STYLES \
-  $STYLE_TYPES \
-  $TSCONFIG \
-  $PACKAGE_JSON
-
-echo "import { mount } from \"@cypress/react\";
-import $CAPITALIZED_COMPONENT_NAME from \"../$CAPITALIZED_COMPONENT_NAME\";
+echo "import { mount } from \"@cypress/react18\";
+import $CAPITALIZED_COMPONENT_NAME from \"../$SRC/$CAPITALIZED_COMPONENT_NAME\";
 
 describe(\"$CAPITALIZED_COMPONENT_NAME\", () => {
   it(\"renders\", () => {
     mount(<$CAPITALIZED_COMPONENT_NAME />);
   });
-});
-" > $CYPRESS
+});" > $CYPRESS
 
 echo "import Props from \"./types\";
 import styles from \"./style.module.scss\";
@@ -82,22 +73,20 @@ $CAPITALIZED_COMPONENT_NAME.defaultProps = {
   size: \"small\",
 };
 
-export default $CAPITALIZED_COMPONENT_NAME;
-" > $COMPONENT.tsx
+export default $CAPITALIZED_COMPONENT_NAME;" > $SRC/$COMPONENT.tsx
 
-echo "import { BaseProps, Size } from \"../utils\";
+echo "import { BaseProps, Size } from \"../../../utils\";
 
 type Props = BaseProps & {
   children?: React.ReactNode;
   size?: Size;
 };
 
-export default Props;
-" > $TYPES
+export default Props;" > $SRC/$TYPES
 
 echo "import styled, { css } from \"styled-components\";
 
-import { GridPos } from \"../utils\";
+import { GridPos } from \"../../../utils\";
 
 const $STYLED_COMPONENT = styled.div\`
   \${({ rowPos, colPos }: GridPos) => css\`
@@ -106,10 +95,10 @@ const $STYLED_COMPONENT = styled.div\`
   \`}
 \`;
 
-export default $STYLED_COMPONENT;
-" > $STYLED_COMPONENT.tsx
+export default $STYLED_COMPONENT;" > $SRC/$STYLED_COMPONENT.tsx
 
-echo "export { default } from \"./$CAPITALIZED_COMPONENT_NAME\";" > $INDEX
+echo "export { default } from \"./$CAPITALIZED_COMPONENT_NAME\";" > $SRC/$INDEX
+echo "export { default } from \"./$SRC\";" > $INDEX
 
 echo "import { Meta, Story } from \"@storybook/addon-docs\";
 
@@ -123,10 +112,9 @@ export const Template = (args) => <$CAPITALIZED_COMPONENT_NAME {...args} />;
 
 <Story name=\"Default\" args={{}}>
   {Template.bind({})}
-</Story>
-" > $STORY
+</Story>" > $SRC/$STORY
 
-echo "declare module \"*.scss\"" > $STYLE_TYPES
+echo "declare module \"*.scss\"" > $SRC/$STYLE_TYPES
 
 echo "{
   \"extends\": \"@allaround/configs-tsconfig/dist/tsconfig.build.json\",
@@ -155,10 +143,14 @@ echo "{
     \"react\": \"^18.0.0\"
   },
   \"devDependencies\": {
-    \"@allaround/configs-tsconfig\": \"^1.0.0\"
+    \"@allaround/configs-tsconfig\": \"^1.0.0\",
+    \"@cypress/react18\": \"^2.0.0\",
+    \"cypress\": \"^12.13.0\"
   }
 }" > $PACKAGE_JSON
 
-cd ..
-ALL_COMPONENTS_INDEX=index.ts
-echo "export { default as $CAPITALIZED_COMPONENT_NAME } from \"./$COMPONENT_NAME\";" >> $ALL_COMPONENTS_INDEX
+ALL_COMPONENTS=../all
+cd $ALL_COMPONENTS
+ALL_COMPONENTS_INDEX=./src/index.ts
+jq ".dependencies += { \"@allaround/$COMPONENT_NAME\": \"^1.0.0\" }" package.json > package.json.tmp && mv package.json.tmp package.json
+echo "export { default as $CAPITALIZED_COMPONENT_NAME } from \"@allaround/$COMPONENT_NAME\";" >> $ALL_COMPONENTS_INDEX
