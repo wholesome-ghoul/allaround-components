@@ -17,6 +17,7 @@
     "tsc:config": "tsc --showConfig",
     "create:component": "./src/scripts/create-component.sh",
     "build": "lerna run build",
+    "lint": "eslint .",
     "viz": "npx nx graph"
   },
   "devDependencies": {
