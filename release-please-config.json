@@ -1,13 +1,18 @@
 {
-  "plugins": ["node-workspace"],
+  "plugins": [
+    "node-workspace"
+  ],
   "packages": {
     ".": {
+      "release-type": "node"
+    },
+    "src/packages/all": {
       "release-type": "node"
     },
     "src/packages/button": {
       "release-type": "node"
     },
-    "src/packages/all": {
+    "src/packages/input": {
       "release-type": "node"
     }
   }

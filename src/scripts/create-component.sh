@@ -155,9 +155,10 @@ ALL_COMPONENTS_INDEX=./src/index.ts
 jq ".dependencies += { \"@allaround/$COMPONENT_NAME\": \"^1.0.0\" }" package.json > package.json.tmp && mv package.json.tmp package.json
 echo "export { default as $CAPITALIZED_COMPONENT_NAME } from \"@allaround/$COMPONENT_NAME\";" >> $ALL_COMPONENTS_INDEX
 
+ROOT_DIR=../../..
+cd $ROOT_DIR
+
 RELEASE_CONFIG=release-please-config.json
 jq ".packages += { \"src/packages/$COMPONENT_NAME\": { \"release-type\": \"node\" } }" $RELEASE_CONFIG > $RELEASE_CONFIG.tmp && mv $RELEASE_CONFIG.tmp $RELEASE_CONFIG
 
-ROOT_DIR=../../..
-cd $ROOT_DIR
 npm install
