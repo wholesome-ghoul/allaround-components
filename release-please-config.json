@@ -1,0 +1,11 @@
+{
+  "plugins": ["node-workspace"],
+  "packages": {
+    ".": {
+      "release-type": "node"
+    },
+    "src/packages/button": {
+      "release-type": "node"
+    }
+  }
+}
