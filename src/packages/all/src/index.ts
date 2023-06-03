@@ -1,1 +1,1 @@
-export {default as Button} from "@allaround/button";
+export { default as Button } from "@allaround/button";
