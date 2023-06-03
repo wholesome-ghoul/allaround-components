@@ -6,6 +6,9 @@
     },
     "src/packages/button": {
       "release-type": "node"
+    },
+    "src/packages/all": {
+      "release-type": "node"
     }
   }
 }

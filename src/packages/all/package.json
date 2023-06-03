@@ -1,0 +1,25 @@
+{
+  "name": "@allaround/all-components",
+  "version": "0.0.0",
+  "description": "AllAround React Button component",
+  "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "npx tsc --build --verbose"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@allaround/configs-tsconfig": "^1.3.0"
+  },
+  "dependencies": {
+    "@allaround/button": "^1.0.0"
+  }
+}
