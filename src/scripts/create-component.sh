@@ -132,7 +132,7 @@ echo "{
   \"publishConfig\": {
     \"access\": \"public\"
   },
-  \"main\": \"dist/index.js\",
+  \"main\": \"dist/packages/$COMPONENT_NAME/src/index.js\",
   \"files\": [
     \"dist/**/*\"
   ],
