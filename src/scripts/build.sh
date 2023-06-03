@@ -2,6 +2,9 @@
 
 # INTENDED TO RUN FROM PROJECT ROOT
 
+OUT=dist/packages/*/src
+
 npx tsc --build --verbose &&
-  yarn node-sass src/ -o dist/ --output-style compressed &&
-  grep -rlZ '\.scss' ./dist | xargs -0 -r sed -i 's/\.scss/\.css/g'
+  cp src/*.d.ts $OUT &&
+  yarn node-sass src/ -o $OUT --output-style compressed &&
+  grep -rlZ '\.scss' ./$OUT | xargs -0 -r sed -i 's/\.scss/\.css/g'
