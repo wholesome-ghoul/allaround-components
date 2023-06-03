@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.2.2...allaround-components-v1.2.3) (2023-06-03)
+
+
+### Bug Fixes
+
+* package entry index ([b00c320](https://github.com/wholesome-ghoul/allaround-components/commit/b00c32060ccddcbb0774362da4aa49a66b562928))
+
 ## [1.2.2](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.2.1...allaround-components-v1.2.2) (2023-06-03)
 
 
