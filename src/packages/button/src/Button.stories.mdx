@@ -1,0 +1,49 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Button from "./Button";
+
+<Meta title="Button" component={Button} />
+
+export const Template = (args) => <Button {...args} />;
+
+# Button
+
+<Story
+  name="Small"
+  args={{
+    children: "Button",
+    size: "small",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+<Story
+  name="Medium"
+  args={{
+    children: "Button",
+    size: "medium",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+<Story
+  name="Large"
+  args={{
+    children: "Button",
+    size: "large",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+<Story
+  name="Fill"
+  args={{
+    children: "Button",
+    size: "fill",
+  }}
+>
+  {Template.bind({})}
+</Story>
