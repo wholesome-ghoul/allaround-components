@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.2.1...allaround-components-v1.2.2) (2023-06-03)
+
+
+### Bug Fixes
+
+* add declaration file ([ec18c12](https://github.com/wholesome-ghoul/allaround-components/commit/ec18c123419e45b7e1bb8452c1085e136c2e263e))
+
 ## [1.2.1](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.2.0...allaround-components-v1.2.1) (2023-06-03)
 
 
