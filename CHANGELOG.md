@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.2.0...allaround-components-v1.2.1) (2023-06-03)
+
+
+### Bug Fixes
+
+* add missing sass type ([9ab4cfe](https://github.com/wholesome-ghoul/allaround-components/commit/9ab4cfed2d1e8896602bd5a29d3e32e10bb9842c))
+
 ## [1.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.1.0...allaround-components-v1.2.0) (2023-06-03)
 
 
