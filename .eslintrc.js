@@ -1,6 +1,8 @@
 module.exports = {
-  extends: ["plugin:jsx-a11y/recommended"],
-  plugins: ["jsx-a11y"],
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
   rules: {
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
