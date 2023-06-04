@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.4.0...allaround-components-v2.0.0) (2023-06-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* add new props to `input` component
+
+### Features
+
+* add new props to `input` component ([54c25d0](https://github.com/wholesome-ghoul/allaround-components/commit/54c25d0ae70f718ba617d1e1c66c55673203375a))
+
 ## [1.4.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.3.0...allaround-components-v1.4.0) (2023-06-04)
 
 

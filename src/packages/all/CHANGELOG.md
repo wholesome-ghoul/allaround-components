@@ -13,6 +13,12 @@
   * dependencies
     * @allaround/button bumped from ^1.0.1 to ^1.1.0
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/input bumped from ^1.0.1 to ^2.0.0
+
 ## [1.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.1.3...all-components-v1.2.0) (2023-06-04)
 
 
