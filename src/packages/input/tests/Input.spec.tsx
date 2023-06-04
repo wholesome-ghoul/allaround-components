@@ -23,7 +23,7 @@ describe("Input", () => {
       </Container>
     );
 
-    cy.get("[data-cy=input]").should(($p) => {
+    cy.get("[data-cy=input-component]").should(($p) => {
       expect($p).to.have.length(4);
 
       const placeholders = $p.map((_, el) => Cypress.$(el).attr("placeholder"));
@@ -42,7 +42,7 @@ describe("Input", () => {
     const onChangeSpy = cy.spy().as("onChangeSpy");
     mount(<Input value="" onChange={onChangeSpy} />);
 
-    cy.get("[data-cy=input]").type("test");
+    cy.get("[data-cy=input-component]").type("test");
     cy.get("@onChangeSpy").its("callCount").should("eq", 4);
   });
 });

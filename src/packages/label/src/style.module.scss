@@ -1,0 +1,17 @@
+.label {
+  color: var(--fg-color);
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.smallLabel {
+  font-size: var(--small-font-size);
+}
+
+.mediumLabel {
+  font-size: var(--medium-font-size);
+}
+
+.largeLabel {
+  font-size: var(--large-font-size);
+}

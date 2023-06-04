@@ -11,20 +11,20 @@ describe("Container", () => {
   it("should NOT display as a grid", () => {
     mount(<Container noGrid>noGrid container</Container>);
 
-    cy.get("[data-cy=container]").should("not.have.css", "display", "grid");
+    cy.get("[data-cy=container-component]").should("not.have.css", "display", "grid");
   });
 
   it("should display as a grid", () => {
     mount(<Container grid="4x5">container</Container>);
 
-    cy.get("[data-cy=container]")
+    cy.get("[data-cy=container-component]")
       .should("have.css", "display")
       .and("equal", "grid");
-    cy.get("[data-cy=container").should("have.css", "grid-column");
-    cy.get("[data-cy=container").should("have.css", "grid-row");
+    cy.get("[data-cy=container-component").should("have.css", "grid-column");
+    cy.get("[data-cy=container-component").should("have.css", "grid-row");
 
-    cy.get("[data-cy=container").should("have.css", "grid-template-columns");
-    cy.get("[data-cy=container").should("have.css", "grid-template-rows");
+    cy.get("[data-cy=container-component").should("have.css", "grid-template-columns");
+    cy.get("[data-cy=container-component").should("have.css", "grid-template-rows");
   });
 
   it("renders with children", () => {
