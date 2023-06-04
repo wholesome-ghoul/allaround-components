@@ -17,6 +17,9 @@
     },
     "src/packages/container": {
       "release-type": "node"
+    },
+    "src/packages/label": {
+      "release-type": "node"
     }
   }
 }
