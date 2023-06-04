@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@allaround/button": "^1.1.0",
-    "@allaround/input": "^1.0.1"
+    "@allaround/input": "^1.0.1",
+    "@allaround/container": "^1.0.0"
   }
 }

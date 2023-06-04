@@ -1,0 +1,24 @@
+{
+  "name": "@allaround/container",
+  "version": "1.0.0",
+  "description": "AllAround React Container component",
+  "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/packages/container/src/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "../../scripts/build.sh"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@allaround/configs-tsconfig": "^1.0.0",
+    "@cypress/react18": "^2.0.0",
+    "cypress": "^12.13.0"
+  }
+}
