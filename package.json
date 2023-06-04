@@ -16,6 +16,8 @@
     "rm:dist": "find ./src -name 'dist' -prune -exec rm -rf '{}' +",
     "tsc:config": "tsc --showConfig",
     "create:component": "./src/scripts/create-component.sh",
+    "cy:run": "cypress run --component --browser chrome",
+    "cy:open": "cypress open --component --browser chrome",
     "build": "lerna run build",
     "lint": "eslint .",
     "viz": "npx nx graph"
