@@ -58,6 +58,7 @@ echo ".$COMPONENT_NAME {
 }" > $SRC/$STYLES
 
 echo "import { mount } from \"@cypress/react18\";
+
 import $CAPITALIZED_COMPONENT_NAME from \"../$SRC/$CAPITALIZED_COMPONENT_NAME\";
 
 describe(\"$CAPITALIZED_COMPONENT_NAME\", () => {
@@ -82,7 +83,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
 
   return (
     <$STYLED_COMPONENT
-      className={cx(styles.$COMPONENT_NAME, styles[\`${size}$CAPITALIZED_COMPONENT_NAME\`], className)}
+      className={cx(styles.$COMPONENT_NAME, styles[\`\${size}$CAPITALIZED_COMPONENT_NAME\`], className)}
       {...styledProps}
       data-cy=\"$COMPONENT_NAME-component\"
     >
