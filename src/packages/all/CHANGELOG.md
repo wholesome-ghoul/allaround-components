@@ -13,6 +13,13 @@
   * dependencies
     * @allaround/button bumped from ^1.0.1 to ^1.1.0
 
+## [1.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.1.3...all-components-v1.2.0) (2023-06-04)
+
+
+### Features
+
+* implement `container` component ([#21](https://github.com/wholesome-ghoul/allaround-components/issues/21)) ([06cdc5e](https://github.com/wholesome-ghoul/allaround-components/commit/06cdc5e48f94166320c1a3e36516ac34b2145e38))
+
 ## [1.1.1](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.1.0...all-components-v1.1.1) (2023-06-03)
 
 
