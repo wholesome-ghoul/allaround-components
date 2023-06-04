@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.2.3...allaround-components-v1.3.0) (2023-06-04)
+
+
+### Features
+
+* icon support for button ([d672b97](https://github.com/wholesome-ghoul/allaround-components/commit/d672b9750b75b5be37c633779d1a6547d4d4781e))
+
 ## [1.2.3](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v1.2.2...allaround-components-v1.2.3) (2023-06-03)
 
 
