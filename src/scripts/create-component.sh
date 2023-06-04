@@ -36,7 +36,26 @@ STYLE_TYPES="style.module.d.ts"
 TSCONFIG="tsconfig.json"
 PACKAGE_JSON="package.json"
 
-touch $SRC/$STYLES
+echo ".$COMPONENT_NAME {
+  color: var(--fg-color);
+  font-family: inherit;
+}
+
+.small$CAPITALIZED_COMPONENT_NAME {
+  font-size: var(--font-size-small);
+}
+
+.medium$CAPITALIZED_COMPONENT_NAME {
+  font-size: var(--font-size-medium);
+}
+
+.large$CAPITALIZED_COMPONENT_NAME {
+  font-size: var(--font-size-large);
+}
+
+.fill$CAPITALIZED_COMPONENT_NAME {
+  width: 100%;
+}" > $SRC/$STYLES
 
 echo "import { mount } from \"@cypress/react18\";
 import $CAPITALIZED_COMPONENT_NAME from \"../$SRC/$CAPITALIZED_COMPONENT_NAME\";
@@ -47,7 +66,9 @@ describe(\"$CAPITALIZED_COMPONENT_NAME\", () => {
   });
 });" > $CYPRESS
 
-echo "import Props from \"./types\";
+echo "import cx from \"classnames\";
+
+import Props from \"./types\";
 import styles from \"./style.module.scss\";
 import $STYLED_COMPONENT from \"./$STYLED_COMPONENT\";
 
@@ -61,9 +82,9 @@ const $CAPITALIZED_COMPONENT_NAME = ({
 
   return (
     <$STYLED_COMPONENT
-      className={className}
+      className={cx(styles.$COMPONENT_NAME, styles[\`${size}$CAPITALIZED_COMPONENT_NAME\`], className)}
       {...styledProps}
-      data-cy=\"$COMPONENT_NAME\"
+      data-cy=\"$COMPONENT_NAME-component\"
     >
       {children}
     </$STYLED_COMPONENT>

@@ -32,6 +32,7 @@ const Button = ({
         )}
         onClick={onClick}
         {...styledProps}
+        data-cy="button-component"
       >
         {icon}
       </StyledButton>
@@ -52,6 +53,7 @@ const Button = ({
       )}
       onClick={onClick}
       {...styledProps}
+      data-cy="button-component"
     >
       {children}
     </StyledButton>

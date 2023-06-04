@@ -36,7 +36,7 @@ const Container = ({
       className={cx(styles.container, className)}
       {...styledProps}
       {...rest}
-      data-cy="container"
+      data-cy="container-component"
     >
       {children}
     </StyledContainer>

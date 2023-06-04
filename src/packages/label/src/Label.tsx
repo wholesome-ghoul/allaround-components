@@ -1,3 +1,5 @@
+import cx from "classnames";
+
 import Props from "./types";
 import styles from "./style.module.scss";
 import StyledLabel from "./StyledLabel";
@@ -7,10 +9,10 @@ const Label = ({ children, size, gridPosition, className, htmlFor }: Props) => {
 
   return (
     <StyledLabel
-      className={className}
+      className={cx(styles.label, styles[`${size}Label`], className)}
       htmlFor={htmlFor}
       {...styledProps}
-      data-cy="label"
+      data-cy="label-component"
     >
       {children}
     </StyledLabel>

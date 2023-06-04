@@ -23,7 +23,7 @@ const Input = ({
       value={value}
       onChange={onChange}
       {...styledProps}
-      data-cy="input"
+      data-cy="input-component"
     />
   );
 };
