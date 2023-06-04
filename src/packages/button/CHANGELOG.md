@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.1.0...button-v1.2.0) (2023-06-04)
+
+
+### Features
+
+* implement `label` component ([#26](https://github.com/wholesome-ghoul/allaround-components/issues/26)) ([b94b584](https://github.com/wholesome-ghoul/allaround-components/commit/b94b58475c8a068d6a235a9cbb46906e710818c5))
+
 ## [1.1.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.0.1...button-v1.1.0) (2023-06-04)
 
 

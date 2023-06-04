@@ -19,6 +19,22 @@
   * dependencies
     * @allaround/input bumped from ^1.0.1 to ^2.0.0
 
+## [1.3.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.2.1...all-components-v1.3.0) (2023-06-04)
+
+
+### Features
+
+* implement `label` component ([#26](https://github.com/wholesome-ghoul/allaround-components/issues/26)) ([b94b584](https://github.com/wholesome-ghoul/allaround-components/commit/b94b58475c8a068d6a235a9cbb46906e710818c5))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/button bumped from ^1.1.0 to ^1.2.0
+    * @allaround/input bumped from ^2.0.0 to ^2.1.0
+    * @allaround/container bumped from ^1.0.0 to ^1.1.0
+
 ## [1.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.1.3...all-components-v1.2.0) (2023-06-04)
 
 
