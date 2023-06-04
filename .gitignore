@@ -4,3 +4,4 @@ dist/
 tsconfig.tsbuildinfo
 
 cypress/videos/
+cypress/screenshots/

@@ -63,6 +63,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
     <$STYLED_COMPONENT
       className={className}
       {...styledProps}
+      data-cy=\"$COMPONENT_NAME\"
     >
       {children}
     </$STYLED_COMPONENT>

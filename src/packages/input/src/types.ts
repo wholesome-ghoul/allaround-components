@@ -1,7 +1,12 @@
 import { BaseProps, Size } from "../../../utils";
 
+type InputType = "text";
+
 type Props = BaseProps & {
-  children?: React.ReactNode;
+  type?: InputType;
+  value: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  placeholder?: string;
   size?: Size;
 };
 

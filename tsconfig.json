@@ -1,7 +1,11 @@
 {
   "extends": "@allaround/configs-tsconfig/dist/tsconfig.build.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": [
+      "cypress",
+      "cypress-visual-regression"
+    ]
   },
   "include": ["src"],
   "exclude": ["**/dist"]
