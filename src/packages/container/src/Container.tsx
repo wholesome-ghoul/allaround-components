@@ -7,8 +7,8 @@ import { Grid } from "../../../utils";
 
 const cellCreator = (n: number | string) => `repeat(${n}, minmax(0, 1fr))`;
 
-const defaultRows = cellCreator(12);
-const defaultCols = cellCreator(12);
+const defaultRows = cellCreator(8);
+const defaultCols = cellCreator(8);
 
 const Container = ({
   children,
@@ -36,6 +36,7 @@ const Container = ({
       className={cx(styles.container, className)}
       {...styledProps}
       {...rest}
+      data-cy="container"
     >
       {children}
     </StyledContainer>

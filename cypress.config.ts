@@ -7,5 +7,7 @@ export default defineConfig({
       bundler: "webpack",
     },
     specPattern: "src/packages/*/tests/*.spec.tsx",
+    excludeSpecPattern: "**/dist/**",
+    port: 6969,
   },
 });
