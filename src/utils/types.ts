@@ -1,6 +1,7 @@
 type Grid = {
   rows?: string;
   cols?: string;
+  gap?: string;
 };
 
 type GridPos = {

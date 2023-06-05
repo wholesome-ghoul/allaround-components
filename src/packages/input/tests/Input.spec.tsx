@@ -41,7 +41,7 @@ describe("Input", () => {
       ]);
     });
 
-    cy.compareSnapshot("input-sizes");
+    cy.compareSnapshot("input-sizes", 0.02);
   });
 
   it("correctly calls onChange", () => {

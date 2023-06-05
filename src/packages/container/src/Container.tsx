@@ -14,6 +14,7 @@ const Container = ({
   children,
   className,
   grid,
+  gap,
   gridPosition,
   noGrid,
   ...rest
@@ -27,6 +28,8 @@ const Container = ({
       _grid.rows = grid.rows || defaultRows;
       _grid.cols = grid.cols || defaultCols;
     }
+
+    _grid.gap = gap;
   }
 
   const styledProps = { ..._grid, ...gridPosition, noGrid };

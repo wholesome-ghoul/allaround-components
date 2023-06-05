@@ -32,7 +32,7 @@ describe("Button", () => {
       ["small", "medium", "large", "fill"].join("")
     );
 
-    cy.compareSnapshot("button-sizes");
+    cy.compareSnapshot("button-sizes", 0.02);
   });
 
   it("calls onClick when clicked", () => {

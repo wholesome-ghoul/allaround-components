@@ -8,8 +8,9 @@ type CSS = Grid &
   };
 
 const StyledContainer = styled.div`
-  ${({ rows, cols, rowPos, colPos, noGrid }: CSS) => css`
+  ${({ rows, cols, rowPos, colPos, noGrid, gap }: CSS) => css`
     ${!noGrid && "display: grid;"}
+    ${!noGrid && `grid-gap: ${gap};`}
     grid-template-columns: ${cols};
     grid-template-rows: ${rows};
     grid-row: ${rowPos};

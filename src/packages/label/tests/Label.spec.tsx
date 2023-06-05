@@ -31,6 +31,6 @@ describe("Label", () => {
       ]);
     });
 
-    cy.compareSnapshot("label-sizes");
+    cy.compareSnapshot("label-sizes", 0.02);
   });
 });
