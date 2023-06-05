@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.1.0...allaround-components-v2.2.0) (2023-06-05)
+
+
+### Features
+
+* fill prop ([85fbf94](https://github.com/wholesome-ghoul/allaround-components/commit/85fbf94e73a45faea06dce6bcc741025958624dc))
+
 ## [2.1.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.0.0...allaround-components-v2.1.0) (2023-06-04)
 
 
