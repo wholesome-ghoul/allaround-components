@@ -1,11 +1,9 @@
 import styled, { css } from "styled-components";
 
 import { Grid, GridPos, GridGap } from "../../../utils";
+import Props from "./types";
 
-type CSS = Grid &
-  GridPos & {
-    noGrid?: boolean;
-  };
+type CSS = Grid & GridPos & Pick<Props, "noGrid">;
 
 const StyledContainer = styled.div`
   ${({ rows, cols, rowPos, colPos, noGrid, gap }: CSS) => css`

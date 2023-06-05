@@ -12,6 +12,7 @@ const Input = ({
   gridPosition,
   placeholder,
   fill,
+  isError,
   className,
   ...rest
 }: Props) => {
@@ -23,6 +24,7 @@ const Input = ({
         styles.input,
         {
           [styles.fill]: fill,
+          [styles.isError]: isError,
         },
         styles[`${size}Input`],
         className

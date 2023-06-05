@@ -1,0 +1,20 @@
+.list {
+  color: var(--fg-color);
+  font-family: inherit;
+}
+
+.smallList {
+  font-size: var(--font-size-small);
+}
+
+.mediumList {
+  font-size: var(--font-size-medium);
+}
+
+.largeList {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

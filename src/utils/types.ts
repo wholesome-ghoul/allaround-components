@@ -4,8 +4,8 @@ type GridGap = {
 }
 
 type Grid = {
-  rows?: string;
-  cols?: string;
+  rows?: string | number;
+  cols?: string | number;
   gap?: GridGap | string;
 };
 

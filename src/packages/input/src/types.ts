@@ -8,6 +8,7 @@ type Props = BaseProps & {
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   size?: Size;
+  isError?: boolean;
 };
 
 export default Props;
