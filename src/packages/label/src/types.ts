@@ -1,7 +1,7 @@
 import { BaseProps, Size } from "../../../utils";
 
 type Props = BaseProps &
-  Pick<HTMLLabelElement, "htmlFor"> & {
+  Partial<Pick<HTMLLabelElement, "htmlFor">> & {
     children?: React.ReactNode;
     size?: Size;
   };
