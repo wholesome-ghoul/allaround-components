@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.2.1...allaround-components-v2.3.0) (2023-06-05)
+
+
+### Features
+
+* add grid `gap` ([c5d07a0](https://github.com/wholesome-ghoul/allaround-components/commit/c5d07a03836b039a16b3ac100cfaea8fc5603800))
+
 ## [2.2.1](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.2.0...allaround-components-v2.2.1) (2023-06-05)
 
 
