@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.2.0...button-v1.3.0) (2023-06-05)
+
+
+### Features
+
+* fill prop ([85fbf94](https://github.com/wholesome-ghoul/allaround-components/commit/85fbf94e73a45faea06dce6bcc741025958624dc))
+
 ## [1.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.1.0...button-v1.2.0) (2023-06-04)
 
 
