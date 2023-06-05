@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.2.0...allaround-components-v2.2.1) (2023-06-05)
+
+
+### Bug Fixes
+
+* lock file ([0b132f5](https://github.com/wholesome-ghoul/allaround-components/commit/0b132f5e0f37e494c06a7a6503ff570b176f0a20))
+
 ## [2.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.1.0...allaround-components-v2.2.0) (2023-06-05)
 
 
