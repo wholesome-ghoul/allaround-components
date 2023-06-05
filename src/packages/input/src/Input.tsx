@@ -11,13 +11,21 @@ const Input = ({
   size,
   gridPosition,
   placeholder,
+  fill,
   className,
 }: Props) => {
   const styledProps = { ...gridPosition };
 
   return (
     <StyledInput
-      className={cx(styles.input, styles[`${size}Input`], className)}
+      className={cx(
+        styles.input,
+        {
+          [styles.fill]: fill,
+        },
+        styles[`${size}Input`],
+        className
+      )}
       placeholder={placeholder}
       type={type}
       value={value}

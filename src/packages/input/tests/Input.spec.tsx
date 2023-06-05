@@ -19,7 +19,13 @@ describe("Input", () => {
           placeholder="medium"
         />
         <Input size="large" value="" onChange={() => {}} placeholder="large" />
-        <Input size="fill" value="" onChange={() => {}} placeholder="fill" />
+        <Input
+          size="medium"
+          value=""
+          onChange={() => {}}
+          placeholder="fill"
+          fill
+        />
       </Container>
     );
 

@@ -21,7 +21,7 @@ describe("Button", () => {
         <Button size="large" onClick={() => {}}>
           large
         </Button>
-        <Button size="fill" onClick={() => {}}>
+        <Button size="medium" onClick={() => {}} fill>
           fill
         </Button>
       </Container>

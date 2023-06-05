@@ -53,7 +53,7 @@ echo ".$COMPONENT_NAME {
   font-size: var(--font-size-large);
 }
 
-.fill$CAPITALIZED_COMPONENT_NAME {
+.fill {
   width: 100%;
 }" > $SRC/$STYLES
 
@@ -77,13 +77,21 @@ const $CAPITALIZED_COMPONENT_NAME = ({
   children,
   size,
   gridPosition,
+  fill,
   className,
 }: Props) => {
   const styledProps = { ...gridPosition };
 
   return (
     <$STYLED_COMPONENT
-      className={cx(styles.$COMPONENT_NAME, styles[\`\${size}$CAPITALIZED_COMPONENT_NAME\`], className)}
+      className={cx(
+        styles.$COMPONENT_NAME,
+        {
+          [styles.fill]: fill,
+        },
+        styles[\`\${size}$CAPITALIZED_COMPONENT_NAME\`],
+        className
+      )}
       {...styledProps}
       data-cy=\"$COMPONENT_NAME-component\"
     >

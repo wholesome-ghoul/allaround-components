@@ -8,18 +8,18 @@ type GridPos = {
   colPos?: string | number;
 };
 
-type Size = "small" | "medium" | "large" | "xlarge" | "fill";
+type Size = "small" | "medium" | "large" | "xlarge";
 const IconSize = {
   small: "1.2rem",
   medium: "1.5rem",
   large: "2rem",
   xlarge: "3rem",
-  fill: "2rem",
 };
 
 type BaseProps = {
   className?: string;
   gridPosition?: GridPos;
+  fill?: boolean;
 };
 
 export type { BaseProps, GridPos, Grid, Size };

@@ -13,6 +13,7 @@ const Button = ({
   transparent,
   disabled,
   active,
+  fill,
   className,
 }: Props) => {
   const styledProps = { ...gridPosition };
@@ -24,6 +25,7 @@ const Button = ({
           styles.button,
           styles.icon,
           {
+            [styles.fill]: fill,
             [styles.transparent]: transparent,
             [styles.disabled]: disabled,
             [styles.active]: active,
@@ -45,6 +47,7 @@ const Button = ({
         styles.button,
         styles[`${size}Button`],
         {
+          [styles.fill]: fill,
           [styles.transparent]: transparent,
           [styles.disabled]: disabled,
           [styles.active]: active,
