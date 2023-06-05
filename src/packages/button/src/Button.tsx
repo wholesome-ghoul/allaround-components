@@ -15,6 +15,7 @@ const Button = ({
   active,
   fill,
   className,
+  ...rest
 }: Props) => {
   const styledProps = { ...gridPosition };
 
@@ -34,6 +35,7 @@ const Button = ({
         )}
         onClick={onClick}
         {...styledProps}
+        {...rest}
         data-cy="button-component"
       >
         {icon}

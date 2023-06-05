@@ -79,6 +79,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
   gridPosition,
   fill,
   className,
+  ...rest
 }: Props) => {
   const styledProps = { ...gridPosition };
 
@@ -93,6 +94,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
         className
       )}
       {...styledProps}
+      {...rest}
       data-cy=\"$COMPONENT_NAME-component\"
     >
       {children}

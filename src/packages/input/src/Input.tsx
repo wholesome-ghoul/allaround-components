@@ -13,6 +13,7 @@ const Input = ({
   placeholder,
   fill,
   className,
+  ...rest
 }: Props) => {
   const styledProps = { ...gridPosition };
 
@@ -31,6 +32,7 @@ const Input = ({
       value={value}
       onChange={onChange}
       {...styledProps}
+      {...rest}
       data-cy="input-component"
     />
   );

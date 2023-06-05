@@ -1,6 +1,6 @@
 import { BaseProps, Size } from "../../../utils";
 
-type InputType = "text";
+type InputType = "text" | "password" | "email";
 
 type Props = BaseProps & {
   type?: InputType;

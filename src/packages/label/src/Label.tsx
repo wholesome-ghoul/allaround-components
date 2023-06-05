@@ -11,6 +11,7 @@ const Label = ({
   fill,
   className,
   htmlFor,
+  ...rest
 }: Props) => {
   const styledProps = { ...gridPosition };
 
@@ -26,6 +27,7 @@ const Label = ({
       )}
       htmlFor={htmlFor}
       {...styledProps}
+      {...rest}
       data-cy="label-component"
     >
       {children}
