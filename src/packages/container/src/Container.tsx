@@ -17,6 +17,7 @@ const Container = ({
   gap,
   gridPosition,
   noGrid,
+  dataCy,
   ...rest
 }: Props) => {
   let _grid: Grid = {};
@@ -48,7 +49,7 @@ const Container = ({
       className={cx(styles.container, className)}
       {...styledProps}
       {...rest}
-      data-cy="container-component"
+      data-cy={dataCy}
     >
       {children}
     </StyledContainer>
@@ -61,6 +62,7 @@ Container.defaultProps = {
     cols: defaultCols,
   },
   noGrid: false,
+  dataCy: "container-component",
 };
 
 export default Container;

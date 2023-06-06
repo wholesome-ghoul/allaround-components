@@ -13,6 +13,7 @@ const Input = ({
   placeholder,
   fill,
   isError,
+  dataCy,
   className,
   ...rest
 }: Props) => {
@@ -35,7 +36,7 @@ const Input = ({
       onChange={onChange}
       {...styledProps}
       {...rest}
-      data-cy="input-component"
+      data-cy={dataCy}
     />
   );
 };
@@ -43,6 +44,7 @@ const Input = ({
 Input.defaultProps = {
   size: "small",
   type: "text",
+  dataCy: "input-component",
 };
 
 export default Input;

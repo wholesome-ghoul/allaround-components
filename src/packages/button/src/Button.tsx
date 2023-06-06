@@ -14,6 +14,7 @@ const Button = ({
   disabled,
   active,
   fill,
+  dataCy,
   className,
   ...rest
 }: Props) => {
@@ -36,7 +37,7 @@ const Button = ({
         onClick={onClick}
         {...styledProps}
         {...rest}
-        data-cy="button-component"
+        data-cy={dataCy}
       >
         {icon}
       </StyledButton>
@@ -58,7 +59,7 @@ const Button = ({
       )}
       onClick={onClick}
       {...styledProps}
-      data-cy="button-component"
+      data-cy={dataCy}
     >
       {children}
     </StyledButton>
@@ -70,6 +71,7 @@ Button.defaultProps = {
   transparent: false,
   disabled: false,
   active: false,
+  dataCy: "button-component",
 };
 
 export default Button;

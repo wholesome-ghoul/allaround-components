@@ -9,6 +9,7 @@ const Label = ({
   size,
   gridPosition,
   fill,
+  dataCy,
   className,
   htmlFor,
   ...rest
@@ -28,7 +29,7 @@ const Label = ({
       htmlFor={htmlFor}
       {...styledProps}
       {...rest}
-      data-cy="label-component"
+      data-cy={dataCy}
     >
       {children}
     </StyledLabel>
@@ -37,6 +38,7 @@ const Label = ({
 
 Label.defaultProps = {
   size: "small",
+  dataCy: "label-component",
 };
 
 export default Label;

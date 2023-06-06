@@ -78,6 +78,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
   size,
   gridPosition,
   fill,
+  dataCy,
   className,
   ...rest
 }: Props) => {
@@ -95,7 +96,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
       )}
       {...styledProps}
       {...rest}
-      data-cy=\"$COMPONENT_NAME-component\"
+      data-cy={dataCy}
     >
       {children}
     </$STYLED_COMPONENT>
@@ -104,6 +105,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
 
 $CAPITALIZED_COMPONENT_NAME.defaultProps = {
   size: \"small\",
+  dataCy: \"$COMPONENT_NAME-component\",
 };
 
 export default $CAPITALIZED_COMPONENT_NAME;" > $SRC/$COMPONENT.tsx

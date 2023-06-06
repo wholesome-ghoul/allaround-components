@@ -27,6 +27,7 @@ type BaseProps = {
   gridPosition?: GridPos;
   fill?: boolean;
   id?: string;
+  dataCy?: string;
 };
 
 export type { BaseProps, GridPos, Grid, GridGap, Size };

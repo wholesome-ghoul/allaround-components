@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import "./index.scss";
 import Label from "./packages/label";
 import Container from "./packages/container";
+import Input from "./packages/input";
 
 const root = createRoot(document.getElementById("root")!);
 
@@ -14,6 +15,7 @@ root.render(
         <Label size="large" gridPosition={{ rowPos: "1 / 2", colPos: "2 / 4" }} htmlFor="tmp">
           Email
         </Label>
+        <Input value="" onChange={()=>{}} isError/>
         <Label size="large" gridPosition={{ rowPos: "3", colPos: "2 / 4" }} htmlFor="tmp">
           Password
         </Label>

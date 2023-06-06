@@ -11,6 +11,7 @@ const List = ({
   fill,
   items,
   bulletPosition,
+  dataCy,
   className,
   ...rest
 }: Props) => {
@@ -28,7 +29,7 @@ const List = ({
       )}
       {...styledProps}
       {...rest}
-      data-cy="list-component"
+      data-cy={dataCy}
     >
       {(children ?? items)?.map((child, index) => (
         <li key={index}>{child}</li>
@@ -40,6 +41,7 @@ const List = ({
 List.defaultProps = {
   size: "small",
   bulletPosition: "outside",
+  dataCy: "list-component",
 };
 
 export default List;

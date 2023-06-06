@@ -28,3 +28,7 @@
 .fill {
   width: 100%;
 }
+
+.isError, .isError:focus-visible {
+  outline: 0.125rem solid var(--error-color);
+}
