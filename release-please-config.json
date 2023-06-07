@@ -20,6 +20,9 @@
     },
     "src/packages/label": {
       "release-type": "node"
+    },
+    "src/packages/list": {
+      "release-type": "node"
     }
   }
 }

@@ -17,6 +17,7 @@ const Container = ({
   gap,
   gridPosition,
   noGrid,
+  dataCy,
   ...rest
 }: Props) => {
   let _grid: Grid = {};
@@ -25,11 +26,20 @@ const Container = ({
     if (typeof grid === "string") {
       [_grid.cols, _grid.rows] = grid.split("x").map(cellCreator); // 4x5
     } else {
-      _grid.rows = grid.rows || defaultRows;
-      _grid.cols = grid.cols || defaultCols;
-    }
+      if (Number.isInteger(Math.abs(Number(grid.rows)))) {
+        _grid.rows = cellCreator(grid.rows as number);
+      } else {
+        _grid.rows = grid.rows ?? defaultRows;
+      }
 
-    _grid.gap = gap;
+      if (Number.isInteger(Math.abs(Number(grid.cols)))) {
+        _grid.cols = cellCreator(grid.cols as number);
+      } else {
+        _grid.cols = grid.cols ?? defaultCols;
+      }
+
+      _grid.gap = gap;
+    }
   }
 
   const styledProps = { ..._grid, ...gridPosition, noGrid };
@@ -39,7 +49,7 @@ const Container = ({
       className={cx(styles.container, className)}
       {...styledProps}
       {...rest}
-      data-cy="container-component"
+      data-cy={dataCy}
     >
       {children}
     </StyledContainer>
@@ -52,6 +62,7 @@ Container.defaultProps = {
     cols: defaultCols,
   },
   noGrid: false,
+  dataCy: "container-component",
 };
 
 export default Container;

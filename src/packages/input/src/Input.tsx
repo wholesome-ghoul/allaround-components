@@ -12,7 +12,10 @@ const Input = ({
   gridPosition,
   placeholder,
   fill,
+  isError,
+  dataCy,
   className,
+  ...rest
 }: Props) => {
   const styledProps = { ...gridPosition };
 
@@ -22,6 +25,7 @@ const Input = ({
         styles.input,
         {
           [styles.fill]: fill,
+          [styles.isError]: isError,
         },
         styles[`${size}Input`],
         className
@@ -31,7 +35,8 @@ const Input = ({
       value={value}
       onChange={onChange}
       {...styledProps}
-      data-cy="input-component"
+      {...rest}
+      data-cy={dataCy}
     />
   );
 };
@@ -39,6 +44,7 @@ const Input = ({
 Input.defaultProps = {
   size: "small",
   type: "text",
+  dataCy: "input-component",
 };
 
 export default Input;

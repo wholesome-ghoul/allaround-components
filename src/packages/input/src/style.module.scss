@@ -1,5 +1,5 @@
 .input {
-  border: 0.125rem solid var(--fg-color);
+  border: 0.1rem solid var(--fg-color);
   border-radius: 1rem;
 }
 
@@ -27,4 +27,8 @@
 
 .fill {
   width: 100%;
+}
+
+.isError, .isError:focus-visible {
+  outline: 0.125rem solid var(--error-color);
 }

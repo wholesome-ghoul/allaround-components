@@ -1,7 +1,12 @@
+type GridGap = {
+  row?: string;
+  col?: string;
+}
+
 type Grid = {
-  rows?: string;
-  cols?: string;
-  gap?: string;
+  rows?: string | number;
+  cols?: string | number;
+  gap?: GridGap | string;
 };
 
 type GridPos = {
@@ -21,7 +26,9 @@ type BaseProps = {
   className?: string;
   gridPosition?: GridPos;
   fill?: boolean;
+  id?: string;
+  dataCy?: string;
 };
 
-export type { BaseProps, GridPos, Grid, Size };
+export type { BaseProps, GridPos, Grid, GridGap, Size };
 export { IconSize };
