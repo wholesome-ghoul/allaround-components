@@ -36,6 +36,12 @@
     * @allaround/container bumped from ^1.1.0 to ^1.2.0
     * @allaround/label bumped from ^1.1.0 to ^1.2.0
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/input bumped from ^2.4.0 to ^2.5.0
+
 ## [1.4.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.3.2...all-components-v1.4.0) (2023-06-07)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.4.1...allaround-components-v2.5.0) (2023-06-07)
+
+
+### Features
+
+* add box shadow to input ([2b069fb](https://github.com/wholesome-ghoul/allaround-components/commit/2b069fbf55f372dc2b31df7f78ca4a24ac129b02))
+
 ## [2.4.1](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.4.0...allaround-components-v2.4.1) (2023-06-07)
 
 
