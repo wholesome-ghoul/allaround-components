@@ -1,27 +1,42 @@
 .input {
-  border: 0.1rem solid var(--fg-color);
   border-radius: 1rem;
+  caret-color: var(--fg-color);
+  color: white;
+
+  border: none;
+  outline: none;
+
+  background-color: var(--bg-color);
+  box-shadow: inset -15px -15px 15px hsl(250, 13%, 12%), inset 15px 15px 15px hsl(250, 13%, 10%)
 }
 
+// get rid of autofill background color WTF
+// https://stackoverflow.com/a/68240841/14414945
+.input:-webkit-autofill,
+.input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.input:focus, 
 .input:focus-visible {
-  outline: 0.125rem solid var(--fg-color);
+  outline: 0.1rem solid var(--fg-color);
 }
 
 .smallInput {
   width: 10rem;
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: var(--small-font-size);
 }
 
 .mediumInput {
   width: 16rem;
-  padding: 0.75rem;
+  padding: 1.1rem;
   font-size: var(--medium-font-size);
 }
 
 .largeInput {
   width: 24rem;
-  padding: 0.75rem;
+  padding: 1.2rem;
   font-size: var(--large-font-size);
 }
 
@@ -30,5 +45,5 @@
 }
 
 .isError, .isError:focus-visible {
-  outline: 0.125rem solid var(--error-color);
+  outline: 0.1rem solid var(--error-color);
 }
