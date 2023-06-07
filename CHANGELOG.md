@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.1](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.4.0...allaround-components-v2.4.1) (2023-06-07)
+
+
+### Bug Fixes
+
+* install missing dep ([36d3510](https://github.com/wholesome-ghoul/allaround-components/commit/36d3510ebab43cecf3dc02c4aded7ed63b7b0eeb))
+
 ## [2.4.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.3.0...allaround-components-v2.4.0) (2023-06-07)
 
 
