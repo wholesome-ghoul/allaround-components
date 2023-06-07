@@ -36,6 +36,23 @@
     * @allaround/container bumped from ^1.1.0 to ^1.2.0
     * @allaround/label bumped from ^1.1.0 to ^1.2.0
 
+## [1.4.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.3.2...all-components-v1.4.0) (2023-06-07)
+
+
+### Features
+
+* new release ([d6023da](https://github.com/wholesome-ghoul/allaround-components/commit/d6023da6de01374d99554d3752abee62135a431f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/button bumped from ^1.4.0 to ^1.5.0
+    * @allaround/input bumped from ^2.3.0 to ^2.4.0
+    * @allaround/container bumped from ^1.2.0 to ^1.3.0
+    * @allaround/label bumped from ^1.2.0 to ^1.3.0
+
 ## [1.3.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.2.1...all-components-v1.3.0) (2023-06-04)
 
 
