@@ -18,6 +18,7 @@ const Container = ({
   gridPosition,
   noGrid,
   dataCy,
+  minWidth,
   ...rest
 }: Props) => {
   let _grid: Grid = {};
@@ -42,7 +43,7 @@ const Container = ({
     }
   }
 
-  const styledProps = { ..._grid, ...gridPosition, noGrid };
+  const styledProps = { ..._grid, ...gridPosition, noGrid, minWidth };
 
   return (
     <StyledContainer
@@ -63,6 +64,7 @@ Container.defaultProps = {
   },
   noGrid: false,
   dataCy: "container-component",
+  minWidth: "auto",
 };
 
 export default Container;

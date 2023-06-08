@@ -9,6 +9,7 @@ type Props = BaseProps & {
   placeholder?: string;
   size?: Size;
   isError?: boolean;
+  minWidth?: string;
 };
 
 export default Props;

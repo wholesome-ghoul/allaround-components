@@ -13,11 +13,12 @@ const Input = ({
   placeholder,
   fill,
   isError,
+  minWidth,
   dataCy,
   className,
   ...rest
 }: Props) => {
-  const styledProps = { ...gridPosition };
+  const styledProps = { ...gridPosition, minWidth };
 
   return (
     <StyledInput
@@ -45,6 +46,7 @@ Input.defaultProps = {
   size: "small",
   type: "text",
   dataCy: "input-component",
+  minWidth: "auto",
 };
 
 export default Input;

@@ -8,6 +8,7 @@ type Props = BaseProps &
      * determines if container is a grid or grid item
      */
     noGrid?: boolean;
+    minWidth?: string;
   };
 
 export default Props;

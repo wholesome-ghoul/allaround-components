@@ -3,10 +3,10 @@ import styled, { css } from "styled-components";
 import { Grid, GridPos, GridGap } from "../../../utils";
 import Props from "./types";
 
-type CSS = Grid & GridPos & Pick<Props, "noGrid">;
+type CSS = Grid & GridPos & Pick<Props, "noGrid" | "minWidth">;
 
 const StyledContainer = styled.div`
-  ${({ rows, cols, rowPos, colPos, noGrid, gap }: CSS) => css`
+  ${({ rows, cols, rowPos, colPos, noGrid, gap, minWidth }: CSS) => css`
     ${!noGrid && "display: grid;"}
 
     ${!noGrid && `grid-gap: ${gap};`}
@@ -21,6 +21,8 @@ const StyledContainer = styled.div`
     grid-template-rows: ${rows};
     grid-row: ${rowPos};
     grid-column: ${colPos};
+
+    min-width: ${minWidth};
   `}
 `;
 
