@@ -10,7 +10,7 @@
   --fg-hover-color: hsl(25, 91%, 53%);
   --secondary-color: hsl(25, 64%, 56%);
 
-  --small-font-size: 0.9rem;
+  --small-font-size: 1.0rem;
   --medium-font-size: 1.2rem;
   --large-font-size: 1.25rem;
   --error-color: hsl(0, 100%, 50%);
@@ -23,14 +23,14 @@
   --secondary-color: grey;
 }
 
-body {
+html {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
+  font-size: 100%;
   background-color: var(--bg-color);
   color: var(--fg-color);
   box-sizing: border-box;

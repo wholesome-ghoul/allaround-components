@@ -3,7 +3,7 @@ import cx from "classnames";
 import Props from "./types";
 import styles from "./style.module.scss";
 import StyledContainer from "./StyledContainer";
-import { Grid } from "../../../utils";
+import { Grid, GridPos } from "../../../utils";
 
 const cellCreator = (n: number | string) => `repeat(${n}, minmax(0, 1fr))`;
 
@@ -48,6 +48,7 @@ const Container = ({
   return (
     <StyledContainer
       className={cx(styles.container, className)}
+      gridPosition={gridPosition}
       {...styledProps}
       {...rest}
       data-cy={dataCy}

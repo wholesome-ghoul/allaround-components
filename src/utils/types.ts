@@ -1,7 +1,7 @@
 type GridGap = {
   row?: string;
   col?: string;
-}
+};
 
 type Grid = {
   rows?: string | number;
@@ -12,7 +12,17 @@ type Grid = {
 type GridPos = {
   rowPos?: string | number;
   colPos?: string | number;
+  /**
+   * Breakpoint for grid position
+   *
+   * used for @media (min-width: ${bp}) { ... }
+   */
+  bp?: string | number;
 };
+
+type GridPosBpRequired = Pick<GridPos, "rowPos" | "colPos"> &
+  Required<Pick<GridPos, "bp">>;
+type GridPosList = GridPosBpRequired[];
 
 type Size = "small" | "medium" | "large" | "xlarge";
 const IconSize = {
@@ -24,11 +34,11 @@ const IconSize = {
 
 type BaseProps = {
   className?: string;
-  gridPosition?: GridPos;
+  gridPosition?: GridPos | GridPosList;
   fill?: boolean;
   id?: string;
   dataCy?: string;
 };
 
-export type { BaseProps, GridPos, Grid, GridGap, Size };
+export type { BaseProps, GridPos, Grid, GridGap, GridPosList, Size };
 export { IconSize };
