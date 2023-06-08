@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.5.0...allaround-components-v2.6.0) (2023-06-08)
+
+
+### Features
+
+* add `common-scss` component ([#36](https://github.com/wholesome-ghoul/allaround-components/issues/36)) ([ae7ecd5](https://github.com/wholesome-ghoul/allaround-components/commit/ae7ecd5cc8534b323493b624b369b1f541e7c7fa))
+
 ## [2.5.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.4.1...allaround-components-v2.5.0) (2023-06-07)
 
 
