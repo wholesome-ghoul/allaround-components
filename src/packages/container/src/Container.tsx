@@ -1,9 +1,10 @@
+import React from "react";
 import cx from "classnames";
 
 import Props from "./types";
 import styles from "./style.module.scss";
 import StyledContainer from "./StyledContainer";
-import { Grid, GridPos } from "../../../utils";
+import { BaseProps, Grid } from "../../../utils";
 
 const cellCreator = (n: number | string) => `repeat(${n}, minmax(0, 1fr))`;
 
@@ -17,6 +18,8 @@ const Container = ({
   gap,
   gridPosition,
   noGrid,
+  autoVer,
+  autoHor,
   dataCy,
   minWidth,
   ...rest
@@ -53,7 +56,18 @@ const Container = ({
       {...rest}
       data-cy={dataCy}
     >
-      {children}
+      {!noGrid && (autoVer || autoHor)
+        ? React.Children.map(children, (child, index) =>
+            React.isValidElement(child)
+              ? React.cloneElement(child as React.ReactElement<BaseProps>, {
+                  gridPosition: {
+                    rowPos: autoHor ? index : undefined,
+                    colPos: autoVer ? index : undefined,
+                  },
+                })
+              : child
+          )
+        : children}
     </StyledContainer>
   );
 };
@@ -66,6 +80,8 @@ Container.defaultProps = {
   noGrid: false,
   dataCy: "container-component",
   minWidth: "auto",
+  autoVer: false,
+  autoHor: false,
 };
 
 export default Container;

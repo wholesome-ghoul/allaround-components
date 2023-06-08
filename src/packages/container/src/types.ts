@@ -9,6 +9,11 @@ type Props = BaseProps &
      */
     noGrid?: boolean;
     minWidth?: string;
+    /**
+     * automatically positions grid container's children
+     */
+    autoVer?: boolean;
+    autoHor?: boolean;
   };
 
 export default Props;
