@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/wholesome-ghoul/allaround-components/compare/common-scss-v1.0.0...common-scss-v1.1.0) (2023-06-08)
+
+
+### Features
+
+* handle breakpoints ([0bb8b29](https://github.com/wholesome-ghoul/allaround-components/commit/0bb8b293d6e93448b0a734bbaf864a6bbc71b8d9))
+
 ## 1.0.0 (2023-06-08)
 
 

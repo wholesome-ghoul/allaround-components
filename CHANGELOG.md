@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.7.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.6.0...allaround-components-v2.7.0) (2023-06-08)
+
+
+### Features
+
+* add `heading` component ([#39](https://github.com/wholesome-ghoul/allaround-components/issues/39)) ([7357c0d](https://github.com/wholesome-ghoul/allaround-components/commit/7357c0d618dd132e66933a6857ce539bb96fd57f))
+* add `minWidth` ([499574c](https://github.com/wholesome-ghoul/allaround-components/commit/499574c2bbe047d52b8131bc349381756c1e11c3))
+* add props to automatically sort grid items ([0365529](https://github.com/wholesome-ghoul/allaround-components/commit/03655296c5e567280d71613f4c7cb8ff7b82a25a))
+* handle breakpoints ([0bb8b29](https://github.com/wholesome-ghoul/allaround-components/commit/0bb8b293d6e93448b0a734bbaf864a6bbc71b8d9))
+
 ## [2.6.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.5.0...allaround-components-v2.6.0) (2023-06-08)
 
 

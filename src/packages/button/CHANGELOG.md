@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.5.0...button-v1.6.0) (2023-06-08)
+
+
+### Features
+
+* add `heading` component ([#39](https://github.com/wholesome-ghoul/allaround-components/issues/39)) ([7357c0d](https://github.com/wholesome-ghoul/allaround-components/commit/7357c0d618dd132e66933a6857ce539bb96fd57f))
+
 ## [1.5.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.4.0...button-v1.5.0) (2023-06-07)
 
 
