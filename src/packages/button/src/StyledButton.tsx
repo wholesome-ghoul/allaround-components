@@ -1,11 +1,13 @@
 import styled, { css } from "styled-components";
 
-import { GridPos } from "../../../utils";
+import Props from "./types";
+import { applyGridPosition } from "../../../utils";
+
+type CSS = Pick<Props, "gridPosition">;
 
 const StyledButton = styled.button`
-  ${({ rowPos, colPos }: GridPos) => css`
-    grid-row: ${rowPos};
-    grid-column: ${colPos};
+  ${({ gridPosition }: CSS) => css`
+    ${applyGridPosition(gridPosition)};
   `}
 `;
 

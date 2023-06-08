@@ -1,16 +1,13 @@
 import styled, { css } from "styled-components";
 
-import { GridPos } from "../../../utils";
 import Props from "./types";
+import { applyGridPosition } from "../../../utils";
 
-type CSS = GridPos & {
-  bulletPosition: Props["bulletPosition"];
-};
+type CSS = Pick<Props, "gridPosition" | "bulletPosition">;
 
 const StyledList = styled.ul`
-  ${({ rowPos, colPos, bulletPosition }: CSS) => css`
-    grid-row: ${rowPos};
-    grid-column: ${colPos};
+  ${({ gridPosition, bulletPosition }: CSS) => css`
+    ${applyGridPosition(gridPosition)};
 
     list-style-position: ${bulletPosition};
   `}

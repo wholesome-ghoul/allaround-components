@@ -26,6 +26,9 @@
     },
     "src/packages/common-scss": {
       "release-type": "node"
+    },
+    "src/packages/heading": {
+      "release-type": "node"
     }
   }
 }

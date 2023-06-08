@@ -1,14 +1,13 @@
 import styled, { css } from "styled-components";
 
 import Props from "./types";
-import { GridPos } from "../../../utils";
+import { applyGridPosition } from "../../../utils";
 
-type CSS = GridPos & Pick<Props, "minWidth">;
+type CSS = Pick<Props, "minWidth" | "gridPosition">;
 
 const StyledInput = styled.input`
-  ${({ rowPos, colPos, minWidth }: CSS) => css`
-    grid-row: ${rowPos};
-    grid-column: ${colPos};
+  ${({ gridPosition, minWidth }: CSS) => css`
+    ${applyGridPosition(gridPosition)};
 
     min-width: ${minWidth};
   `}

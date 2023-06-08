@@ -123,12 +123,14 @@ export default Props;" > $SRC/$TYPES
 
 echo "import styled, { css } from \"styled-components\";
 
-import { GridPos } from \"../../../utils\";
+import Props from \"./types\";
+import { applyGridPosition } from \"../../../utils\";
+
+type CSS = Pick<Props, \"gridPosition\">;
 
 const $STYLED_COMPONENT = styled.div\`
-  \${({ rowPos, colPos }: GridPos) => css\`
-    grid-row: \${rowPos};
-    grid-column: \${colPos};
+  \${({ gridPosition }: CSS) => css\`
+    \${applyGridPosition(gridPosition)};
   \`}
 \`;
 

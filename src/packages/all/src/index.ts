@@ -4,3 +4,4 @@ export { default as Container } from "@allaround/container";
 export { default as Label } from "@allaround/label";
 export { default as List } from "@allaround/list";
 export { default as CommonScss } from "@allaround/common-scss";
+export { default as Heading } from "@allaround/heading";

@@ -46,7 +46,7 @@ const Container = ({
     }
   }
 
-  const styledProps = { ..._grid, ...gridPosition, noGrid, minWidth };
+  const styledProps = { ..._grid, noGrid, minWidth };
 
   return (
     <StyledContainer
@@ -57,16 +57,21 @@ const Container = ({
       data-cy={dataCy}
     >
       {!noGrid && (autoVer || autoHor)
-        ? React.Children.map(children, (child, index) =>
-            React.isValidElement(child)
-              ? React.cloneElement(child as React.ReactElement<BaseProps>, {
+        ? React.Children.map(children, (child, index) => {
+            if (React.isValidElement(child)) {
+              return React.cloneElement(
+                child as React.ReactElement<BaseProps>,
+                {
                   gridPosition: {
-                    rowPos: autoHor ? index : undefined,
-                    colPos: autoVer ? index : undefined,
+                    rowPos: autoHor ? index + 1 : undefined,
+                    colPos: autoVer ? index + 1 : undefined,
                   },
-                })
-              : child
-          )
+                }
+              );
+            }
+
+            return child;
+          })
         : children}
     </StyledContainer>
   );
