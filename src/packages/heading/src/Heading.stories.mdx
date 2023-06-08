@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Heading from "./Heading";
+
+<Meta title="Heading" component={Heading} />
+
+export const Template = (args) => <Heading {...args} />;
+
+# Heading
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>

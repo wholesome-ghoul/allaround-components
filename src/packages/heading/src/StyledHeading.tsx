@@ -5,10 +5,10 @@ import { applyGridPosition } from "../../../utils";
 
 type CSS = Pick<Props, "gridPosition">;
 
-const StyledLabel = styled.label`
+const StyledHeading = styled.h1`
   ${({ gridPosition }: CSS) => css`
     ${applyGridPosition(gridPosition)};
   `}
 `;
 
-export default StyledLabel;
+export default StyledHeading;
