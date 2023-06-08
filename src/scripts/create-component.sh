@@ -2,18 +2,20 @@
 
 # USAGE:
 #
+# ./create-component.sh component
 # ./create-component.sh component-name
 
-COMPONENT_NAME=$1
+RAW_COMPONENT_NAME=$1
+COMPONENT_NAME=$(echo $RAW_COMPONENT_NAME | sed -r 's/(-)(.)/\u\2/g') # kebab-case to camelCase
 
-DIRECTORY_PATH="./src/packages/$COMPONENT_NAME"
+DIRECTORY_PATH="./src/packages/$RAW_COMPONENT_NAME"
 
 if [ -d "$DIRECTORY_PATH" ]; then
-  echo "[ *** ] component '$COMPONENT_NAME' exists."
+  echo "[ *** ] component '$RAW_COMPONENT_NAME' exists."
   exit 0
 fi
 
-CAPITALIZED_COMPONENT_NAME="${COMPONENT_NAME^}"
+CAPITALIZED_COMPONENT_NAME="${COMPONENT_NAME^}" # PascalCase
 
 mkdir -p $DIRECTORY_PATH/src
 
@@ -105,7 +107,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
 
 $CAPITALIZED_COMPONENT_NAME.defaultProps = {
   size: \"small\",
-  dataCy: \"$COMPONENT_NAME-component\",
+  dataCy: \"$RAW_COMPONENT_NAME-component\",
 };
 
 export default $CAPITALIZED_COMPONENT_NAME;" > $SRC/$COMPONENT.tsx
@@ -160,14 +162,14 @@ echo "{
 }" > $TSCONFIG
 
 echo "{
-  \"name\": \"@allaround/$COMPONENT_NAME\",
+  \"name\": \"@allaround/$RAW_COMPONENT_NAME\",
   \"version\": \"1.0.0\",
   \"description\": \"AllAround React $CAPITALIZED_COMPONENT_NAME component\",
   \"author\": \"Wholesome Ghoul <wholesome.ghoul@gmail.com>\",
   \"publishConfig\": {
     \"access\": \"public\"
   },
-  \"main\": \"dist/packages/$COMPONENT_NAME/src/index.js\",
+  \"main\": \"dist/packages/$RAW_COMPONENT_NAME/src/index.js\",
   \"files\": [
     \"dist/**/*\"
   ],
@@ -187,13 +189,13 @@ echo "{
 ALL_COMPONENTS=../all
 cd $ALL_COMPONENTS
 ALL_COMPONENTS_INDEX=./src/index.ts
-jq ".dependencies += { \"@allaround/$COMPONENT_NAME\": \"^1.0.0\" }" package.json > package.json.tmp && mv package.json.tmp package.json
-echo "export { default as $CAPITALIZED_COMPONENT_NAME } from \"@allaround/$COMPONENT_NAME\";" >> $ALL_COMPONENTS_INDEX
+jq ".dependencies += { \"@allaround/$RAW_COMPONENT_NAME\": \"^1.0.0\" }" package.json > package.json.tmp && mv package.json.tmp package.json
+echo "export { default as $CAPITALIZED_COMPONENT_NAME } from \"@allaround/$RAW_COMPONENT_NAME\";" >> $ALL_COMPONENTS_INDEX
 
 ROOT_DIR=../../..
 cd $ROOT_DIR
 
 RELEASE_CONFIG=release-please-config.json
-jq ".packages += { \"src/packages/$COMPONENT_NAME\": { \"release-type\": \"node\" } }" $RELEASE_CONFIG > $RELEASE_CONFIG.tmp && mv $RELEASE_CONFIG.tmp $RELEASE_CONFIG
+jq ".packages += { \"src/packages/$RAW_COMPONENT_NAME\": { \"release-type\": \"node\" } }" $RELEASE_CONFIG > $RELEASE_CONFIG.tmp && mv $RELEASE_CONFIG.tmp $RELEASE_CONFIG
 
 npm install
