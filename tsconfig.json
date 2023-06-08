@@ -2,7 +2,9 @@
   "extends": "@allaround/configs-tsconfig/dist/tsconfig.build.json",
   "compilerOptions": {
     "outDir": "dist",
+    "module": "esnext",
     "types": [
+      "node",
       "cypress",
       "cypress-visual-regression"
     ]

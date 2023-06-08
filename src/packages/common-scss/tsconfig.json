@@ -4,5 +4,5 @@
     "module": "esnext",
     "outDir": "dist"
   },
-  "include": ["src", "declaration.d.ts"]
+  "include": ["src"]
 }

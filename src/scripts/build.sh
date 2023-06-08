@@ -2,7 +2,8 @@
 
 # INTENDED TO RUN FROM PROJECT ROOT
 
-OUT=dist/packages/*/src
+CWD=$(basename "$(pwd)")
+OUT=dist/packages/$CWD/src
 
 npx tsc --build --verbose &&
   yarn node-sass src/ -o $OUT --output-style compressed &&
