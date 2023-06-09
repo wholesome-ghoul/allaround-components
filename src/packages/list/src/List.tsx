@@ -15,7 +15,7 @@ const List = ({
   className,
   ...rest
 }: Props) => {
-  const styledProps = { bulletPosition, ...gridPosition };
+  const styledProps = { bulletPosition };
 
   return (
     <StyledList
@@ -27,6 +27,7 @@ const List = ({
         styles[`${size}List`],
         className
       )}
+      gridPosition={gridPosition}
       {...styledProps}
       {...rest}
       data-cy={dataCy}

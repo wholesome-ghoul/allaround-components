@@ -84,8 +84,6 @@ const $CAPITALIZED_COMPONENT_NAME = ({
   className,
   ...rest
 }: Props) => {
-  const styledProps = { ...gridPosition };
-
   return (
     <$STYLED_COMPONENT
       className={cx(
@@ -96,7 +94,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
         styles[\`\${size}$CAPITALIZED_COMPONENT_NAME\`],
         className
       )}
-      {...styledProps}
+      gridPosition={gridPosition}
       {...rest}
       data-cy={dataCy}
     >

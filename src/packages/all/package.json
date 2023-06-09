@@ -26,6 +26,7 @@
     "@allaround/label": "^1.4.0",
     "@allaround/list": "^1.1.0",
     "@allaround/common-scss": "^1.1.0",
-    "@allaround/heading": "^1.0.0"
+    "@allaround/heading": "^1.0.0",
+    "@allaround/link": "^1.0.0"
   }
 }
