@@ -1,0 +1,20 @@
+.link {
+  color: var(--fg-color);
+  font-family: inherit;
+}
+
+.smallLink {
+  font-size: var(--font-size-small);
+}
+
+.mediumLink {
+  font-size: var(--font-size-medium);
+}
+
+.largeLink {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

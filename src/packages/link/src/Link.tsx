@@ -2,41 +2,41 @@ import cx from "classnames";
 
 import Props from "./types";
 import styles from "./style.module.scss";
-import StyledLabel from "./StyledLabel";
+import StyledLink from "./StyledLink";
 
-const Label = ({
+const Link = ({
   children,
   size,
   gridPosition,
   fill,
   dataCy,
   className,
-  htmlFor,
+  href,
   ...rest
 }: Props) => {
   return (
-    <StyledLabel
+    <StyledLink
       className={cx(
-        styles.label,
+        styles.link,
         {
           [styles.fill]: fill,
         },
-        styles[`${size}Label`],
+        styles[`${size}Link`],
         className
       )}
-      htmlFor={htmlFor}
+      href={href}
       gridPosition={gridPosition}
       {...rest}
       data-cy={dataCy}
     >
       {children}
-    </StyledLabel>
+    </StyledLink>
   );
 };
 
-Label.defaultProps = {
+Link.defaultProps = {
   size: "small",
-  dataCy: "label-component",
+  dataCy: "link-component",
 };
 
-export default Label;
+export default Link;

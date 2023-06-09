@@ -18,7 +18,7 @@ const Input = ({
   className,
   ...rest
 }: Props) => {
-  const styledProps = { ...gridPosition, minWidth };
+  const styledProps = { minWidth };
 
   return (
     <StyledInput
@@ -35,6 +35,7 @@ const Input = ({
       type={type}
       value={value}
       onChange={onChange}
+      gridPosition={gridPosition}
       {...styledProps}
       {...rest}
       data-cy={dataCy}

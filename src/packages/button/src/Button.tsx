@@ -19,8 +19,6 @@ const Button = (props: Props) => {
     className,
     ...rest
   } = props;
-  const styledProps = { ...gridPosition };
-
   if (icon) {
     return (
       <StyledButton
@@ -36,7 +34,7 @@ const Button = (props: Props) => {
           className
         )}
         onClick={onClick}
-        {...styledProps}
+        gridPosition={gridPosition}
         {...rest}
         data-cy={dataCy}
       >
@@ -59,7 +57,7 @@ const Button = (props: Props) => {
         className
       )}
       onClick={onClick}
-      {...styledProps}
+      gridPosition={gridPosition}
       {...rest}
       data-cy={dataCy}
     >
