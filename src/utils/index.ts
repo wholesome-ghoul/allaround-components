@@ -1,4 +1,5 @@
 import { css } from "styled-components";
+import kebabCase from "lodash/kebabCase";
 
 import { GridPos, GridPosList } from "./types";
 
@@ -39,6 +40,14 @@ const applyGridPosition = (gridPosition?: GridPos | GridPosList) => {
   return mediaMinWidth(gridPosition);
 };
 
-export { capitalize, applyGridPosition };
+const stylesObjToCss = (styles?: React.CSSProperties): string => {
+  if (!styles) return "";
+
+  return Object.entries(styles).reduce((acc, [key, value]) => {
+    return `${acc}${kebabCase(key)}: ${value};\n`;
+  }, "");
+};
+
+export { capitalize, applyGridPosition, stylesObjToCss };
 
 export * from "./types";

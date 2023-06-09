@@ -38,6 +38,7 @@ type BaseProps = {
   fill?: boolean;
   id?: string;
   dataCy?: string;
+  styles?: React.CSSProperties;
 };
 
 export type { BaseProps, GridPos, Grid, GridGap, GridPosList, Size };

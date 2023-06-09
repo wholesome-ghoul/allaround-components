@@ -1,15 +1,17 @@
 import styled, { css } from "styled-components";
 
 import Props from "./types";
-import { applyGridPosition } from "../../../utils";
+import { applyGridPosition, stylesObjToCss } from "../../../utils";
 
-type CSS = Pick<Props, "minWidth" | "gridPosition">;
+type CSS = Pick<Props, "gridPosition" | "styles" | "minWidth">;
 
 const StyledInput = styled.input`
-  ${({ gridPosition, minWidth }: CSS) => css`
+  ${({ gridPosition, minWidth, styles }: CSS) => css`
     ${applyGridPosition(gridPosition)};
 
     min-width: ${minWidth};
+
+    ${stylesObjToCss(styles)};
   `}
 `;
 

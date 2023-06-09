@@ -1,12 +1,18 @@
 import styled, { css } from "styled-components";
 
-import { Grid, GridGap, applyGridPosition } from "../../../utils";
+import {
+  Grid,
+  GridGap,
+  applyGridPosition,
+  stylesObjToCss,
+} from "../../../utils";
 import Props from "./types";
 
-type CSS = Grid & Pick<Props, "noGrid" | "minWidth" | "gridPosition">;
+type CSS = Grid &
+  Pick<Props, "noGrid" | "minWidth" | "gridPosition" | "styles">;
 
 const StyledContainer = styled.div`
-  ${({ rows, cols, gridPosition, noGrid, gap, minWidth }: CSS) => css`
+  ${({ rows, cols, gridPosition, noGrid, gap, minWidth, styles }: CSS) => css`
     ${!noGrid && "display: grid;"}
 
     ${!noGrid && `grid-gap: ${gap};`}
@@ -23,6 +29,8 @@ const StyledContainer = styled.div`
     ${applyGridPosition(gridPosition)};
 
     min-width: ${minWidth};
+
+    ${stylesObjToCss(styles)};
   `}
 `;
 

@@ -19,6 +19,7 @@ const CommonHeading = (props: Props) => {
       gridPosition={gridPosition}
       {...rest}
       data-cy={dataCy}
+      styles={props.styles}
     >
       {children}
     </StyledHeading>

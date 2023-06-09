@@ -4,20 +4,21 @@ import Props from "./types";
 import styles from "./style.module.scss";
 import StyledButton from "./StyledButton";
 
-const Button = ({
-  children,
-  size,
-  gridPosition,
-  onClick,
-  icon,
-  transparent,
-  disabled,
-  active,
-  fill,
-  dataCy,
-  className,
-  ...rest
-}: Props) => {
+const Button = (props: Props) => {
+  const {
+    children,
+    size,
+    gridPosition,
+    onClick,
+    icon,
+    transparent,
+    disabled,
+    active,
+    fill,
+    dataCy,
+    className,
+    ...rest
+  } = props;
   const styledProps = { ...gridPosition };
 
   if (icon) {
@@ -59,6 +60,7 @@ const Button = ({
       )}
       onClick={onClick}
       {...styledProps}
+      {...rest}
       data-cy={dataCy}
     >
       {children}
