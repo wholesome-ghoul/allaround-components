@@ -42,6 +42,25 @@
   * dependencies
     * @allaround/input bumped from ^2.4.0 to ^2.5.0
 
+## [1.7.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.6.0...all-components-v1.7.0) (2023-06-09)
+
+
+### Features
+
+* add `link` component ([#41](https://github.com/wholesome-ghoul/allaround-components/issues/41)) ([9741561](https://github.com/wholesome-ghoul/allaround-components/commit/97415619870566bdfb8d23e4d0a253ca2d7413b9))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/button bumped from ^1.6.0 to ^1.7.0
+    * @allaround/input bumped from ^2.6.0 to ^2.7.0
+    * @allaround/container bumped from ^1.4.0 to ^1.5.0
+    * @allaround/label bumped from ^1.4.0 to ^1.5.0
+    * @allaround/list bumped from ^1.1.0 to ^1.2.0
+    * @allaround/heading bumped from ^1.0.0 to ^1.1.0
+
 ## [1.6.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.5.0...all-components-v1.6.0) (2023-06-08)
 
 
