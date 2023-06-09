@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.6.0...button-v1.7.0) (2023-06-09)
+
+
+### Features
+
+* add `link` component ([#41](https://github.com/wholesome-ghoul/allaround-components/issues/41)) ([9741561](https://github.com/wholesome-ghoul/allaround-components/commit/97415619870566bdfb8d23e4d0a253ca2d7413b9))
+* add `styles` prop ([eb58214](https://github.com/wholesome-ghoul/allaround-components/commit/eb58214703a3ac051f2ecccbb073f4dd62fb3bf2))
+
 ## [1.6.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.5.0...button-v1.6.0) (2023-06-08)
 
 

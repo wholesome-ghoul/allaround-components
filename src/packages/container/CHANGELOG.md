@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/wholesome-ghoul/allaround-components/compare/container-v1.4.0...container-v1.5.0) (2023-06-09)
+
+
+### Features
+
+* add `styles` prop ([eb58214](https://github.com/wholesome-ghoul/allaround-components/commit/eb58214703a3ac051f2ecccbb073f4dd62fb3bf2))
+
 ## [1.4.0](https://github.com/wholesome-ghoul/allaround-components/compare/container-v1.3.0...container-v1.4.0) (2023-06-08)
 
 
