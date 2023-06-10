@@ -25,12 +25,14 @@ type GridPosBpRequired = Pick<GridPos, "rowPos" | "colPos"> &
 type GridPosList = GridPosBpRequired[];
 
 type Size = "small" | "medium" | "large" | "xlarge";
-const IconSize = {
+const iconSize = {
   small: "1.2rem",
   medium: "1.5rem",
   large: "2rem",
   xlarge: "3rem",
-};
+} as const;
+type IconSize = keyof typeof iconSize;
+const isIconSize = (size: string): size is IconSize => size in iconSize;
 
 type BaseProps = {
   className?: string;
@@ -41,5 +43,5 @@ type BaseProps = {
   styles?: React.CSSProperties;
 };
 
-export type { BaseProps, GridPos, Grid, GridGap, GridPosList, Size };
-export { IconSize };
+export type { BaseProps, GridPos, Grid, GridGap, GridPosList, Size, IconSize };
+export { isIconSize, iconSize };

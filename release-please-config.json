@@ -32,6 +32,9 @@
     },
     "src/packages/link": {
       "release-type": "node"
+    },
+    "src/packages/icons": {
+      "release-type": "node"
     }
   }
 }

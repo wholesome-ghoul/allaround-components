@@ -1,0 +1,27 @@
+{
+  "name": "@allaround/icons",
+  "version": "1.0.0",
+  "description": "AllAround React Icons component",
+  "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/packages/icons/src/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "npm run generate:icons && ../../scripts/build.sh",
+    "generate:icons": "npx @svgr/cli ../../svgs -d ./src"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@allaround/configs-tsconfig": "^1.0.0",
+    "@cypress/react18": "^2.0.0",
+    "cypress": "^12.13.0",
+    "@svgr/cli": "^8.0.1",
+    "@svgr/plugin-jsx": "^8.0.1"
+  }
+}

@@ -5,6 +5,15 @@
 CWD=$(basename "$(pwd)")
 OUT=dist/packages/$CWD/src
 
-npx tsc --build --verbose &&
+COMPILE_SASS=1
+
+if [[ $CWD == "icons" ]]; then
+  COMPILE_SASS=0
+fi
+
+npx tsc --build --verbose
+
+if [[ $COMPILE_SASS == 1 ]]; then
   yarn node-sass src/ -o $OUT --output-style compressed &&
   grep -rlZ '\.scss' ./$OUT | xargs -0 -r sed -i 's/\.scss/\.css/g'
+fi
