@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Sidebar from "./Sidebar";
+
+<Meta title="Sidebar" component={Sidebar} />
+
+export const Template = (args) => <Sidebar {...args} />;
+
+# Sidebar
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>
