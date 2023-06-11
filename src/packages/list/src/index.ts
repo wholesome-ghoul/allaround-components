@@ -1,2 +1,2 @@
 export { default } from "./List";
-export type { Props } from "./types";
+export type { Props as ListProps } from "./types";

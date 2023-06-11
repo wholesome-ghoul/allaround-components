@@ -1,2 +1,2 @@
 export { default } from "./Label";
-export type { Props } from "./types";
+export type { Props as LabelProps } from "./types";

@@ -1,2 +1,2 @@
 export { default } from "./src";
-export type { Props as ListProps } from "./src/types";
+export type { ListProps } from "./src";
