@@ -38,6 +38,9 @@
     },
     "src/packages/sidebar": {
       "release-type": "node"
+    },
+    "src/packages/navbar": {
+      "release-type": "node"
     }
   }
 }

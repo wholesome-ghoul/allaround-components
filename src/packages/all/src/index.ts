@@ -8,3 +8,4 @@ export { default as Heading } from "@allaround/heading";
 export { default as Link } from "@allaround/link";
 export { default as Icons } from "@allaround/icons";
 export { default as Sidebar } from "@allaround/sidebar";
+export { default as Navbar } from "@allaround/navbar";

@@ -6,3 +6,4 @@ export type { ListProps } from "@allaround/list";
 export type { HeadingProps } from "@allaround/heading";
 export type { LinkProps } from "@allaround/link";
 export type { SidebarProps } from "@allaround/sidebar";
+export type { NavbarProps } from "@allaround/navbar";

@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Navbar from "./Navbar";
+
+<Meta title="Navbar" component={Navbar} />
+
+export const Template = (args) => <Navbar {...args} />;
+
+# Navbar
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>
