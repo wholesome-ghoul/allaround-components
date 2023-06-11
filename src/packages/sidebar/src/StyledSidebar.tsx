@@ -1,16 +1,5 @@
-import styled, { css } from "styled-components";
+import Container from "@allaround/container";
 
-import Props from "./types";
-import { applyGridPosition, stylesObjToCss } from "../../../utils";
-
-type CSS = Pick<Props, "gridPosition" | "styles">;
-
-const StyledSidebar = styled.div`
-  ${({ gridPosition, styles }: CSS) => css`
-    ${applyGridPosition(gridPosition)};
-
-    ${stylesObjToCss(styles)};
-  `}
-`;
+const StyledSidebar = Container
 
 export default StyledSidebar;

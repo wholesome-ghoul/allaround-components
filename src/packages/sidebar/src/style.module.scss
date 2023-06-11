@@ -1,10 +1,16 @@
 .sidebar {
   color: var(--fg-color);
   font-family: inherit;
-  border: 1px solid green;
-  width: 300px;
+  background-color: var(--bg-color-secondary);
+  min-width: 4.5rem;
   height: 100%;
-  position: absolute;
+  align-self: normal;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
 .smallSidebar {

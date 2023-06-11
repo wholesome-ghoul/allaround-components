@@ -6,10 +6,9 @@ import StyledSidebar from "./StyledSidebar";
 
 const Sidebar = ({
   children,
-  size,
   gridPosition,
-  fill,
   dataCy,
+  sticky,
   className,
   ...rest
 }: Props) => {
@@ -18,9 +17,8 @@ const Sidebar = ({
       className={cx(
         styles.sidebar,
         {
-          [styles.fill]: fill,
+          [styles.sticky]: sticky,
         },
-        styles[`${size}Sidebar`],
         className
       )}
       gridPosition={gridPosition}
@@ -33,8 +31,10 @@ const Sidebar = ({
 };
 
 Sidebar.defaultProps = {
-  size: "small",
   dataCy: "sidebar-component",
+  sticky: false,
+  gap: "1rem",
+  grid: { cols: 1, rows: 12 },
 };
 
 export default Sidebar;

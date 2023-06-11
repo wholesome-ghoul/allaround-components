@@ -37,6 +37,7 @@ STYLES="style.module.scss"
 STYLE_TYPES="style.module.d.ts"
 TSCONFIG="tsconfig.json"
 PACKAGE_JSON="package.json"
+PROPS=$CAPITALIZED_COMPONENT_NAME"Props"
 
 echo ".$COMPONENT_NAME {
   color: var(--fg-color);
@@ -117,7 +118,8 @@ type Props = BaseProps & {
   size?: Size;
 };
 
-export default Props;" > $SRC/$TYPES
+export default Props;
+export type { Props };" > $SRC/$TYPES
 
 echo "import styled, { css } from \"styled-components\";
 
@@ -137,7 +139,8 @@ const $STYLED_COMPONENT = styled.div\`
 export default $STYLED_COMPONENT;" > $SRC/$STYLED_COMPONENT.tsx
 
 echo "export { default } from \"./$CAPITALIZED_COMPONENT_NAME\";" > $SRC/$INDEX
-echo "export { default } from \"./$SRC\";" > $INDEX
+echo "export { default } from \"./$SRC\";
+export type { Props as $PROPS } from \"./src/types\";"> $INDEX
 
 echo "import { Meta, Story } from \"@storybook/addon-docs\";
 
@@ -191,8 +194,10 @@ echo "{
 ALL_COMPONENTS=../all
 cd $ALL_COMPONENTS
 ALL_COMPONENTS_INDEX=./src/index.ts
+ALL_COMPONENTS_TYPES=./src/types.ts
 jq ".dependencies += { \"@allaround/$RAW_COMPONENT_NAME\": \"^1.0.0\" }" package.json > package.json.tmp && mv package.json.tmp package.json
-echo "export { default as $CAPITALIZED_COMPONENT_NAME } from \"@allaround/$RAW_COMPONENT_NAME\";" >> $ALL_COMPONENTS_INDEX
+echo "export { default as $CAPITALIZED_COMPONENT_NAME } from \"@allaround/$RAW_COMPONENT_NAME\";>> $ALL_COMPONENTS_INDEX
+echo "export type { $PROPS } from \"@allaround/$RAW_COMPONENT_NAME\";>> $ALL_COMPONENTS_TYPES
 
 ROOT_DIR=../../..
 cd $ROOT_DIR

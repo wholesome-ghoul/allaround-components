@@ -1,8 +1,8 @@
-import { BaseProps, Size } from "../../../utils";
+import type { ContainerProps } from "@allaround/container";
 
-type Props = BaseProps & {
-  children?: React.ReactNode;
-  size?: Size;
+type Props = Omit<ContainerProps, "alignItems"> & {
+  sticky?: boolean;
 };
 
 export default Props;
+export type { Props };

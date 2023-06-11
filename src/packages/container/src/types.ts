@@ -17,3 +17,4 @@ type Props = Omit<BaseProps, "fill"> &
   };
 
 export default Props;
+export type { Props };

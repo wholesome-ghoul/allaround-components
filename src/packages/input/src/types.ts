@@ -13,3 +13,4 @@ type Props = BaseProps & {
 };
 
 export default Props;
+export type { Props };
