@@ -1,0 +1,30 @@
+.navbar {
+  color: var(--fg-color);
+  font-family: inherit;
+  background-color: var(--bg-color-secondary);
+  min-height: 4.5rem;
+  width: 100%;
+  align-self: normal;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+}
+
+.smallNavbar {
+  font-size: var(--font-size-small);
+}
+
+.mediumNavbar {
+  font-size: var(--font-size-medium);
+}
+
+.largeNavbar {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}
