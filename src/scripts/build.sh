@@ -7,7 +7,7 @@ OUT=dist/packages/$CWD/src
 
 COMPILE_SASS=1
 
-if [[ $CWD == "icons" ]]; then
+if [[ $CWD == "icons" || $CWD == "hooks" ]]; then
   COMPILE_SASS=0
 fi
 
