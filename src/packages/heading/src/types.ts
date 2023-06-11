@@ -1,6 +1,6 @@
 import { BaseProps } from "../../../utils";
 
-type Props = BaseProps & {
+type Props = BaseProps<HTMLHeadingElement> & {
   children?: React.ReactNode;
 };
 

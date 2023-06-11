@@ -34,13 +34,14 @@ const iconSize = {
 type IconSize = keyof typeof iconSize;
 const isIconSize = (size: string): size is IconSize => size in iconSize;
 
-type BaseProps = {
+type BaseProps<Elem> = {
   className?: string;
   gridPosition?: GridPos | GridPosList;
   fill?: boolean;
   id?: string;
   dataCy?: string;
   styles?: React.CSSProperties;
+  innerRef?: React.RefObject<Elem>;
 };
 
 export type { BaseProps, GridPos, Grid, GridGap, GridPosList, Size, IconSize };

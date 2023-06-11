@@ -82,6 +82,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
   gridPosition,
   fill,
   dataCy,
+  innerRef,
   className,
   ...rest
 }: Props) => {
@@ -95,6 +96,7 @@ const $CAPITALIZED_COMPONENT_NAME = ({
         styles[\`\${size}$CAPITALIZED_COMPONENT_NAME\`],
         className
       )}
+      ref={innerRef}
       gridPosition={gridPosition}
       {...rest}
       data-cy={dataCy}
@@ -113,7 +115,7 @@ export default $CAPITALIZED_COMPONENT_NAME;" > $SRC/$COMPONENT.tsx
 
 echo "import { BaseProps, Size } from \"../../../utils\";
 
-type Props = BaseProps & {
+type Props = BaseProps<HTMLDivElement> & {
   children?: React.ReactNode;
   size?: Size;
 };

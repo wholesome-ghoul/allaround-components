@@ -5,7 +5,8 @@ import styles from "./style.module.scss";
 import StyledHeading from "./StyledHeading";
 
 const CommonHeading = (props: Props) => {
-  const { fill, className, gridPosition, dataCy, children, ...rest } = props;
+  const { fill, className, gridPosition, dataCy, children, innerRef, ...rest } =
+    props;
 
   return (
     <StyledHeading
@@ -17,6 +18,7 @@ const CommonHeading = (props: Props) => {
         className
       )}
       gridPosition={gridPosition}
+      ref={innerRef}
       {...rest}
       data-cy={dataCy}
       styles={props.styles}

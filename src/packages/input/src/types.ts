@@ -2,7 +2,7 @@ import { BaseProps, Size } from "../../../utils";
 
 type InputType = "text" | "password" | "email";
 
-type Props = BaseProps & {
+type Props = BaseProps<HTMLInputElement> & {
   type?: InputType;
   value: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;

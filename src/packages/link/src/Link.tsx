@@ -9,6 +9,7 @@ const Link = ({
   size,
   gridPosition,
   fill,
+  innerRef,
   dataCy,
   className,
   href,
@@ -26,6 +27,7 @@ const Link = ({
       )}
       href={href}
       gridPosition={gridPosition}
+      ref={innerRef}
       {...rest}
       data-cy={dataCy}
     >

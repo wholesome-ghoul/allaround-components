@@ -1,6 +1,6 @@
 import { BaseProps, Grid } from "../../../utils";
 
-type Props = Omit<BaseProps, "fill"> &
+type Props = Omit<BaseProps<HTMLDivElement>, "fill"> &
   Pick<Grid, "gap"> & {
     children: React.ReactNode;
     grid?: Grid | string;

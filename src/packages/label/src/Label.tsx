@@ -9,6 +9,7 @@ const Label = ({
   size,
   gridPosition,
   fill,
+  innerRef,
   dataCy,
   className,
   htmlFor,
@@ -26,6 +27,7 @@ const Label = ({
       )}
       htmlFor={htmlFor}
       gridPosition={gridPosition}
+      ref={innerRef}
       {...rest}
       data-cy={dataCy}
     >

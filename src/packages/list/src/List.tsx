@@ -11,6 +11,7 @@ const List = ({
   fill,
   items,
   bulletPosition,
+  innerRef,
   dataCy,
   className,
   ...rest
@@ -28,6 +29,7 @@ const List = ({
         className
       )}
       gridPosition={gridPosition}
+      ref={innerRef}
       {...styledProps}
       {...rest}
       data-cy={dataCy}

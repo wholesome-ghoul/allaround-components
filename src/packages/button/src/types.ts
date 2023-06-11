@@ -1,6 +1,6 @@
 import { BaseProps, Size } from "../../../utils";
 
-type Props = BaseProps & {
+type Props = BaseProps<HTMLButtonElement> & {
   children?: React.ReactNode;
   size?: Size;
   onClick: React.MouseEventHandler<HTMLButtonElement>;

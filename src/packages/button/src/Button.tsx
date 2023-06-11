@@ -17,6 +17,7 @@ const Button = (props: Props) => {
     fill,
     dataCy,
     noBorder,
+    innerRef,
     className,
     ...rest
   } = props;
@@ -37,6 +38,7 @@ const Button = (props: Props) => {
         )}
         onClick={onClick}
         gridPosition={gridPosition}
+        ref={innerRef}
         {...rest}
         data-cy={dataCy}
       >
@@ -61,6 +63,7 @@ const Button = (props: Props) => {
       )}
       onClick={onClick}
       gridPosition={gridPosition}
+      ref={innerRef}
       {...rest}
       data-cy={dataCy}
     >

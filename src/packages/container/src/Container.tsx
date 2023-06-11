@@ -22,6 +22,7 @@ const Container = ({
   autoHor,
   dataCy,
   minWidth,
+  innerRef,
   ...rest
 }: Props) => {
   let _grid: Grid = {};
@@ -52,6 +53,7 @@ const Container = ({
     <StyledContainer
       className={cx(styles.container, className)}
       gridPosition={gridPosition}
+      ref={innerRef}
       {...styledProps}
       {...rest}
       data-cy={dataCy}
@@ -67,7 +69,7 @@ const Container = ({
               if (autoVer) colPos = index + 1;
 
               return React.cloneElement(
-                child as React.ReactElement<BaseProps>,
+                child as React.ReactElement<BaseProps<typeof child.type>>,
                 {
                   gridPosition: {
                     rowPos,

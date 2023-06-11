@@ -1,6 +1,6 @@
 import { BaseProps, Size } from "../../../utils";
 
-type Props = BaseProps &
+type Props = BaseProps<HTMLAnchorElement> &
   Pick<HTMLAnchorElement, "href"> & {
     children?: React.ReactNode;
     size?: Size;

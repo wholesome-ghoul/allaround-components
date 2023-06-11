@@ -14,6 +14,7 @@ const Input = ({
   fill,
   isError,
   minWidth,
+  innerRef,
   dataCy,
   className,
   ...rest
@@ -36,6 +37,7 @@ const Input = ({
       value={value}
       onChange={onChange}
       gridPosition={gridPosition}
+      ref={innerRef}
       {...styledProps}
       {...rest}
       data-cy={dataCy}

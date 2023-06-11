@@ -9,6 +9,7 @@ const Navbar = ({
   gridPosition,
   dataCy,
   sticky,
+  innerRef,
   className,
   ...rest
 }: Props) => {
@@ -22,6 +23,7 @@ const Navbar = ({
         className
       )}
       gridPosition={gridPosition}
+      innerRef={innerRef}
       {...rest}
       data-cy={dataCy}
     >

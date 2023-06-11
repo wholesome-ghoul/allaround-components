@@ -9,6 +9,8 @@ const Sidebar = ({
   gridPosition,
   dataCy,
   sticky,
+  innerRef,
+  overlap,
   className,
   ...rest
 }: Props) => {
@@ -18,10 +20,12 @@ const Sidebar = ({
         styles.sidebar,
         {
           [styles.sticky]: sticky,
+          [styles.overlap]: overlap,
         },
         className
       )}
       gridPosition={gridPosition}
+      innerRef={innerRef}
       {...rest}
       data-cy={dataCy}
     >
@@ -33,6 +37,7 @@ const Sidebar = ({
 Sidebar.defaultProps = {
   dataCy: "sidebar-component",
   sticky: false,
+  overlap: false,
   gap: "1rem",
   grid: { cols: 1, rows: 12 },
 };

@@ -1,6 +1,6 @@
 import { BaseProps, Size } from "../../../utils";
 
-type Props = BaseProps & {
+type Props = BaseProps<HTMLUListElement> & {
   children?: React.ReactNode[];
   size?: Size;
   items?: Array<string | number>;
