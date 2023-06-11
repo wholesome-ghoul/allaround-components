@@ -35,6 +35,9 @@
     },
     "src/packages/icons": {
       "release-type": "node"
+    },
+    "src/packages/sidebar": {
+      "release-type": "node"
     }
   }
 }

@@ -1,0 +1,30 @@
+.sidebar {
+  color: var(--fg-color);
+  font-family: inherit;
+  background-color: var(--bg-color-secondary);
+  min-width: 4.5rem;
+  height: 100%;
+  align-self: normal;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.smallSidebar {
+  font-size: var(--font-size-small);
+}
+
+.mediumSidebar {
+  font-size: var(--font-size-medium);
+}
+
+.largeSidebar {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

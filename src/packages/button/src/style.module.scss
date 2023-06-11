@@ -24,8 +24,8 @@
 }
 
 .icon {
-  border: none;
   color: var(--fg-color);
+  border-radius: 50%;
 
   &:hover {
     background-color: var(--bg-color);
@@ -69,7 +69,10 @@
   width: 100%;
 }
 
+.noBorder {
+  border: none;
+}
+
 .transparent {
   background: transparent;
 }
-

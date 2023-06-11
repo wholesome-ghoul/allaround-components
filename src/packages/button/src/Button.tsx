@@ -16,6 +16,7 @@ const Button = (props: Props) => {
     active,
     fill,
     dataCy,
+    noBorder,
     className,
     ...rest
   } = props;
@@ -30,6 +31,7 @@ const Button = (props: Props) => {
             [styles.transparent]: transparent,
             [styles.disabled]: disabled,
             [styles.active]: active,
+            [styles.noBorder]: noBorder,
           },
           className
         )}
@@ -53,6 +55,7 @@ const Button = (props: Props) => {
           [styles.transparent]: transparent,
           [styles.disabled]: disabled,
           [styles.active]: active,
+          [styles.noBorder]: noBorder,
         },
         className
       )}
@@ -71,6 +74,7 @@ Button.defaultProps = {
   transparent: false,
   disabled: false,
   active: false,
+  noBorder: false,
   dataCy: "button-component",
 };
 

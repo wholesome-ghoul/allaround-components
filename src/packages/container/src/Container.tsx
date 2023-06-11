@@ -59,12 +59,19 @@ const Container = ({
       {!noGrid && (autoVer || autoHor)
         ? React.Children.map(children, (child, index) => {
             if (React.isValidElement(child)) {
+              const childGridPosition = child.props.gridPosition;
+              let rowPos = childGridPosition?.rowPos;
+              let colPos = childGridPosition?.colPos;
+
+              if (autoHor) rowPos = index + 1;
+              if (autoVer) colPos = index + 1;
+
               return React.cloneElement(
                 child as React.ReactElement<BaseProps>,
                 {
                   gridPosition: {
-                    rowPos: autoHor ? index + 1 : undefined,
-                    colPos: autoVer ? index + 1 : undefined,
+                    rowPos,
+                    colPos,
                   },
                 }
               );

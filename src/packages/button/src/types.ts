@@ -8,6 +8,8 @@ type Props = BaseProps & {
   transparent?: boolean;
   disabled?: boolean;
   active?: boolean;
+  noBorder?: boolean;
 };
 
 export default Props;
+export type { Props };
