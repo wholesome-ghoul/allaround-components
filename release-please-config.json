@@ -41,6 +41,9 @@
     },
     "src/packages/navbar": {
       "release-type": "node"
+    },
+    "src/packages/hooks": {
+      "release-type": "node"
     }
   }
 }
