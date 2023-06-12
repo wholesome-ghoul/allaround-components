@@ -8,3 +8,4 @@ export type { LinkProps } from "@allaround/link";
 export type { SidebarProps } from "@allaround/sidebar";
 export type { NavbarProps } from "@allaround/navbar";
 export type * from "@allaround/hooks";
+export type { TextProps } from "@allaround/text";

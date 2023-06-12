@@ -26,8 +26,9 @@ const Button = (props: Props) => {
       <StyledButton
         className={cx(
           styles.button,
-          styles.icon,
+          styles.iconButton,
           {
+            [styles.icon]: !!children,
             [styles.fill]: fill,
             [styles.transparent]: transparent,
             [styles.disabled]: disabled,
@@ -43,6 +44,7 @@ const Button = (props: Props) => {
         data-cy={dataCy}
       >
         {icon}
+        {children}
       </StyledButton>
     );
   }

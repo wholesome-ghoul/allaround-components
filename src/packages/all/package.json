@@ -31,6 +31,7 @@
     "@allaround/icons": "^1.0.0",
     "@allaround/sidebar": "^1.0.0",
     "@allaround/navbar": "^1.0.0",
-    "@allaround/hooks": "^1.0.0"
+    "@allaround/hooks": "^1.0.0",
+    "@allaround/text": "^1.0.0"
   }
 }

@@ -1,21 +1,20 @@
-.label {
+.text {
   color: var(--fg-color);
-  font-weight: bold;
   font-family: inherit;
 }
 
-.smallLabel {
+.smallText {
   font-size: var(--font-size-small);
 }
 
-.mediumLabel {
+.mediumText {
   font-size: var(--font-size-medium);
 }
 
-.largeLabel {
+.largeText {
   font-size: var(--font-size-large);
 }
 
 .fill {
-  width: 100%
+  width: 100%;
 }
