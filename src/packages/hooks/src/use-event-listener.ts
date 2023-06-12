@@ -13,8 +13,6 @@ const useEventListener = (
   const handler = useRef((_event: any) => {});
 
   useEffect(() => {
-
-    console.log("WTF");
     handler.current = eventHandler;
   }, [eventHandler]);
 
