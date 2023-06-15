@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 import kebabCase from "lodash/kebabCase";
 
-import { GridPos, GridPosList } from "./types";
+import { GridPos, GridPosList, Grid, GridList, GridGap } from "./types";
 
 const capitalize = (str: string | undefined) => {
   return str && str.charAt(0).toUpperCase() + str.slice(1);
@@ -16,9 +16,28 @@ const numFromBp = (bp: string | number) => {
 
 const mediaMinWidth = ({ bp, rowPos, colPos }: GridPos) => css`
   @media (min-width: ${bp}) {
-    grid-row: ${rowPos};
-    grid-column: ${colPos};
+    ${gridPositionFields({ rowPos, colPos })};
   }
+`;
+
+const gridPositionFields = ({ rowPos, colPos }: GridPos) => css`
+  grid-row: ${rowPos};
+  grid-column: ${colPos};
+`;
+
+const mediaMinWidthGrid = ({ bp, rows, cols, gap }: Grid) => css`
+  @media (min-width: ${bp}) {
+    ${gridFields({ rows, cols, gap })};
+  }
+`;
+
+const gridFields = ({ rows, cols, gap }: Grid) => css`
+  grid-template-rows: ${rows};
+  grid-template-columns: ${cols};
+
+  ${`grid-gap: ${gap};`}
+  ${(gap as GridGap)?.row && `grid-row-gap: ${(gap as GridGap).row};`}
+  ${(gap as GridGap)?.col && `grid-column-gap: ${(gap as GridGap).col};`}
 `;
 
 const applyGridPosition = (gridPosition?: GridPos | GridPosList) => {
@@ -31,13 +50,26 @@ const applyGridPosition = (gridPosition?: GridPos | GridPosList) => {
   }
 
   if (!gridPosition.bp) {
-    return css`
-      grid-row: ${gridPosition.rowPos};
-      grid-column: ${gridPosition.colPos};
-    `;
+    return gridPositionFields(gridPosition);
   }
 
   return mediaMinWidth(gridPosition);
+};
+
+const applyGrid = (grid?: Grid | GridList) => {
+  if (!grid) return;
+
+  if (Array.isArray(grid)) {
+    return grid
+      .sort((grid1, grid2) => numFromBp(grid1.bp) - numFromBp(grid2.bp))
+      .map(mediaMinWidthGrid);
+  }
+
+  if (!grid.bp) {
+    return gridFields(grid);
+  }
+
+  return mediaMinWidthGrid(grid);
 };
 
 const stylesObjToCss = (styles?: React.CSSProperties): string => {
@@ -48,6 +80,6 @@ const stylesObjToCss = (styles?: React.CSSProperties): string => {
   }, "");
 };
 
-export { capitalize, applyGridPosition, stylesObjToCss };
+export { capitalize, applyGridPosition, stylesObjToCss, applyGrid };
 
 export * from "./types";

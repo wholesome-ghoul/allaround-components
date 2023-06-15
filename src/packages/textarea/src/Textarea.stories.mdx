@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Textarea from "./Textarea";
+
+<Meta title="Textarea" component={Textarea} />
+
+export const Template = (args) => <Textarea {...args} />;
+
+# Textarea
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>
