@@ -4,7 +4,7 @@ import cx from "classnames";
 import Props from "./types";
 import styles from "./style.module.scss";
 import StyledContainer from "./StyledContainer";
-import { BaseProps, Grid } from "../../../utils";
+import { BaseProps, Grid, GridList, GridBpRequired } from "../../../utils";
 
 const cellCreator = (n: number | string) => `repeat(${n}, minmax(0, 1fr))`;
 
@@ -25,12 +25,12 @@ const Container = ({
   innerRef,
   ...rest
 }: Props) => {
-  let _grid: Grid = {};
+  let _grid: Grid | GridList = {};
 
   if (!noGrid && grid) {
     if (typeof grid === "string") {
       [_grid.cols, _grid.rows] = grid.split("x").map(cellCreator); // 4x5
-    } else {
+    } else if (!Array.isArray(grid)) {
       if (Number.isInteger(Math.abs(Number(grid.rows)))) {
         _grid.rows = cellCreator(grid.rows as number);
       } else {
@@ -43,16 +43,38 @@ const Container = ({
         _grid.cols = grid.cols ?? defaultCols;
       }
 
-      _grid.gap = gap;
+      _grid.bp = grid.bp;
+      _grid.gap = grid.gap || gap;
+    } else {
+      _grid = grid.map((g) => {
+        const result: GridBpRequired = { bp: 0 };
+
+        if (Number.isInteger(Math.abs(Number(g.rows)))) {
+          result.rows = cellCreator(g.rows as number);
+        } else {
+          result.rows = g.rows ?? defaultRows;
+        }
+
+        if (Number.isInteger(Math.abs(Number(g.cols)))) {
+          result.cols = cellCreator(g.cols as number);
+        } else {
+          result.cols = g.cols ?? defaultCols;
+        }
+
+        result.gap = g.gap;
+        result.bp = g.bp;
+        return result;
+      });
     }
   }
 
-  const styledProps = { ..._grid, noGrid, minWidth };
+  const styledProps = { noGrid, minWidth };
 
   return (
     <StyledContainer
       className={cx(styles.container, className)}
       gridPosition={gridPosition}
+      grid={_grid}
       ref={innerRef}
       {...styledProps}
       {...rest}

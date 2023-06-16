@@ -9,3 +9,4 @@ export type { SidebarProps } from "@allaround/sidebar";
 export type { NavbarProps } from "@allaround/navbar";
 export type * from "@allaround/hooks";
 export type { TextProps } from "@allaround/text";
+export type { TextareaProps } from "@allaround/textarea";

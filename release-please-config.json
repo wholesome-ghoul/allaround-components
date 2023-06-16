@@ -47,6 +47,9 @@
     },
     "src/packages/text": {
       "release-type": "node"
+    },
+    "src/packages/textarea": {
+      "release-type": "node"
     }
   }
 }

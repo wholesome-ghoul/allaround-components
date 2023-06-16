@@ -7,7 +7,17 @@ type Grid = {
   rows?: string | number;
   cols?: string | number;
   gap?: GridGap | string;
+  /**
+   * Breakpoint for grid position
+   *
+   * used for @media (min-width: ${bp}) { ... }
+   */
+  bp?: string | number;
 };
+
+type GridBpRequired = Pick<Grid, "rows" | "cols" | "gap"> &
+  Required<Pick<Grid, "bp">>;
+type GridList = GridBpRequired[];
 
 type GridPos = {
   rowPos?: string | number;
@@ -44,5 +54,15 @@ type BaseProps<Elem> = {
   innerRef?: React.RefObject<Elem>;
 };
 
-export type { BaseProps, GridPos, Grid, GridGap, GridPosList, Size, IconSize };
+export type {
+  BaseProps,
+  GridPos,
+  Grid,
+  GridGap,
+  GridPosList,
+  GridList,
+  GridBpRequired,
+  Size,
+  IconSize,
+};
 export { isIconSize, iconSize };
