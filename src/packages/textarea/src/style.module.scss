@@ -13,18 +13,33 @@
   }
 }
 
-.container {
-  background-color: var(--bg-color);
-  padding: 10px;
-  border: 2px solid var(--bg-color-secondary);
-  border-radius: 1rem;
+.parentContainer {
   color: var(--bg-color-secondary);
+
+  &:focus-within {
+    color: var(--fg-color);
+
+    > .border {
+      border: 2px solid var(--fg-color);
+    }
+  }
+}
+
+.border {
+  padding: 10px;
+  border-radius: 1rem;
+  border: 2px solid var(--bg-color-secondary);
   outline: none;
 
   &:focus-within {
     border: 2px solid var(--fg-color);
-    color: var(--fg-color);
   }
+}
+
+.outsideCounter {
+  text-align: right;
+  height: unset;
+  padding: 5px;
 }
 
 .label {
@@ -32,14 +47,26 @@
   text-align: left;
 }
 
-.isErrorContainer {
-  border: 2px solid var(--error-color);
+.isError {
   color: var(--error-color);
 
   &:focus-within {
-    border: 2px solid var(--error-color);
     color: var(--error-color);
   }
+}
+
+.isErrorContainer {
+  border: 2px solid var(--error-color);
+
+  &:focus-within {
+    border: 2px solid var(--error-color);
+  }
+}
+
+.counterContainer {
+  text-align: right;
+  height: unset;
+  user-select: none;
 }
 
 .smallTextarea {

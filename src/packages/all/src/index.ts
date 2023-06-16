@@ -12,3 +12,4 @@ export { default as Navbar } from "@allaround/navbar";
 export { default as hooks } from "@allaround/hooks";
 export { default as Text } from "@allaround/text";
 export { default as Textarea } from "@allaround/textarea";
+export { default as Tags } from "@allaround/tags";

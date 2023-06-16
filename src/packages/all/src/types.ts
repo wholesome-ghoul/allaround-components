@@ -10,3 +10,4 @@ export type { NavbarProps } from "@allaround/navbar";
 export type * from "@allaround/hooks";
 export type { TextProps } from "@allaround/text";
 export type { TextareaProps } from "@allaround/textarea";
+export type { TagsProps } from "@allaround/tags";

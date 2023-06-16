@@ -14,6 +14,12 @@ type Props = BaseProps<HTMLTextAreaElement> & {
   rows?: number;
 
   max?: number;
+  current?: number;
+  counterIsInside?: boolean;
+
+  copyHandler?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  delHandler?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+
   value?: string;
 
   isError?: boolean;

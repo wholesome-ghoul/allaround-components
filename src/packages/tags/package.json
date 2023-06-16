@@ -1,12 +1,12 @@
 {
-  "name": "@allaround/textarea",
+  "name": "@allaround/tags",
   "version": "1.0.0",
-  "description": "AllAround React Textarea component",
+  "description": "AllAround React Tags component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/packages/textarea/src/index.js",
+  "main": "dist/packages/tags/src/index.js",
   "files": [
     "dist/**/*"
   ],
@@ -18,10 +18,8 @@
   },
   "devDependencies": {
     "@allaround/configs-tsconfig": "^1.0.0",
-    "@allaround/container": "^1.5.0",
-    "@allaround/label": "^1.5.0",
-    "@allaround/icons": "^1.0.0",
-    "@allaround/button": "^1.0.0",
+    "@allaround/input": "^1.0.0",
+    "@allaround/hooks": "^1.0.0",
     "@cypress/react18": "^2.0.0",
     "cypress": "^12.13.0"
   }
