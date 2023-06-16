@@ -19,6 +19,7 @@ const Textarea = ({
   placeholder,
   value,
   max,
+  rows,
   htmlFor,
   label,
   className,
@@ -52,7 +53,7 @@ const Textarea = ({
     <Container
       grid={{
         cols: 1,
-        rows: "1fr 5fr 1fr",
+        rows: "auto 5fr auto",
         gap: "10px",
       }}
       styles={{ width: "100%" }}
@@ -81,6 +82,7 @@ const Textarea = ({
           onChange={handleOnChange}
           placeholder={placeholder}
           value={value}
+          rows={rows}
           ref={innerRef}
           gridPosition={gridPosition}
           {...rest}

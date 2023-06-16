@@ -11,6 +11,8 @@ type Props = BaseProps<HTMLTextAreaElement> & {
   htmlFor?: string;
   label?: string;
 
+  rows?: number;
+
   max?: number;
   value?: string;
 
