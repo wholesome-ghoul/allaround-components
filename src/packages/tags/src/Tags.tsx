@@ -38,7 +38,7 @@ const Tags = ({
           <Tag
             value={currentValue}
             key={currentValue}
-            handleTagChange={() => {}}
+            handleTagChange={handleTagChange}
             handleTagDel={handleTagDel}
           />
         );
@@ -70,6 +70,20 @@ const Tags = ({
     });
   };
 
+  const handleTagChange = (newValue: string, key: string) => {
+    setElements((prevElements: TagElement[]) => {
+      return prevElements
+        .map((element: TagElement) => {
+          if (element.name === key) {
+            return { ...element, name: newValue };
+          }
+
+          return element;
+        })
+        .filter((element: TagElement) => element.name !== "");
+    });
+  };
+
   const handleMainInputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value.includes(",")) {
       const newValues = e.target.value.split(",");
@@ -87,7 +101,7 @@ const Tags = ({
           <Tag
             value={value}
             key={value}
-            handleTagChange={() => {}}
+            handleTagChange={handleTagChange}
             handleTagDel={handleTagDel}
           />
         );
