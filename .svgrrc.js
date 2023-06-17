@@ -46,6 +46,7 @@ module.exports = {
   filenameCase: "pascal",
   jsxRuntime: "automatic",
   icon: "1rem",
+  ignoreExisting: true,
   jsx: {
     babelConfig: {
       plugins: [
@@ -84,7 +85,8 @@ module.exports = {
             values: [
               {
                 value: "1rem",
-                newValue: "isIconSize(props.size) ? iconSize[props.size] : props.size",
+                newValue:
+                  "isIconSize(props.size) ? iconSize[props.size] : props.size",
                 literal: true,
               },
             ],

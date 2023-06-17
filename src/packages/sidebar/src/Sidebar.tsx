@@ -39,7 +39,7 @@ Sidebar.defaultProps = {
   sticky: false,
   overlap: false,
   gap: "1rem",
-  grid: { cols: 1, rows: 12 },
+  grid: { cols: 1, rows: "repeat(12, 1fr)" },
 };
 
 export default Sidebar;

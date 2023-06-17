@@ -22,7 +22,8 @@
 }
 
 .active {
-  outline: 2px solid var(--fg-color);
+  // outline: 2px solid var(--fg-color);
+  background-color: var(--bg-color);
 }
 
 .iconButton {
