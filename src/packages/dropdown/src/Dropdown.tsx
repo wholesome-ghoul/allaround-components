@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import cx from "classnames";
 import Button from "@allaround/button";
@@ -26,6 +25,7 @@ const Dropdown = ({
   isOpen,
   setIsOpen,
   activeIndicator,
+  dropdownItemsRef,
   ...rest
 }: Props) => {
   const handleDropdown = () => {
@@ -69,6 +69,7 @@ const Dropdown = ({
         popup={popup}
         selectedIndex={selectedIndex}
         activeIndicator={activeIndicator}
+        dropdownItemsRef={dropdownItemsRef}
       >
         {children}
       </DropdownItems>
@@ -82,9 +83,11 @@ const DropdownItems = ({
   popup,
   selectedIndex,
   activeIndicator,
+  dropdownItemsRef,
 }: any) => {
   const elem = (
     <Container
+      innerRef={dropdownItemsRef}
       grid={{
         cols: 1,
         rows: Array.isArray(children) ? children?.length : 1,

@@ -15,6 +15,8 @@ type Props = BaseProps<HTMLDivElement> &
     enableArrow?: boolean;
     activeIndicator?: boolean;
     text?: string;
+
+    dropdownItemsRef?: React.MutableRefObject<HTMLDivElement | null>;
   };
 
 export default Props;
