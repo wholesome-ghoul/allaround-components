@@ -37,7 +37,7 @@ const Tags = ({
         const newElement = (
           <Tag
             value={currentValue}
-            key={currentValue}
+            key={`${currentValue}-${elements.length}}`}
             handleTagChange={handleTagChange}
             handleTagDel={handleTagDel}
           />
@@ -64,17 +64,19 @@ const Tags = ({
     ref?.current!
   );
 
-  const handleTagDel = (key: string) => {
+  const handleTagDel = (currValue: string) => {
     setElements((prevElements: TagElement[]) => {
-      return prevElements.filter((element: TagElement) => element.name !== key);
+      return prevElements.filter(
+        (element: TagElement) => element.name !== currValue
+      );
     });
   };
 
-  const handleTagChange = (newValue: string, key: string) => {
+  const handleTagChange = (newValue: string, currValue: string) => {
     setElements((prevElements: TagElement[]) => {
       return prevElements
         .map((element: TagElement) => {
-          if (element.name === key) {
+          if (element.name === currValue) {
             return { ...element, name: newValue };
           }
 
@@ -100,7 +102,7 @@ const Tags = ({
         const newElement = (
           <Tag
             value={value}
-            key={value}
+            key={`${currentValue}-${elements.length}}`}
             handleTagChange={handleTagChange}
             handleTagDel={handleTagDel}
           />
@@ -157,6 +159,7 @@ const Tags = ({
             onChange={handleMainInputOnChange}
             className={cx(styles.tagMainInput)}
             innerRef={ref}
+            placeholder="Add tag"
           />
         </div>
       </div>

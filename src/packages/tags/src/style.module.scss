@@ -16,6 +16,10 @@
   &:focus {
     outline: none;
   }
+
+  &::placeholder {
+    color: var(--bg-color-secondary);
+  }
 }
 
 .tagMainInputContainer {
@@ -26,6 +30,7 @@
 .tagInput {
   color: var(--fg-color);
   box-shadow: none;
+  text-overflow: ellipsis;
 
   &:focus {
     outline: none;

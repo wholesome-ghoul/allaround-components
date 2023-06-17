@@ -42,7 +42,7 @@ const Textarea = ({
     }
 
     setShowCounter(true);
-    if (current) setTotalChars(current);
+    if (current !== undefined) setTotalChars(current);
 
     if (totalChars > max) {
       setIsError(true);

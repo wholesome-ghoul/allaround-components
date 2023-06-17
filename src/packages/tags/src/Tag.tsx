@@ -21,7 +21,7 @@ const Tag = ({ value, handleTagChange, handleTagDel }: any) => {
         className={styles.tagInput}
       />
       <Button
-        onClick={() => handleTagDel(value)}
+        onClick={() => handleTagDel(_value)}
         icon={<Icons.DelIcon />}
         noBorder
       />
