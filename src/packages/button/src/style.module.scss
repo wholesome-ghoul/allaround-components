@@ -26,7 +26,6 @@
 }
 
 .iconButton {
-  border-radius: 50%;
   color: var(--fg-color);
 
   display: flex;
@@ -46,7 +45,6 @@
 
   &:hover {
     border-radius: 1rem;
-    border: 0.1rem solid var(--fg-hover-color);
 
     & > svg {
       fill: var(--fg-hover-color);
@@ -88,6 +86,7 @@
 
 .fill {
   width: 100%;
+  justify-content: left;
 }
 
 .noBorder {

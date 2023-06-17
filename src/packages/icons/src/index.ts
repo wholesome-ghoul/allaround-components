@@ -1,5 +1,6 @@
 export { default as AaIcon } from "./Aa";
 export { default as CopyIcon } from "./Copy";
+export { default as CreateIcon } from "./Create";
 export { default as DefaultAvatarIcon } from "./DefaultAvatar";
 export { default as DelIcon } from "./Del";
 export { default as HamburgerIcon } from "./Hamburger";
