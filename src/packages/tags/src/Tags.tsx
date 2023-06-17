@@ -102,7 +102,7 @@ const Tags = ({
         const newElement = (
           <Tag
             value={value}
-            key={`${currentValue}-${elements.length}}`}
+            key={`${value}-${elements.length}}`}
             handleTagChange={handleTagChange}
             handleTagDel={handleTagDel}
           />
@@ -146,8 +146,8 @@ const Tags = ({
       current={elements.reduce((acc: number, curr: TagElement) => {
         return acc + curr.name.length;
       }, 0)}
-      copyHandler={copyAllHandler}
-      delHandler={delAllHandler}
+      copyHandler={elements.length > 0 ? copyAllHandler : undefined}
+      delHandler={elements.length > 1 ? delAllHandler : undefined}
       {...rest}
       data-cy={dataCy}
     >
