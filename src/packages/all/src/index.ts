@@ -13,3 +13,4 @@ export { default as hooks } from "@allaround/hooks";
 export { default as Text } from "@allaround/text";
 export { default as Textarea } from "@allaround/textarea";
 export { default as Tags } from "@allaround/tags";
+export { default as Dropdown } from "@allaround/dropdown";

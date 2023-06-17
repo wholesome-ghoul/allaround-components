@@ -53,6 +53,9 @@
     },
     "src/packages/tags": {
       "release-type": "node"
+    },
+    "src/packages/dropdown": {
+      "release-type": "node"
     }
   }
 }

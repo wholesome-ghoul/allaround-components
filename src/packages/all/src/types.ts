@@ -11,3 +11,4 @@ export type * from "@allaround/hooks";
 export type { TextProps } from "@allaround/text";
 export type { TextareaProps } from "@allaround/textarea";
 export type { TagsProps } from "@allaround/tags";
+export type { DropdownProps } from "@allaround/dropdown";
