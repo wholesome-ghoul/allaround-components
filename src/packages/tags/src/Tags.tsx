@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import cx from "classnames";
 import Input from "@allaround/input";
 import hooks from "@allaround/hooks";
@@ -22,6 +22,7 @@ const Tags = ({
   fill,
   dataCy,
   innerRef,
+  onChange,
   className,
   ...rest
 }: Props) => {
@@ -130,6 +131,10 @@ const Tags = ({
   const delAllHandler = () => {
     setElements([]);
   };
+
+  useEffect(() => {
+    onChange && onChange(elements.map((element: TagElement) => element.name));
+  }, [elements]);
 
   return (
     <StyledTags
