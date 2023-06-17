@@ -1,0 +1,68 @@
+.tagsContainer {
+  color: var(--fg-color);
+  font-family: inherit;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tagMainInput {
+  color: inherit;
+  box-shadow: none;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--bg-color-secondary);
+  }
+}
+
+.tagMainInputContainer {
+  display: flex;
+  flex-grow: 1;
+}
+
+.tagInput {
+  color: var(--fg-color);
+  box-shadow: none;
+  text-overflow: ellipsis;
+
+  &:focus {
+    outline: none;
+    color: var(--fg-color);
+  }
+}
+
+.tagContainer {
+  border-radius: 1rem;
+  border: 1px solid var(--fg-color);
+  display: inline-flex;
+  margin: 0.5rem 0.5rem;
+  align-items: center;
+}
+
+.tagText {
+  padding: 0.5rem;
+  font-size: var(--font-size-small);
+}
+
+.smallTags {
+  font-size: var(--font-size-small);
+}
+
+.mediumTags {
+  font-size: var(--font-size-medium);
+}
+
+.largeTags {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

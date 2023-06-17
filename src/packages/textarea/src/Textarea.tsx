@@ -1,7 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import cx from "classnames";
 import Container from "@allaround/container";
 import Label from "@allaround/label";
+import Icons from "@allaround/icons";
+import Button from "@allaround/button";
 
 import Props from "./types";
 import styles from "./style.module.scss";
@@ -19,15 +22,18 @@ const Textarea = ({
   placeholder,
   value,
   max,
+  current,
   rows,
   htmlFor,
   label,
+  counterIsInside,
   className,
   ...rest
 }: Props) => {
   const [_isError, setIsError] = useState(isError);
   const [showCounter, setShowCounter] = useState(false);
-  const [totalChars, setTotalChars] = useState(0);
+  const [totalChars, setTotalChars] = useState(current ?? 0);
+  const parentContainerRef = useRef(null);
 
   useEffect(() => {
     if (!max) {
@@ -36,13 +42,14 @@ const Textarea = ({
     }
 
     setShowCounter(true);
+    if (current !== undefined) setTotalChars(current);
 
     if (totalChars > max) {
       setIsError(true);
     } else {
       setIsError(false);
     }
-  }, [max, totalChars]);
+  }, [max, totalChars, current]);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTotalChars(e.target.value.length);
@@ -51,49 +58,136 @@ const Textarea = ({
 
   return (
     <Container
+      innerRef={parentContainerRef}
+      className={cx({
+        [styles.border]: counterIsInside,
+        [styles.isError]: isError || _isError,
+        [styles.parentContainer]: !(isError || _isError),
+        [styles.isErrorContainer]: counterIsInside && (isError || _isError),
+      })}
       grid={{
         cols: 1,
-        rows: "auto 5fr auto",
-        gap: "10px",
+        rows: "auto",
       }}
       styles={{ width: "100%" }}
-      className={cx(styles.container, {
-        [styles.isErrorContainer]: isError || _isError,
-      })}
       autoHor
     >
-      {!!label && (
+      <Container
+        grid={{
+          cols: 1,
+          rows: "auto 5fr auto",
+          gap: "10px",
+        }}
+        styles={{ width: "100%" }}
+        className={cx({
+          [styles.border]: !counterIsInside,
+          [styles.isErrorContainer]: !counterIsInside && (isError || _isError),
+        })}
+        autoHor
+      >
+        {!!label && (
+          <Container noGrid>
+            <Label htmlFor={htmlFor} size="small" className={cx(styles.label)}>
+              {label}
+            </Label>
+          </Container>
+        )}
         <Container noGrid>
-          <Label htmlFor={htmlFor} size="small" className={cx(styles.label)}>
-            {label}
-          </Label>
-        </Container>
-      )}
-      <Container noGrid>
-        <StyledTextarea
-          className={cx(
-            styles.textarea,
-            {
-              [styles.fill]: fill,
-            },
-            styles[`${size}Textarea`],
-            className
+          {children ?? (
+            <StyledTextarea
+              className={cx(
+                styles.textarea,
+                {
+                  [styles.fill]: fill,
+                },
+                styles[`${size}Textarea`],
+                className
+              )}
+              onChange={handleOnChange}
+              placeholder={placeholder}
+              value={value}
+              rows={rows}
+              ref={innerRef}
+              gridPosition={gridPosition}
+              {...rest}
+              data-cy={dataCy}
+            />
           )}
-          onChange={handleOnChange}
-          placeholder={placeholder}
-          value={value}
-          rows={rows}
-          ref={innerRef}
-          gridPosition={gridPosition}
+        </Container>
+        <Utilities
+          {...{
+            showCounter,
+            counterIsInside,
+            parentContainerRef,
+            totalChars,
+            max,
+          }}
           {...rest}
-          data-cy={dataCy}
         />
       </Container>
-      {showCounter && (
-        <Container noGrid styles={{ textAlign: "right" }}>
-          {totalChars}/{max}
-        </Container>
+    </Container>
+  );
+};
+
+const Utilities = ({
+  showCounter,
+  counterIsInside,
+  parentContainerRef,
+  totalChars,
+  max,
+  ...rest
+}: any) => {
+  if (!showCounter) return;
+
+  if (!counterIsInside && parentContainerRef) {
+    return createPortal(
+      <UtilityComponents
+        totalChars={totalChars}
+        max={max}
+        className={cx(styles.outsideCounter)}
+        {...rest}
+      />,
+      parentContainerRef.current
+    );
+  }
+
+  return <UtilityComponents totalChars={totalChars} max={max} {...rest} />;
+};
+
+const UtilityComponents = ({ totalChars, max, className, ...rest }: any) => {
+  return (
+    <Container
+      grid={{
+        cols: "auto auto 1fr",
+        rows: 1,
+        gap: "5px",
+      }}
+      className={className}
+      {...rest}
+    >
+      {rest.copyHandler && (
+        <Button
+          icon={<Icons.CopyIcon size="large" />}
+          onClick={rest.copyHandler}
+          styles={{ color: "inherit" }}
+          noBorder
+        />
       )}
+      {rest.delHandler && (
+        <Button
+          icon={<Icons.DelIcon size="large" />}
+          onClick={rest.delHandler}
+          styles={{ color: "inherit" }}
+          noBorder
+        />
+      )}
+      <Container
+        noGrid
+        className={cx(styles.counterContainer)}
+        gridPosition={{ colPos: 3 }}
+      >
+        {totalChars}/{max}
+      </Container>
     </Container>
   );
 };
@@ -102,10 +196,8 @@ Textarea.defaultProps = {
   size: "small",
   dataCy: "textarea-component",
   resize: "none",
-  // width: "400px",
-  // height: "200px",
-  hasCounter: false,
   isError: false,
+  counterIsInside: true,
 };
 
 export default Textarea;

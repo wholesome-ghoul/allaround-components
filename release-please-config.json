@@ -50,6 +50,9 @@
     },
     "src/packages/textarea": {
       "release-type": "node"
+    },
+    "src/packages/tags": {
+      "release-type": "node"
     }
   }
 }
