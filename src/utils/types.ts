@@ -52,6 +52,7 @@ type BaseProps<Elem> = {
   dataCy?: string;
   styles?: React.CSSProperties;
   innerRef?: React.RefObject<Elem>;
+  onClick?: (e: React.MouseEvent<Elem>) => void;
 };
 
 export type {

@@ -30,6 +30,7 @@ const Container = ({
   if (!noGrid && grid) {
     if (typeof grid === "string") {
       [_grid.cols, _grid.rows] = grid.split("x").map(cellCreator); // 4x5
+      _grid.gap = gap;
     } else if (!Array.isArray(grid)) {
       if (Number.isInteger(Math.abs(Number(grid.rows)))) {
         _grid.rows = cellCreator(grid.rows as number);
@@ -75,6 +76,7 @@ const Container = ({
       className={cx(styles.container, className)}
       gridPosition={gridPosition}
       grid={_grid}
+      gap={gap}
       ref={innerRef}
       {...styledProps}
       {...rest}

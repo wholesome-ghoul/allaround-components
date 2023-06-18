@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Select from "./Select";
+
+<Meta title="Select" component={Select} />
+
+export const Template = (args) => <Select {...args} />;
+
+# Select
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>
