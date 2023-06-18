@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Upload from "./Upload";
+
+<Meta title="Upload" component={Upload} />
+
+export const Template = (args) => <Upload {...args} />;
+
+# Upload
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>

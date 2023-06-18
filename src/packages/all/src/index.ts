@@ -15,3 +15,4 @@ export { default as Textarea } from "@allaround/textarea";
 export { default as Tags } from "@allaround/tags";
 export { default as Dropdown } from "@allaround/dropdown";
 export { default as Select } from "@allaround/select";
+export { default as Upload } from "@allaround/upload";

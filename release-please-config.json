@@ -59,6 +59,9 @@
     },
     "src/packages/select": {
       "release-type": "node"
+    },
+    "src/packages/upload": {
+      "release-type": "node"
     }
   }
 }
