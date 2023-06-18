@@ -11,14 +11,18 @@ import {
 import Props from "./types";
 
 type CSS = Grid &
-  Pick<Props, "noGrid" | "minWidth" | "gridPosition" | "grid" | "styles">;
+  Pick<
+    Props,
+    "noGrid" | "minWidth" | "gridPosition" | "grid" | "styles" | "gap"
+  >;
 
 const StyledContainer = styled.div`
-  ${({ grid, gridPosition, noGrid, minWidth, styles }: CSS) => css`
+  ${({ grid, gridPosition, gap, noGrid, minWidth, styles }: CSS) => css`
     ${!noGrid && "display: grid;"}
 
     ${applyGrid(grid as Grid | GridList)};
     ${applyGridPosition(gridPosition)};
+    ${gap && `gap: ${gap};`}
 
     min-width: ${minWidth};
 

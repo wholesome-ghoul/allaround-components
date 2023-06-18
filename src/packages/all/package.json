@@ -35,6 +35,7 @@
     "@allaround/text": "^1.0.0",
     "@allaround/textarea": "^1.0.0",
     "@allaround/tags": "^1.0.0",
-    "@allaround/dropdown": "^1.0.0"
+    "@allaround/dropdown": "^1.0.0",
+    "@allaround/select": "^1.0.0"
   }
 }

@@ -1,0 +1,84 @@
+.select {
+  position: relative;
+  color: var(--fg-color);
+  font-family: inherit;
+  background-color: var(--bg-color);
+  outline: none;
+  border: 1px solid var(--bg-color-secondary);
+  border-radius: 1rem;
+  padding: 8px;
+
+  &:hover {
+    cursor: pointer;
+    border-color: var(--fg-color);
+  }
+}
+
+.active {
+  border-color: var(--fg-color);
+}
+
+.optionsContainer {
+  position: absolute;
+  left: 0;
+  background: inherit;
+  border: 1px solid var(--bg-color-secondary);
+  border-radius: 1rem;
+  justify-items: left;
+  height: auto;
+  overflow: auto;
+  z-index: 201;
+  padding: 8px;
+  justify-content: unset;
+
+  display: flex;
+  flex-flow: column;
+}
+
+.option {
+  padding: 8px;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-color-secondary);
+  }
+}
+
+.selectedButton {
+  display: flex;
+  text-align: left;
+
+  &:hover {
+    color: var(--fg-color);
+    background-color: unset;
+  }
+}
+
+.selectedOption {
+  background-color: var(--bg-color-secondary);
+}
+
+.arrow {
+  margin-left: auto !important;
+}
+
+.text {
+  margin-right: 10px;
+}
+
+.smallSelect {
+  font-size: var(--font-size-small);
+}
+
+.mediumSelect {
+  font-size: var(--font-size-medium);
+}
+
+.largeSelect {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}
