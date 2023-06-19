@@ -68,6 +68,9 @@
     },
     "src/packages/video": {
       "release-type": "node"
+    },
+    "src/packages/image": {
+      "release-type": "node"
     }
   }
 }

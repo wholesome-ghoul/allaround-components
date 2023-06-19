@@ -1,0 +1,42 @@
+.image {
+  color: var(--fg-color);
+  font-family: inherit;
+}
+
+.imageContainer {
+  position: relative;
+  // width: 100%;
+  // padding-top: 56.25%; /* 16:9 Aspect Ratio */
+
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   padding-top: inherit;
+  // }
+}
+
+.delButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.smallImage {
+  font-size: var(--font-size-small);
+}
+
+.mediumImage {
+  font-size: var(--font-size-medium);
+}
+
+.largeImage {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

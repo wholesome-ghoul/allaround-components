@@ -89,7 +89,7 @@ const Select = ({
     >
       <Button
         onClick={() => {}}
-        className={cx(styles.selectedButton)}
+        className={cx(styles.selectButton)}
         noBorder
         transparent
         fill
@@ -97,19 +97,22 @@ const Select = ({
         <Text className={cx(styles.text)}>{options[selectedIndex].label}</Text>
         <Icons.ArrowDownIcon className={cx(styles.arrow)} />
       </Button>
-      {isOpen && (
-        <Container className={cx(styles.optionsContainer)} noGrid>
-          {options.map((option, index) => (
-            <Option
-              key={option.value}
-              index={index}
-              handleSelect={handleSelect}
-              isSelected={selectedIndex === index}
-              {...option}
-            />
-          ))}
-        </Container>
-      )}
+      <Container
+        className={cx(styles.optionsContainer, {
+          [styles.none]: !isOpen,
+        })}
+        noGrid
+      >
+        {options.map((option, index) => (
+          <Option
+            key={option.value}
+            index={index}
+            handleSelect={handleSelect}
+            isSelected={selectedIndex === index}
+            {...option}
+          />
+        ))}
+      </Container>
     </StyledSelect>
   );
 };

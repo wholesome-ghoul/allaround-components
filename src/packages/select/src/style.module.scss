@@ -49,7 +49,7 @@
   }
 }
 
-.selectedButton {
+.selectButton {
   display: flex;
   text-align: left;
 
@@ -85,6 +85,11 @@
 
 .largeSelect {
   font-size: var(--font-size-large);
+}
+
+.none {
+  display: none;
+  z-index: -1;
 }
 
 .fill {
