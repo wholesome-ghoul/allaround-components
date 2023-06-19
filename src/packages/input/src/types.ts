@@ -4,12 +4,13 @@ type InputType = "text" | "password" | "email" | "file";
 
 type Props = BaseProps<HTMLInputElement> & {
   type?: InputType;
-  value: string;
+  value?: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   size?: Size;
   isError?: boolean;
   minWidth?: string;
+  accept?: string;
 };
 
 export default Props;

@@ -38,6 +38,7 @@
     "@allaround/dropdown": "^1.0.0",
     "@allaround/select": "^1.0.0",
     "@allaround/upload": "^1.0.0",
-    "@allaround/scheduler": "^1.0.0"
+    "@allaround/scheduler": "^1.0.0",
+    "@allaround/video": "^1.0.0"
   }
 }

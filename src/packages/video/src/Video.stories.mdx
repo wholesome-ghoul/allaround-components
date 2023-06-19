@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Video from "./Video";
+
+<Meta title="Video" component={Video} />
+
+export const Template = (args) => <Video {...args} />;
+
+# Video
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>
