@@ -16,3 +16,4 @@ export type { SelectProps } from "@allaround/select";
 export type { UploadProps } from "@allaround/upload";
 export type { SchedulerProps } from "@allaround/scheduler";
 export type { VideoProps } from "@allaround/video";
+export type { ImageProps } from "@allaround/image";

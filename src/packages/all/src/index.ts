@@ -18,3 +18,4 @@ export { default as Select } from "@allaround/select";
 export { default as Upload } from "@allaround/upload";
 export { default as Scheduler } from "@allaround/scheduler";
 export { default as Video } from "@allaround/video";
+export { default as Image } from "@allaround/image";
