@@ -14,6 +14,8 @@ type Props = Omit<BaseProps<HTMLDivElement>, "fill"> &
      */
     autoVer?: boolean;
     autoHor?: boolean;
+
+    flex?: boolean;
   };
 
 export default Props;

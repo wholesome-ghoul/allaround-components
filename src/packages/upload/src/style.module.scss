@@ -31,7 +31,7 @@
   border: 3px dotted var(--bg-color-secondary);
   border-radius: 1rem;
 
-  &:hover, &:active {
+  &:hover, &:active, &:focus {
     color: var(--fg-hover-color);
     background-color: var(--bg-color-secondary);
   }

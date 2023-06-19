@@ -22,6 +22,7 @@ const Container = ({
   autoHor,
   dataCy,
   minWidth,
+  flex,
   innerRef,
   ...rest
 }: Props) => {
@@ -73,7 +74,13 @@ const Container = ({
 
   return (
     <StyledContainer
-      className={cx(styles.container, className)}
+      className={cx(
+        styles.container,
+        {
+          [styles.flex]: flex,
+        },
+        className
+      )}
       gridPosition={gridPosition}
       grid={_grid}
       gap={gap}
@@ -120,6 +127,7 @@ Container.defaultProps = {
   minWidth: "auto",
   autoVer: false,
   autoHor: false,
+  flex: false,
 };
 
 export default Container;
