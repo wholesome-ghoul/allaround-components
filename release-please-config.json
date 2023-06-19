@@ -62,6 +62,9 @@
     },
     "src/packages/upload": {
       "release-type": "node"
+    },
+    "src/packages/scheduler": {
+      "release-type": "node"
     }
   }
 }

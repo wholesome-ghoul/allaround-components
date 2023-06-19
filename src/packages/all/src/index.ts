@@ -16,3 +16,4 @@ export { default as Tags } from "@allaround/tags";
 export { default as Dropdown } from "@allaround/dropdown";
 export { default as Select } from "@allaround/select";
 export { default as Upload } from "@allaround/upload";
+export { default as Scheduler } from "@allaround/scheduler";

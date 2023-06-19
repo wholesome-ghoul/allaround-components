@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import cx from "classnames";
 import Container from "@allaround/container";
 import Button from "@allaround/button";
@@ -98,7 +98,7 @@ const Select = ({
         <Icons.ArrowDownIcon className={cx(styles.arrow)} />
       </Button>
       {isOpen && (
-        <Container className={cx(styles.optionsContainer)} gap="8px" noGrid>
+        <Container className={cx(styles.optionsContainer)} noGrid>
           {options.map((option, index) => (
             <Option
               key={option.value}

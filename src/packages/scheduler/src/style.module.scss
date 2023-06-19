@@ -1,0 +1,133 @@
+.scheduler {
+  color: var(--fg-color);
+  font-family: inherit;
+  text-align: center;
+  position: relative;
+}
+
+.calendar {
+  background-color: var(--bg-color);
+  border: 1px solid var(--fg-color);
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 205;
+  position: absolute;
+  width: min-content;
+  height: min-content;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--fg-color);
+    border-radius: 8px;
+    grid-row: 9;
+    top: -2%;
+    left: 0;
+    grid-column: 1 / -1;
+  }
+}
+
+.day {
+  text-align: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  display: flex;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+  }
+}
+
+.today {
+  border: 1px solid var(--fg-color);
+}
+
+.selected {
+  border: 1px solid var(--fg-color);
+  background-color: var(--fg-color);
+  color: var(--bg-color);
+}
+
+.past {
+  color: var(--bg-color-secondary);
+  cursor: not-allowed;
+
+  &:hover {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--bg-color-secondary);
+  }
+}
+
+.monthYear {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  display: flex;
+}
+
+.arrowContainer {
+  display: flex;
+  align-items: center;
+}
+
+.arrowButton {
+  &:hover {
+    background-color: var(--bg-color-secondary);
+  }
+}
+
+.datepicker {
+  display: flex;
+}
+
+.datepickerSelect {
+  text-align: left;
+  width: 40%;
+}
+
+.timezone {
+  display: flex;
+  color: var(--bg-color-tertiary);
+}
+
+.smallScheduler {
+  font-size: var(--font-size-small);
+}
+
+.mediumScheduler {
+  font-size: var(--font-size-medium);
+}
+
+.largeScheduler {
+  font-size: var(--font-size-large);
+}
+
+.up {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.down {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+.fill {
+  width: 100%;
+
+  button {
+    width: 100%;
+  }
+}

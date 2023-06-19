@@ -14,3 +14,4 @@ export type { TagsProps } from "@allaround/tags";
 export type { DropdownProps } from "@allaround/dropdown";
 export type { SelectProps } from "@allaround/select";
 export type { UploadProps } from "@allaround/upload";
+export type { SchedulerProps } from "@allaround/scheduler";

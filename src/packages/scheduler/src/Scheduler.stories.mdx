@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Scheduler from "./Scheduler";
+
+<Meta title="Scheduler" component={Scheduler} />
+
+export const Template = (args) => <Scheduler {...args} />;
+
+# Scheduler
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>
