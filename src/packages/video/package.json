@@ -1,12 +1,12 @@
 {
-  "name": "@allaround/upload",
+  "name": "@allaround/video",
   "version": "1.0.0",
-  "description": "AllAround React Upload component",
+  "description": "AllAround React Video component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/packages/upload/src/index.js",
+  "main": "dist/packages/video/src/index.js",
   "files": [
     "dist/**/*"
   ],
@@ -19,8 +19,6 @@
   "devDependencies": {
     "@allaround/configs-tsconfig": "^1.0.0",
     "@cypress/react18": "^2.0.0",
-    "uuid": "^9.0.0",
-    "@types/uuid": "^9.0.2",
     "cypress": "^12.13.0"
   }
 }

@@ -16,6 +16,7 @@ const Input = ({
   minWidth,
   innerRef,
   dataCy,
+  accept,
   className,
   ...rest
 }: Props) => {
@@ -37,6 +38,7 @@ const Input = ({
       value={value}
       onChange={onChange}
       gridPosition={gridPosition}
+      accept={accept}
       ref={innerRef}
       {...styledProps}
       {...rest}

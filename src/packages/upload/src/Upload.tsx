@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import cx from "classnames";
 import hooks from "@allaround/hooks";
 import Input from "@allaround/input";
@@ -26,7 +27,6 @@ const fileValidator = (file: File, accept?: string[], maxSize?: number) => {
   return { text: "", show: false };
 };
 
-// TODO: max size
 const Upload = ({
   children,
   size,
@@ -45,6 +45,25 @@ const Upload = ({
 }: Props) => {
   const uploadRef = useRef(null);
   const [dragging, setDragging] = useState(false);
+  const inputId = useMemo(() => uuidv4(), []);
+  const handleDrop = useCallback(
+    (e: any) => {
+      e.preventDefault();
+      setDragging(false);
+
+      const file = e.dataTransfer.files[0];
+
+      const { text, show } = fileValidator(file, accept, maxSize);
+
+      if (show) {
+        handleError({ text, show });
+        return;
+      }
+
+      setFile(file);
+    },
+    [accept, maxSize, setFile, handleError]
+  );
 
   useEventListener(
     "dragover",
@@ -80,24 +99,17 @@ const Upload = ({
     uploadRef?.current!
   );
 
-  useEventListener(
-    "drop",
-    (e: any) => {
-      e.preventDefault();
-      setDragging(false);
-      const file = e.dataTransfer.files[0];
+  useEventListener("drop", handleDrop, uploadRef?.current!);
 
-      const { text, show } = fileValidator(file, accept, maxSize);
+  // useEffect(() => {
+  //   if (!uploadRef?.current) return;
 
-      if (show) {
-        handleError({ text, show });
-        return;
-      }
+  //   (uploadRef.current as any)?.addEventListener("drop", handleDrop);
 
-      setFile(file);
-    },
-    uploadRef?.current!
-  );
+  //   return () => {
+  //     (uploadRef.current as any)?.removeEventListener("drop", handleDrop);
+  //   }
+  // }, [handleDrop])
 
   return (
     <StyledUpload
@@ -117,7 +129,7 @@ const Upload = ({
     >
       <Label
         innerRef={uploadRef}
-        htmlFor="upload-input"
+        htmlFor={inputId}
         className={cx(styles.label, {
           [styles.isError]: isError,
           [styles.active]: dragging,
@@ -141,9 +153,9 @@ const Upload = ({
 
           setFile(file);
         }}
-        value=""
+        accept={accept?.join(",")}
         className={cx(styles.input)}
-        id="upload-input"
+        id={inputId}
       />
     </StyledUpload>
   );

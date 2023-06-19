@@ -1,0 +1,32 @@
+.video {
+  color: var(--fg-color);
+  font-family: inherit;
+
+  &::-webkit-media-controls {
+    /* Add custom styles to the controls container */
+  }
+
+  &::-webkit-media-controls-play-button {
+    /* Add custom styles to the play button */
+  }
+
+  &::-webkit-media-controls-volume-slider {
+    /* Add custom styles to the volume slider */
+  }
+}
+
+.smallVideo {
+  font-size: var(--font-size-small);
+}
+
+.mediumVideo {
+  font-size: var(--font-size-medium);
+}
+
+.largeVideo {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

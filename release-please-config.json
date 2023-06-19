@@ -65,6 +65,9 @@
     },
     "src/packages/scheduler": {
       "release-type": "node"
+    },
+    "src/packages/video": {
+      "release-type": "node"
     }
   }
 }
