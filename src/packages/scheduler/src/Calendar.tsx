@@ -82,7 +82,7 @@ const Calendar = ({ setDate, date, direction, innerRef }: any) => {
   return (
     <Container
       grid={{
-        rows: "repeat(10, minmax(2rem, auto))",
+        rows: "repeat(10, minmax(38px, auto))",
         cols: "repeat(7, minmax(38px, auto))",
         gap: "5px",
       }}

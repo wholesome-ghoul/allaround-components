@@ -7,6 +7,7 @@ import StyledButton from "./StyledButton";
 const Button = (props: Props) => {
   const {
     children,
+    variant,
     size,
     gridPosition,
     onClick,
@@ -26,6 +27,7 @@ const Button = (props: Props) => {
       <StyledButton
         className={cx(
           styles.button,
+          styles[`${variant}Variant`],
           styles.iconButton,
           {
             [styles.icon]: !!children,
@@ -54,6 +56,7 @@ const Button = (props: Props) => {
       className={cx(
         styles.button,
         styles[`${size}Button`],
+          styles[`${variant}Variant`],
         {
           [styles.fill]: fill,
           [styles.transparent]: transparent,

@@ -8,6 +8,7 @@ export { default as DropdownItemIcon } from "./DropdownItem";
 export { default as DropdownLastItemIcon } from "./DropdownLastItem";
 export { default as HamburgerIcon } from "./Hamburger";
 export { default as MoonIcon } from "./Moon";
+export { default as PlusIcon } from "./Plus";
 export { default as SchedulerIcon } from "./Scheduler";
 export { default as SignOutIcon } from "./SignOut";
 export { default as SunIcon } from "./Sun";

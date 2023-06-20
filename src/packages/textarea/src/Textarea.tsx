@@ -27,6 +27,7 @@ const Textarea = ({
   htmlFor,
   label,
   counterIsInside,
+  flex,
   className,
   ...rest
 }: Props) => {
@@ -65,11 +66,18 @@ const Textarea = ({
         [styles.parentContainer]: !(isError || _isError),
         [styles.isErrorContainer]: counterIsInside && (isError || _isError),
       })}
-      grid={{
-        cols: 1,
-        rows: "auto",
-      }}
+      grid={
+        flex
+          ? undefined
+          : {
+              cols: 1,
+              rows: "auto",
+            }
+      }
       styles={{ width: "100%" }}
+      gridPosition={gridPosition}
+      flex={flex}
+      noGrid={flex}
       autoHor
     >
       <Container
@@ -108,7 +116,6 @@ const Textarea = ({
               value={value}
               rows={rows}
               ref={innerRef}
-              gridPosition={gridPosition}
               {...rest}
               data-cy={dataCy}
             />

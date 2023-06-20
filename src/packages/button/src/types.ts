@@ -9,6 +9,14 @@ type Props = BaseProps<HTMLButtonElement> & {
   disabled?: boolean;
   active?: boolean;
   noBorder?: boolean;
+  variant?:
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "danger"
+    | "warning"
+    | "success"
+    | "info";
 };
 
 export default Props;

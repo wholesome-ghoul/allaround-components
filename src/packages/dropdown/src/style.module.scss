@@ -12,7 +12,7 @@
   transform: rotate(180deg);
 }
 
-.itemContainer {
+.itemContainerPadding {
   padding-left: 1rem;
 }
 
@@ -21,7 +21,12 @@
   width: 100%;
 }
 
+.itemPadding {
+  padding: 4px;
+}
+
 .mainButton {
+  display: flex;
   justify-content: center;
 }
 

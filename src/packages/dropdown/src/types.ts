@@ -17,6 +17,8 @@ type Props = BaseProps<HTMLDivElement> &
     text?: string;
 
     dropdownItemsRef?: React.MutableRefObject<HTMLDivElement | null>;
+    paddedItemContainer?: boolean;
+    paddedItem?: boolean;
   };
 
 export default Props;

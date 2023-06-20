@@ -31,6 +31,9 @@
   color: var(--fg-color);
   box-shadow: none;
   text-overflow: ellipsis;
+  padding: 8px;
+  width: 100%;
+  max-width: 5rem;
 
   &:focus {
     outline: none;
@@ -42,7 +45,7 @@
   border-radius: 1rem;
   border: 1px solid var(--fg-color);
   display: inline-flex;
-  margin: 0.5rem 0.5rem;
+  margin: 4px;
   align-items: center;
 }
 

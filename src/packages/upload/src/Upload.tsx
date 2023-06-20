@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import cx from "classnames";
 import hooks from "@allaround/hooks";
@@ -43,13 +43,14 @@ const Upload = ({
   maxSize,
   ...rest
 }: Props) => {
-  const uploadRef = useRef(null);
-  const [dragging, setDragging] = useState(false);
+  const uploadRef = useRef<HTMLLabelElement | null>(null);
+  const [isOnUpload, setIsOnUpload] = useState(false);
   const inputId = useMemo(() => uuidv4(), []);
+  const [labelElem, setLabelElem] = useState<HTMLLabelElement | null>(null);
   const handleDrop = useCallback(
     (e: any) => {
       e.preventDefault();
-      setDragging(false);
+      setIsOnUpload(false);
 
       const file = e.dataTransfer.files[0];
 
@@ -58,6 +59,8 @@ const Upload = ({
       if (show) {
         handleError({ text, show });
         return;
+      } else {
+        handleError({ text: "", show: false });
       }
 
       setFile(file);
@@ -65,12 +68,18 @@ const Upload = ({
     [accept, maxSize, setFile, handleError]
   );
 
+  useEffect(() => {
+    if (uploadRef.current) {
+      setLabelElem(uploadRef.current);
+    }
+  }, []);
+
   useEventListener(
     "dragover",
     (e: any) => {
       e.preventDefault();
     },
-    uploadRef?.current!
+    labelElem!
   );
 
   useEventListener(
@@ -78,38 +87,28 @@ const Upload = ({
     (e: any) => {
       e.preventDefault();
     },
-    uploadRef?.current!
+    labelElem!
   );
 
   useEventListener(
     "dragenter",
     (e: any) => {
       e.preventDefault();
-      setDragging(true);
+      setIsOnUpload(true);
     },
-    uploadRef?.current!
+    labelElem!
   );
 
   useEventListener(
     "dragleave",
     (e: any) => {
       e.preventDefault();
-      setDragging(false);
+      setIsOnUpload(false);
     },
-    uploadRef?.current!
+    labelElem!
   );
 
-  useEventListener("drop", handleDrop, uploadRef?.current!);
-
-  // useEffect(() => {
-  //   if (!uploadRef?.current) return;
-
-  //   (uploadRef.current as any)?.addEventListener("drop", handleDrop);
-
-  //   return () => {
-  //     (uploadRef.current as any)?.removeEventListener("drop", handleDrop);
-  //   }
-  // }, [handleDrop])
+  useEventListener("drop", handleDrop, labelElem!);
 
   return (
     <StyledUpload
@@ -129,10 +128,11 @@ const Upload = ({
     >
       <Label
         innerRef={uploadRef}
+        id="tmp"
         htmlFor={inputId}
         className={cx(styles.label, {
           [styles.isError]: isError,
-          [styles.active]: dragging,
+          [styles.active]: isOnUpload,
         })}
       >
         <Icons.UploadIcon />
@@ -149,6 +149,8 @@ const Upload = ({
           if (show) {
             handleError({ text, show });
             return;
+          } else {
+            handleError({ text: "", show: false });
           }
 
           setFile(file);
