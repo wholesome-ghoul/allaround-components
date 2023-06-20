@@ -1,6 +1,7 @@
 .video {
   color: var(--fg-color);
   font-family: inherit;
+  border-radius: 1rem;
 
   &::-webkit-media-controls {
     /* Add custom styles to the controls container */

@@ -26,6 +26,8 @@ const Dropdown = ({
   setIsOpen,
   activeIndicator,
   dropdownItemsRef,
+  paddedItemContainer,
+  paddedItem,
   ...rest
 }: Props) => {
   const handleDropdown = () => {
@@ -70,6 +72,8 @@ const Dropdown = ({
         selectedIndex={selectedIndex}
         activeIndicator={activeIndicator}
         dropdownItemsRef={dropdownItemsRef}
+        paddedItemContainer={paddedItemContainer}
+        paddedItem={paddedItem}
       >
         {children}
       </DropdownItems>
@@ -84,6 +88,8 @@ const DropdownItems = ({
   selectedIndex,
   activeIndicator,
   dropdownItemsRef,
+  paddedItemContainer,
+  paddedItem,
 }: any) => {
   const elem = (
     <Container
@@ -92,8 +98,9 @@ const DropdownItems = ({
         cols: 1,
         rows: Array.isArray(children) ? children?.length : 1,
       }}
-      className={cx(styles.itemContainer, {
+      className={cx({
         [styles.popup]: isOpen && popup,
+        [styles.itemContainerPadding]: paddedItemContainer,
       })}
     >
       {isOpen &&
@@ -101,30 +108,32 @@ const DropdownItems = ({
           (child, index) => {
             const selected = selectedIndex === index;
 
+            let icon = (
+              <Icons.DropdownItemIcon
+                height="100%"
+                width="24px"
+                selected={selected}
+              />
+            );
+
             if (!Array.isArray(children) || index === children.length - 1) {
-              return (
-                <div className={cx(styles.item)} key={index}>
-                  {activeIndicator && (
-                    <Icons.DropdownLastItemIcon
-                      height="100%"
-                      width="24px"
-                      selected={selected}
-                    />
-                  )}
-                  {child}
-                </div>
+              icon = (
+                <Icons.DropdownLastItemIcon
+                  height="100%"
+                  width="24px"
+                  selected={selected}
+                />
               );
             }
 
             return (
-              <div className={cx(styles.item)} key={index}>
-                {activeIndicator && (
-                  <Icons.DropdownItemIcon
-                    height="100%"
-                    width="24px"
-                    selected={selected}
-                  />
-                )}
+              <div
+                className={cx(styles.item, {
+                  [styles.itemPadding]: paddedItem,
+                })}
+                key={index}
+              >
+                {activeIndicator && icon}
                 {child}
               </div>
             );
@@ -145,6 +154,8 @@ Dropdown.defaultProps = {
   enableArrow: false,
   activeIndicator: false,
   isOpen: false,
+  paddedItemContainer: true,
+  paddedItem: false,
 };
 
 export default Dropdown;

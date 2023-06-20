@@ -94,6 +94,18 @@
   border: none;
 }
 
+.secondaryVariant {
+  color: var(--color-secondary);
+  background-color: trasnparent;
+  border-color: var(--border-color-secondary);
+
+  &:hover {
+    color: var(--color);
+    background-color: transparent;
+    border-color: var(--border-color);
+  }
+}
+
 .transparent {
   background: transparent;
 }
