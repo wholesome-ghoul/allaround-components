@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Checkbox from "./Checkbox";
+
+<Meta title="Checkbox" component={Checkbox} />
+
+export const Template = (args) => <Checkbox {...args} />;
+
+# Checkbox
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>

@@ -6,24 +6,24 @@
 
 :root {
   --bg-color: hsl(250, 13%, 9%);
-
-  --bg-color-secondary: hsl(250, 13%, 13%);
-  --border-color-secondary: hsl(250, 13%, 13%);
-  --color-secondary: hsl(250, 13%, 13%);
-
-  --bg-color-tertiary: hsl(250, 13%, 23%);
-
   --fg-color: hsl(25, 91%, 43%);
   --fg-hover-color: hsl(25, 91%, 53%);
   --color: hsl(25, 91%, 43%);
   --border-color: hsl(25, 91%, 43%);
 
+  --bg-color-secondary: hsl(250, 13%, 13%);
+  --border-color-secondary: hsl(250, 13%, 13%);
+  --color-secondary: hsl(250, 13%, 13%);
   --secondary-color: hsl(25, 64%, 56%);
+  --secondary-hover-color: hsl(25, 64%, 56%);
+
+  --bg-color-tertiary: hsl(250, 13%, 23%);
 
   --font-size-small: 1.0rem;
   --font-size-medium: 1.2rem;
   --font-size-large: 1.25rem;
   --error-color: hsl(0, 100%, 35%);
+  --checkmark-green: hsl(145, 100%, 35%);
 }
 
 [data-theme="light"] {

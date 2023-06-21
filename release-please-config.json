@@ -71,6 +71,9 @@
     },
     "src/packages/image": {
       "release-type": "node"
+    },
+    "src/packages/checkbox": {
+      "release-type": "node"
     }
   }
 }
