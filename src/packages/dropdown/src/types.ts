@@ -2,12 +2,24 @@ import type { ButtonProps } from "@allaround/button";
 
 import { BaseProps, Size } from "../../../utils";
 
+type DropdownItemProps = BaseProps<HTMLDivElement> & {
+  children: React.ReactNode[] | React.ReactNode;
+  padded?: boolean;
+  margined?: boolean;
+  activeIndicator?: boolean;
+  icon?: ButtonProps["icon"];
+};
+
 type Props = BaseProps<HTMLDivElement> &
   Pick<ButtonProps, "icon"> & {
     children: React.ReactNode[] | React.ReactNode;
     size?: Size;
+    dropperSize?: Size;
     selectedIndex?: number;
     popup?: boolean;
+    noDropperBorder?: boolean;
+
+    variant?: "primary" | "secondary" | "tertiary";
 
     isOpen?: boolean;
     setIsOpen?: (isOpen: boolean) => void;
@@ -17,9 +29,11 @@ type Props = BaseProps<HTMLDivElement> &
     text?: string;
 
     dropdownItemsRef?: React.MutableRefObject<HTMLDivElement | null>;
+
     paddedItemContainer?: boolean;
     paddedItem?: boolean;
+    marginedItem?: boolean;
   };
 
 export default Props;
-export type { Props };
+export type { Props, DropdownItemProps };

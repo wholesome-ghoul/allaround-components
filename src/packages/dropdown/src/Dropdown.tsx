@@ -8,6 +8,7 @@ import Container from "@allaround/container";
 import Props from "./types";
 import styles from "./style.module.scss";
 import StyledDropdown from "./StyledDropdown";
+import DropdownItem from "./DropdownItem";
 
 const Dropdown = ({
   children,
@@ -28,6 +29,10 @@ const Dropdown = ({
   dropdownItemsRef,
   paddedItemContainer,
   paddedItem,
+  marginedItem,
+  noDropperBorder,
+  variant,
+  dropperSize,
   ...rest
 }: Props) => {
   const handleDropdown = () => {
@@ -52,12 +57,17 @@ const Dropdown = ({
       <Button
         onClick={handleDropdown}
         icon={icon}
-        className={cx(styles.mainButton)}
+        className={cx(styles.mainButton, styles[`${variant}Button`])}
         transparent={popup ? !isOpen : true}
-        noBorder
+        noBorder={noDropperBorder}
+        size={dropperSize}
         fill
       >
-        {text && <Text size="medium">{text}</Text>}
+        {text && (
+          <Text size="medium" styles={{ maxWidth: "80%" }}>
+            {text}
+          </Text>
+        )}
         {enableArrow && (
           <Icons.ArrowDownIcon
             className={cx(styles.arrow, {
@@ -74,6 +84,7 @@ const Dropdown = ({
         dropdownItemsRef={dropdownItemsRef}
         paddedItemContainer={paddedItemContainer}
         paddedItem={paddedItem}
+        marginedItem={marginedItem}
       >
         {children}
       </DropdownItems>
@@ -90,6 +101,7 @@ const DropdownItems = ({
   dropdownItemsRef,
   paddedItemContainer,
   paddedItem,
+  marginedItem,
 }: any) => {
   const elem = (
     <Container
@@ -126,16 +138,18 @@ const DropdownItems = ({
               );
             }
 
-            return (
-              <div
-                className={cx(styles.item, {
-                  [styles.itemPadding]: paddedItem,
-                })}
+            return child.type?.name === "DropdownItem" ? (
+              child
+            ) : (
+              <DropdownItem
+                padded={paddedItem}
+                margined={marginedItem}
+                activeIndicator={activeIndicator}
+                icon={icon}
                 key={index}
               >
-                {activeIndicator && icon}
                 {child}
-              </div>
+              </DropdownItem>
             );
           }
         )}
@@ -156,6 +170,10 @@ Dropdown.defaultProps = {
   isOpen: false,
   paddedItemContainer: true,
   paddedItem: false,
+  noDropperBorder: false,
+  marginedItem: false,
 };
+
+Dropdown.Item = DropdownItem;
 
 export default Dropdown;

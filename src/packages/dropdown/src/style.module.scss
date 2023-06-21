@@ -25,9 +25,14 @@
   padding: 4px;
 }
 
+.itemMargin {
+  margin: 4px;
+}
+
 .mainButton {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .popup {
@@ -41,6 +46,10 @@
   gap: 1rem;
   background-color: var(--bg-color-secondary);
   border-radius: 1rem;
+}
+
+.secondaryButton {
+  border-color: var(--bg-color-secondary);
 }
 
 .smallDropdown {

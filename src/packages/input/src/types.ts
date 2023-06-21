@@ -1,6 +1,6 @@
 import { BaseProps, Size } from "../../../utils";
 
-type InputType = "text" | "password" | "email" | "file";
+type InputType = "text" | "password" | "email" | "file" | "checkbox";
 
 type Props = BaseProps<HTMLInputElement> & {
   type?: InputType;

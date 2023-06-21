@@ -35,7 +35,13 @@
 
   &:hover {
     background-color: var(--bg-color);
-    color: var(--fg-hover-color);
+    color: var(--secondary-hover-color);
+    border-color: var(--secondary-hover-color);
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: transparent;
   }
 }
 
@@ -48,7 +54,7 @@
     border-radius: 1rem;
 
     & > svg {
-      fill: var(--fg-hover-color);
+      fill: var(--secondary-hover-color);
     }
   }
 }
@@ -75,13 +81,13 @@
 
 .mediumButton {
   width: 16rem;
-  padding: 0.75rem;
+  padding: 12px;
   font-size: var(--font-size-medium);
 }
 
 .largeButton {
   width: 24rem;
-  padding: 0.75rem;
+  padding: 16px;
   font-size: var(--font-size-large);
 }
 
@@ -96,11 +102,21 @@
 
 .secondaryVariant {
   color: var(--color-secondary);
-  background-color: trasnparent;
+  background-color: transparent;
   border-color: var(--border-color-secondary);
 
   &:hover {
     color: var(--color);
+    background-color: transparent;
+    border-color: var(--border-color);
+
+    & > svg {
+      fill: var(--color);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
     background-color: transparent;
     border-color: var(--border-color);
   }
