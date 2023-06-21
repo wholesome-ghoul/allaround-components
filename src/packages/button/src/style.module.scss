@@ -38,6 +38,11 @@
     color: var(--secondary-hover-color);
     border-color: var(--secondary-hover-color);
   }
+
+  &:focus-visible {
+    outline: none;
+    background-color: transparent;
+  }
 }
 
 .icon {
@@ -108,6 +113,12 @@
     & > svg {
       fill: var(--color);
     }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: transparent;
+    border-color: var(--border-color);
   }
 }
 
