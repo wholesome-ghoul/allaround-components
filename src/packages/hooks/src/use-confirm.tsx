@@ -115,7 +115,12 @@ const useConfirm = (
 
     if (enableSkip) {
       inject.skip = (_skip: boolean) => {
-        if (!_skip) openPrompt(_arguments);
+        if (!_skip) {
+          openPrompt(_arguments);
+        } else {
+          setArgs(_arguments);
+          setConfirmed(true);
+        }
 
         return inject;
       };
