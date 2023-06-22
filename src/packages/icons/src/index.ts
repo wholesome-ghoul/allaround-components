@@ -6,6 +6,7 @@ export { default as DefaultAvatarIcon } from "./DefaultAvatar";
 export { default as DelIcon } from "./Del";
 export { default as DropdownItemIcon } from "./DropdownItem";
 export { default as DropdownLastItemIcon } from "./DropdownLastItem";
+export { default as EditIcon } from "./Edit";
 export { default as FacebookIcon } from "./Facebook";
 export { default as HamburgerIcon } from "./Hamburger";
 export { default as InstagramIcon } from "./Instagram";
