@@ -1,3 +1,5 @@
+import type { TooltipProps } from "@allaround/tooltip";
+
 import { BaseProps, Size } from "../../../utils";
 
 type InputType = "text" | "password" | "email" | "file" | "checkbox";
@@ -11,6 +13,8 @@ type Props = BaseProps<HTMLInputElement> & {
   isError?: boolean;
   minWidth?: string;
   accept?: string;
+
+  tooltip?: Omit<TooltipProps, "componentRef">;
 };
 
 export default Props;

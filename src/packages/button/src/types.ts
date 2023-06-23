@@ -1,3 +1,5 @@
+import type { TooltipProps } from "@allaround/tooltip";
+
 import { BaseProps, Size } from "../../../utils";
 
 type Props = BaseProps<HTMLButtonElement> & {
@@ -17,6 +19,8 @@ type Props = BaseProps<HTMLButtonElement> & {
     | "warning"
     | "success"
     | "info";
+
+  tooltip?: Omit<TooltipProps, "componentRef">;
 };
 
 export default Props;

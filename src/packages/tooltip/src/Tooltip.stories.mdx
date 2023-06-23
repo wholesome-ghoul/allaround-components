@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Tooltip from "./Tooltip";
+
+<Meta title="Tooltip" component={Tooltip} />
+
+export const Template = (args) => <Tooltip {...args} />;
+
+# Tooltip
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>
