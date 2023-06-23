@@ -13,6 +13,10 @@ import StyledUpload from "./StyledUpload";
 const { useEventListener } = hooks;
 
 const fileValidator = (file: File, accept?: string[], maxSize?: number) => {
+  if (!file) {
+    return { text: "", show: false };
+  }
+
   if (!!accept && !accept.includes(file.type)) {
     return { text: "Invalid file type", show: true };
   }
@@ -41,6 +45,8 @@ const Upload = ({
   handleError,
   setFile,
   maxSize,
+  icon,
+  noBorder,
   ...rest
 }: Props) => {
   const uploadRef = useRef<HTMLLabelElement | null>(null);
@@ -128,14 +134,14 @@ const Upload = ({
     >
       <Label
         innerRef={uploadRef}
-        id="tmp"
         htmlFor={inputId}
         className={cx(styles.label, {
           [styles.isError]: isError,
           [styles.active]: isOnUpload,
+          [styles.noBorder]: noBorder,
         })}
       >
-        <Icons.UploadIcon />
+        {icon ? icon : <Icons.UploadIcon />}
         {text}
       </Label>
       <Input
@@ -168,6 +174,7 @@ Upload.defaultProps = {
   dataCy: "upload-component",
   isError: false,
   maxSize: 1,
+  noBorder: false,
 };
 
 export default Upload;

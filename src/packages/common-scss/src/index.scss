@@ -4,7 +4,7 @@
 // #00A6ED
 // #246EB9
 
-:root {
+:root, ::backdrop {
   --bg-color: hsl(250, 13%, 9%);
   --fg-color: hsl(25, 91%, 43%);
   --fg-hover-color: hsl(25, 91%, 53%);

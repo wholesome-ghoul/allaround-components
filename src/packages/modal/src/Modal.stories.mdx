@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Modal from "./Modal";
+
+<Meta title="Modal" component={Modal} />
+
+export const Template = (args) => <Modal {...args} />;
+
+# Modal
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>

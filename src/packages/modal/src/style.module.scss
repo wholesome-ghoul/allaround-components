@@ -1,0 +1,23 @@
+.modal {
+  color: var(--fg-color);
+  font-family: inherit;
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.smallModal {
+  font-size: var(--font-size-small);
+}
+
+.mediumModal {
+  font-size: var(--font-size-medium);
+}
+
+.largeModal {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

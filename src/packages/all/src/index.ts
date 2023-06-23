@@ -20,3 +20,4 @@ export { default as Scheduler } from "@allaround/scheduler";
 export { default as Video } from "@allaround/video";
 export { default as Image } from "@allaround/image";
 export { default as Checkbox } from "@allaround/checkbox";
+export { default as Modal } from "@allaround/modal";
