@@ -77,6 +77,9 @@
     },
     "src/packages/modal": {
       "release-type": "node"
+    },
+    "src/packages/tooltip": {
+      "release-type": "node"
     }
   }
 }

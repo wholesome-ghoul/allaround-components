@@ -1,4 +1,6 @@
 import cx from "classnames";
+import { useCallback, useRef } from "react";
+import Tooltip from "@allaround/tooltip";
 
 import Props from "./types";
 import styles from "./style.module.scss";
@@ -18,10 +20,12 @@ const Button = (props: Props) => {
     fill,
     dataCy,
     noBorder,
-    innerRef,
     className,
+    tooltip,
     ...rest
   } = props;
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   if (icon) {
     return (
       <StyledButton
@@ -41,12 +45,18 @@ const Button = (props: Props) => {
         )}
         onClick={onClick}
         gridPosition={gridPosition}
-        ref={innerRef}
+        ref={buttonRef}
         {...rest}
         data-cy={dataCy}
       >
         {icon}
         {children}
+
+        {tooltip && (
+          <Tooltip {...tooltip} componentRef={buttonRef}>
+            {tooltip.children}
+          </Tooltip>
+        )}
       </StyledButton>
     );
   }
@@ -56,7 +66,7 @@ const Button = (props: Props) => {
       className={cx(
         styles.button,
         styles[`${size}Button`],
-          styles[`${variant}Variant`],
+        styles[`${variant}Variant`],
         {
           [styles.fill]: fill,
           [styles.transparent]: transparent,
@@ -68,11 +78,17 @@ const Button = (props: Props) => {
       )}
       onClick={onClick}
       gridPosition={gridPosition}
-      ref={innerRef}
+      ref={buttonRef}
       {...rest}
       data-cy={dataCy}
     >
       {children}
+
+      {tooltip && (
+        <Tooltip {...tooltip} componentRef={buttonRef}>
+          {tooltip.children}
+        </Tooltip>
+      )}
     </StyledButton>
   );
 };

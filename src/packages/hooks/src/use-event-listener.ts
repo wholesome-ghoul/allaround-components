@@ -8,13 +8,14 @@ import {
 const useEventListener = (
   eventName: string,
   eventHandler: EventHandler,
-  element: Element = window
+  element: Element = window,
+  deps: any[] = []
 ) => {
   const handler = useRef((_event: any) => {});
 
   useEffect(() => {
     handler.current = eventHandler;
-  }, [eventHandler]);
+  }, [eventHandler, ...deps]);
 
   useEffect(() => {
     const valid = element && element.addEventListener;
@@ -25,7 +26,7 @@ const useEventListener = (
     element.addEventListener(eventName, _handler);
 
     return () => element.removeEventListener(eventName, _handler);
-  }, [element, eventName]);
+  }, [element, eventName, ...deps]);
 };
 
 export default useEventListener;

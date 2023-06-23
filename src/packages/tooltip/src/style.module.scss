@@ -1,0 +1,106 @@
+.tooltip {
+  color: var(--fg-color);
+  font-family: inherit;
+
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipText {
+  visibility: hidden;
+  position: absolute;
+  width: max-content;
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: visibility 0s, opacity 0.3s;
+  z-index: 10000;
+}
+
+.top {
+  &.tooltipText {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-top-color: #000;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.left {
+  &.tooltipText {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-left-color: #000;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.right {
+  &.tooltipText {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-right-color: #000;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.bottom {
+  &.tooltipText {
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-bottom-color: #000;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  width: max-content;
+  opacity: 1;
+}
+
+.smallTooltip {
+  font-size: var(--font-size-small);
+}
+
+.mediumTooltip {
+  font-size: var(--font-size-medium);
+}
+
+.largeTooltip {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}
