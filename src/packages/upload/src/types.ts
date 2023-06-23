@@ -13,6 +13,8 @@ type Props = BaseProps<HTMLDivElement> & {
   maxSize?: number;
 
   setFile: (file: File | null) => void;
+  icon?: React.ReactNode;
+  noBorder?: boolean;
 };
 
 export default Props;

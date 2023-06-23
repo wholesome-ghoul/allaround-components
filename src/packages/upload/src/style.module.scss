@@ -37,6 +37,10 @@
   }
 }
 
+.noBorder {
+  border: none;
+}
+
 .active {
   color: var(--fg-hover-color);
   background-color: var(--bg-color-secondary);

@@ -3,6 +3,7 @@ import cx from "classnames";
 import Container from "@allaround/container";
 import Button from "@allaround/button";
 import Icons from "@allaround/icons";
+import Upload from "@allaround/upload";
 
 import Props from "./types";
 import styles from "./style.module.scss";
@@ -17,35 +18,41 @@ const Image = ({
   innerRef,
   className,
   src,
-  file,
   alt,
   width,
   height,
-  removeHandler,
+  clickHandler,
+  icon,
+  iconPosition,
+  objectFit,
+  editable,
+  inheritBorderColor,
   ...rest
 }: Props) => {
-  const [_src, _setSrc] = useState(src);
+  const [_src, _setSrc] = useState("");
 
   useEffect(() => {
-    if (src) {
-      _setSrc(src);
+    if (!src) return;
 
-      return;
-    }
-
-    if (file) {
+    if (typeof src === "string") _setSrc(src);
+    else if (src instanceof File) {
       const reader = new FileReader();
 
       reader.onload = (e) => {
         _setSrc(e.target?.result as string);
       };
 
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(src);
     }
-  }, [src, file]);
+  }, [src]);
 
   return (
-    <Container className={cx(styles.imageContainer)} noGrid>
+    <Container
+      className={cx(styles.imageContainer, {
+        [styles.inheritBorderColor]: inheritBorderColor,
+      })}
+      noGrid
+    >
       <StyledImage
         className={cx(
           styles.image,
@@ -61,16 +68,32 @@ const Image = ({
         alt={alt}
         width={width}
         height={height}
+        objectFit={objectFit}
         {...rest}
         data-cy={dataCy}
       />
-      <Button
-        onClick={() => removeHandler && removeHandler()}
-        icon={<Icons.DelIcon size="large"/>}
-        className={cx(styles.delButton)}
-        noBorder
-        transparent
-      />
+      {clickHandler && !editable && (
+        <Button
+          onClick={clickHandler}
+          icon={icon}
+          className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
+          noBorder
+          transparent
+        />
+      )}
+
+      {!clickHandler && editable && (
+        <Upload
+          accept={rest.accept ?? ["image/png"]}
+          maxSize={rest.maxSize}
+          isError={rest.isError}
+          handleError={rest.handleError ?? (() => {})}
+          setFile={rest.setFile ?? (() => {})}
+          icon={<Icons.EditIcon size="small" />}
+          className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
+          noBorder
+        />
+      )}
     </Container>
   );
 };
@@ -80,6 +103,9 @@ Image.defaultProps = {
   dataCy: "image-component",
   width: "100%",
   height: "100%",
+  icon: <Icons.DelIcon size="large" />,
+  iconPosition: "topRight",
+  inheritBorderColor: false,
 };
 
 export default Image;

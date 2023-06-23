@@ -64,7 +64,7 @@ const Dropdown = ({
         fill
       >
         {text && (
-          <Text size="medium" styles={{ maxWidth: "80%" }}>
+          <Text size="medium" className={cx(styles.text)}>
             {text}
           </Text>
         )}

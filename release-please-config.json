@@ -74,6 +74,9 @@
     },
     "src/packages/checkbox": {
       "release-type": "node"
+    },
+    "src/packages/modal": {
+      "release-type": "node"
     }
   }
 }
