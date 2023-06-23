@@ -5,6 +5,8 @@
 }
 
 .checkboxContainer {
+  width: unset;
+
   & > label {
     display: flex;
     position: relative;
@@ -31,10 +33,15 @@
   }
 }
 
-/* Style the checked state of the checkbox */
-.checked {
+.greenChecked {
   & > label::before {
     background-color: var(--checkmark-green);
+  }
+}
+
+.blueChecked {
+  & > label::before {
+    background-color: var(--checkmark-blue);
   }
 }
 
@@ -56,7 +63,7 @@
     & > label::after {
       left: 11px;
       right: 11px;
-      top: 5px;
+      top: 6px;
       width: 8px;
       height: 15px;
       border: solid #fff;
@@ -82,7 +89,7 @@
   &.checked {
     & > label::after {
       left: 14px;
-      right: 14px;
+      right: 13px;
       top: 7px;
       width: 10px;
       height: 18px;

@@ -15,6 +15,7 @@ const Checkbox = ({
   dataCy,
   innerRef,
   checked,
+  color,
   shape,
   className,
   text,
@@ -31,6 +32,7 @@ const Checkbox = ({
         {
           [styles.fill]: fill,
           [styles.checked]: checked,
+          [styles[`${color}Checked`]]: checked,
           [styles.iconOnRight]: iconIsOnRight,
           [styles.iconOnLeft]: !iconIsOnRight,
         },
@@ -60,6 +62,7 @@ Checkbox.defaultProps = {
   dataCy: "checkbox-component",
   shape: "square",
   iconPosition: "left",
+  color: "green",
 };
 
 export default Checkbox;

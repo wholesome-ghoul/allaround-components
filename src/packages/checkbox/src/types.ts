@@ -10,6 +10,7 @@ type Props = BaseProps<HTMLInputElement> &
     shape?: "round" | "square";
     iconPosition?: "left" | "right";
     text?: string;
+    color?: "green" | "blue";
   };
 
 export default Props;
