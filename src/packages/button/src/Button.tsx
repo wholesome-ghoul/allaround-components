@@ -1,5 +1,5 @@
 import cx from "classnames";
-import { useCallback, useRef } from "react";
+import { useRef } from "react";
 import Tooltip from "@allaround/tooltip";
 
 import Props from "./types";

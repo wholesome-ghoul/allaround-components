@@ -27,6 +27,7 @@ const Select = ({
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const selectRef = useRef<HTMLDivElement>(null);
+  const documentRef = useRef<Document>(document);
   const [direction, setDirection] = useState<"up" | "down">("down");
   const [_maxHeight, _setMaxHeight] = useState(maxHeight ?? "");
 
@@ -55,7 +56,7 @@ const Select = ({
         }
       }
     },
-    selectRef?.current!
+    selectRef
   );
 
   useEventListener(
@@ -65,7 +66,7 @@ const Select = ({
         setIsOpen(false);
       }
     },
-    document
+    documentRef
   );
 
   return (

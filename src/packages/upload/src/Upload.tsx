@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState, useEffect } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import cx from "classnames";
 import hooks from "@allaround/hooks";
@@ -52,7 +52,6 @@ const Upload = ({
   const uploadRef = useRef<HTMLLabelElement | null>(null);
   const [isOnUpload, setIsOnUpload] = useState(false);
   const inputId = useMemo(() => uuidv4(), []);
-  const [labelElem, setLabelElem] = useState<HTMLLabelElement | null>(null);
   const handleDrop = useCallback(
     (e: any) => {
       e.preventDefault();
@@ -74,18 +73,12 @@ const Upload = ({
     [accept, maxSize, setFile, handleError]
   );
 
-  useEffect(() => {
-    if (uploadRef.current) {
-      setLabelElem(uploadRef.current);
-    }
-  }, []);
-
   useEventListener(
     "dragover",
     (e: any) => {
       e.preventDefault();
     },
-    labelElem!
+    uploadRef
   );
 
   useEventListener(
@@ -93,7 +86,7 @@ const Upload = ({
     (e: any) => {
       e.preventDefault();
     },
-    labelElem!
+    uploadRef
   );
 
   useEventListener(
@@ -102,7 +95,7 @@ const Upload = ({
       e.preventDefault();
       setIsOnUpload(true);
     },
-    labelElem!
+    uploadRef
   );
 
   useEventListener(
@@ -111,10 +104,10 @@ const Upload = ({
       e.preventDefault();
       setIsOnUpload(false);
     },
-    labelElem!
+    uploadRef
   );
 
-  useEventListener("drop", handleDrop, labelElem!);
+  useEventListener("drop", handleDrop, uploadRef);
 
   return (
     <StyledUpload

@@ -44,6 +44,7 @@ const Scheduler = ({
   setDate,
   ...rest
 }: Props) => {
+  const documentRef = useRef<Document>(document);
   const [_date, _setDate] = useState<Date>(() => {
     const date = new Date();
     date.setHours(17);
@@ -87,7 +88,7 @@ const Scheduler = ({
         }
       }
     },
-    buttonContainerRef?.current!
+    buttonContainerRef
   );
 
   useEventListener(
@@ -97,7 +98,7 @@ const Scheduler = ({
         setIsOpen(false);
       }
     },
-    document
+    documentRef
   );
 
   return (

@@ -1,3 +1,4 @@
+import type { TooltipProps } from "@allaround/tooltip";
 import type { ButtonProps } from "@allaround/button";
 
 import { BaseProps, Size } from "../../../utils";
@@ -8,6 +9,8 @@ type DropdownItemProps = BaseProps<HTMLDivElement> & {
   margined?: boolean;
   activeIndicator?: boolean;
   icon?: ButtonProps["icon"];
+
+  tooltip?: Omit<TooltipProps, "componentRef">;
 };
 
 type Props = BaseProps<HTMLDivElement> &

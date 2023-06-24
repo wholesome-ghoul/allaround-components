@@ -70,6 +70,7 @@ const useConfirm = (
   const [confirmed, setConfirmed] = useState(false);
   const confirmPromptRef = useRef<HTMLDivElement | null>(null);
   const [args, setArgs] = useState<any>([]);
+  const documentBodyRef = useRef<HTMLDivElement | null>(null);
 
   function openPrompt(_args: any) {
     if (!confirmPromptRef.current) {
@@ -146,7 +147,7 @@ const useConfirm = (
         closeAndConfirm(false);
       }
     },
-    document.body
+    documentBodyRef
   );
 
   useEffect(() => {

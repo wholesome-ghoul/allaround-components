@@ -2,7 +2,7 @@ import cx from "classnames";
 import Label from "@allaround/label";
 import Container from "@allaround/container";
 import Tooltip from "@allaround/tooltip";
-import { useId, useRef } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 import Props from "./types";
 import styles from "./style.module.scss";
@@ -26,7 +26,7 @@ const Checkbox = ({
 }: Props) => {
   const id = useId();
   const iconIsOnRight = iconPosition === "right";
-  const checkboxRef = useRef<HTMLLabelElement>(null);
+  const labelRef = useRef<HTMLLabelElement>(null);
 
   return (
     <Container
@@ -46,7 +46,7 @@ const Checkbox = ({
       flex
       noGrid
     >
-      <Label htmlFor={id} innerRef={checkboxRef}>
+      <Label htmlFor={id} innerRef={labelRef}>
         {text}
       </Label>
       <StyledCheckbox
@@ -60,7 +60,7 @@ const Checkbox = ({
       />
 
       {tooltip && (
-        <Tooltip {...tooltip} componentRef={checkboxRef}>
+        <Tooltip {...tooltip} componentRef={labelRef}>
           {tooltip.children}
         </Tooltip>
       )}

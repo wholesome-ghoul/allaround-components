@@ -111,13 +111,15 @@ const DropdownItems = ({
         rows: Array.isArray(children) ? children?.length : 1,
       }}
       className={cx({
-        [styles.popup]: isOpen && popup,
+        [styles.popup]: isOpen && popup && children?.length > 0,
         [styles.itemContainerPadding]: paddedItemContainer,
       })}
     >
       {isOpen &&
         (Array.isArray(children) ? children : [children]).map(
           (child, index) => {
+            if (!child) return null;
+
             const selected = selectedIndex === index;
 
             let icon = (
@@ -138,18 +140,21 @@ const DropdownItems = ({
               );
             }
 
-            return child.type?.name === "DropdownItem" ? (
-              child
-            ) : (
-              <DropdownItem
-                padded={paddedItem}
-                margined={marginedItem}
-                activeIndicator={activeIndicator}
-                icon={icon}
-                key={index}
-              >
-                {child}
-              </DropdownItem>
+            return (
+              child &&
+              (child.type?.name === "DropdownItem" ? (
+                child
+              ) : (
+                <DropdownItem
+                  padded={paddedItem}
+                  margined={marginedItem}
+                  activeIndicator={activeIndicator}
+                  icon={icon}
+                  key={index}
+                >
+                  {child}
+                </DropdownItem>
+              ))
             );
           }
         )}

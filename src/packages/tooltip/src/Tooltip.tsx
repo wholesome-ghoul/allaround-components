@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import cx from "classnames";
 import hooks from "@allaround/hooks";
 
@@ -34,7 +34,8 @@ const Tooltip = <Elem extends HTMLElement>({
 
       if (
         innerRef.current &&
-        componentRef?.current?.contains(e.target as Node)
+        componentRef?.current &&
+        componentRef?.current === (e.target as Node)
       ) {
         const { top, left, width, height } =
           componentRef.current.getBoundingClientRect();
@@ -71,22 +72,10 @@ const Tooltip = <Elem extends HTMLElement>({
           },
         };
 
-        const W = window.innerWidth;
-        const H = window.innerHeight;
-        const w1 = left;
-        const h1 = top;
-        const w2 = W - left;
-        const h2 = H - top;
-
-        // const canBeRight = left + width + tooltipRect.width + margin < W;
-        // const canBeLeft = tooltipRect.width + margin < left;
-        // const canBeBottom = top + height + tooltipRect.height + margin < H;
-        // const canBeTop = tooltipRect.height + margin < top;
-
-        const canBeRight = w2 > w1 + margin;
-        const canBeLeft = w1 > w2 + margin;
-        const canBeBottom = h2 > h1 + margin;
-        const canBeTop = h1 > h2 + margin;
+        const canBeRight = left + width + margin > tooltipRect.width;
+        const canBeLeft = left - margin > tooltipRect.width;
+        const canBeBottom = top + height + margin > tooltipRect.height;
+        const canBeTop = top - margin > tooltipRect.height;
 
         const canBe: { [key in Direction]: boolean } = {
           top: canBeTop,
@@ -115,7 +104,7 @@ const Tooltip = <Elem extends HTMLElement>({
         setVisible(true);
       }
     },
-    componentRef?.current!
+    componentRef
   );
 
   useEventListener(
@@ -123,13 +112,27 @@ const Tooltip = <Elem extends HTMLElement>({
     (e) => {
       if (!visible) return;
 
-      if (componentRef?.current?.contains(e.target as Node)) {
+      if (
+        componentRef?.current &&
+        componentRef?.current === (e.target as Node)
+      ) {
         setPosition({ x: 0, y: 0 });
         setVisible(false);
       }
     },
-    componentRef?.current!
+    componentRef
   );
+
+  useEffect(() => {
+    if (visible) {
+      const timeoutId = setTimeout(() => {
+        setPosition({ x: 0, y: 0 });
+        setVisible(false);
+      }, 3000);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [visible]);
 
   return createPortal(
     <StyledTooltip

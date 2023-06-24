@@ -37,15 +37,15 @@
 
 .popup {
   position: fixed;
-  padding: 1rem;
+  padding: 8px;
   top: 90px;
   left: 90px;
   width: 200px;
   height: auto;
   z-index: 200;
-  gap: 1rem;
+  gap: 8px;
   background-color: var(--bg-color-secondary);
-  border-radius: 1rem;
+  border-radius: 8px;
 }
 
 .text {

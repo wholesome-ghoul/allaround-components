@@ -10,8 +10,8 @@ const Modal = ({
   gridPosition,
   fill,
   dataCy,
-  innerRef,
   visible,
+  innerRef,
   className,
   ...rest
 }: Props) => {

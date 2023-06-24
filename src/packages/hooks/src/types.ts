@@ -1,11 +1,16 @@
-import { SyntheticEvent, EventHandler } from "react";
+import { SyntheticEvent, EventHandler, RefObject } from "react";
 
 type UseResizeObserverAction = (entry: ResizeObserverEntry) => void;
 
 type UseEventListenerEventHandler = EventHandler<
-  SyntheticEvent & KeyboardEvent
+  SyntheticEvent & KeyboardEvent & MessageEvent
 >;
-type UseEventListenerElement = Window | Element | Document | MediaQueryList;
+type UseEventListenerElement<T> =
+  // | Window
+  // | Element
+  // | Document
+  // | MediaQueryList
+  RefObject<T>;
 
 export type {
   UseResizeObserverAction,
