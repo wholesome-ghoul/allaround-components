@@ -12,6 +12,8 @@ const Text = ({
   dataCy,
   innerRef,
   className,
+  oneline,
+  ellipsis,
   ...rest
 }: Props) => {
   return (
@@ -20,6 +22,8 @@ const Text = ({
         styles.text,
         {
           [styles.fill]: fill,
+          [styles.oneline]: oneline,
+          [styles.ellipsis]: ellipsis,
         },
         styles[`${size}Text`],
         className

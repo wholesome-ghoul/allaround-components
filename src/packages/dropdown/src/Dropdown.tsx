@@ -64,7 +64,12 @@ const Dropdown = ({
         fill
       >
         {text && (
-          <Text size="medium" className={cx(styles.text)}>
+          <Text
+            size="medium"
+            className={cx(styles.text)}
+            oneline={rest.oneline}
+            ellipsis={rest.ellipsis}
+          >
             {text}
           </Text>
         )}

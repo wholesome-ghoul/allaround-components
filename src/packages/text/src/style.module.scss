@@ -3,6 +3,15 @@
   font-family: inherit;
 }
 
+.oneline {
+  white-space: nowrap;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .smallText {
   font-size: var(--font-size-small);
 }

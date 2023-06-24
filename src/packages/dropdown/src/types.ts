@@ -1,5 +1,6 @@
 import type { TooltipProps } from "@allaround/tooltip";
 import type { ButtonProps } from "@allaround/button";
+import type { TextProps } from "@allaround/text";
 
 import { BaseProps, Size } from "../../../utils";
 
@@ -14,7 +15,8 @@ type DropdownItemProps = BaseProps<HTMLDivElement> & {
 };
 
 type Props = BaseProps<HTMLDivElement> &
-  Pick<ButtonProps, "icon"> & {
+  Pick<ButtonProps, "icon"> &
+  Pick<TextProps, "oneline" | "ellipsis"> & {
     children: React.ReactNode[] | React.ReactNode;
     size?: Size;
     dropperSize?: Size;
