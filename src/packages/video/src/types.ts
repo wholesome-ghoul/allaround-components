@@ -7,6 +7,11 @@ type Props = BaseProps<HTMLVideoElement> & {
   file?: File | null;
   width?: string;
   height?: string;
+
+  maxDuration?: number;
+
+  handleError: ({ text, show }: { text: string; show: boolean }) => void;
+  isError?: boolean;
 };
 
 export default Props;
