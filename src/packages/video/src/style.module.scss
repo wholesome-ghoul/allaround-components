@@ -32,11 +32,31 @@
   border: 2px solid var(--error-color);
 }
 
-.removeButton {
+.iconButton {
   position: absolute;
+}
+
+.centerIcon {
+  top: 50%;
+}
+
+.topRightIcon {
+  top: 0;
+  right: 0;
+}
+
+.topLeftIcon {
   top: 0;
   left: 0;
-  background: transparent;
+}
+
+.topIcon {
+  top: 0;
+}
+
+.bottomIcon {
+  top: 100%;
+  transform: translateY(-25px);
 }
 
 .none {

@@ -15,7 +15,7 @@ function useEventListener<
 function useEventListener<K extends keyof WindowEventMap, T extends Window>(
   eventName: K,
   eventHandler: (event: WindowEventMap[K]) => void,
-  element: TargetElement<T> | null | undefined,
+  element: TargetElement<T> | Window | null | undefined,
   deps?: any[]
 ): void;
 
@@ -81,7 +81,7 @@ function useEventListener<
       | DocumentEventMap[KD]
       | IDBTransactionEventMap[IT]
   ) => void,
-  element: TargetElement<T> | null | undefined,
+  element: TargetElement<T> | Window | null | undefined,
   deps: any[] = []
 ) {
   const handler = useRef(eventHandler);
@@ -91,16 +91,19 @@ function useEventListener<
   }, [eventHandler]);
 
   useEffect(() => {
-    if (!element?.current) return;
+    const targetElement: T | Window =
+      (element as TargetElement<T>)?.current ?? window;
 
-    const valid = element && element.current?.addEventListener;
+    if (!targetElement) return;
+
+    const valid = targetElement && targetElement.addEventListener;
     if (!valid) return;
 
     const _handler = (event: any) => handler.current(event);
 
-    element.current.addEventListener(eventName, _handler);
+    targetElement.addEventListener(eventName, _handler);
 
-    return () => element.current?.removeEventListener(eventName, _handler);
+    return () => targetElement.removeEventListener(eventName, _handler);
   }, [element, eventName, ...deps]);
 }
 

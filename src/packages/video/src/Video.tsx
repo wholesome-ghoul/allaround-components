@@ -3,6 +3,7 @@ import Container from "@allaround/container";
 import hooks from "@allaround/hooks";
 import Button from "@allaround/button";
 import Icons from "@allaround/icons";
+import Upload from "@allaround/upload";
 import cx from "classnames";
 
 import Props from "./types";
@@ -21,10 +22,13 @@ const Video = ({
   file,
   innerRef,
   width,
+  clickHandler,
+  icon,
+  iconPosition,
   height,
   className,
   setIsError,
-  handleRemove,
+  editable,
   maxDuration = 60 * 15,
   ...rest
 }: Props) => {
@@ -96,23 +100,32 @@ const Video = ({
         {children}
       </StyledVideo>
 
-      {setIsError && error.show && (
-        <>
-          <Container className={cx(styles.errorContainer)} noGrid>
-            {error.text}
-          </Container>
+      {clickHandler && !editable && (
+        <Button
+          onClick={clickHandler}
+          icon={icon}
+          className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
+          noBorder
+          transparent
+        />
+      )}
 
-          <Button
-            onClick={handleRemove}
-            icon={<Icons.DelIcon size="large" />}
-            className={cx(styles.removeButton)}
-            tooltip={{
-              children: "remove video",
-              preferredPosition: "bottom",
-            }}
-            noBorder
-          />
-        </>
+      {!clickHandler && editable && (
+        <Upload
+          accept={rest.accept ?? ["video/mp4"]}
+          maxSize={rest.maxSize}
+          setIsError={rest.uploadSetIsError}
+          setFile={rest.setFile ?? (() => {})}
+          icon={<Icons.EditIcon size="small" />}
+          className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
+          noBorder
+        />
+      )}
+
+      {setIsError && error.show && (
+        <Container className={cx(styles.errorContainer)} noGrid>
+          {error.text}
+        </Container>
       )}
     </Container>
   );
@@ -123,6 +136,8 @@ Video.defaultProps = {
   dataCy: "video-component",
   width: "100%",
   height: "100%",
+  icon: <Icons.DelIcon size="large" />,
+  iconPosition: "topLeft",
 };
 
 export default Video;

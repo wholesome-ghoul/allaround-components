@@ -1,6 +1,7 @@
 import { TooltipProps } from "@allaround/tooltip";
-import { BaseProps, Size } from "../../../utils";
 import type { UploadProps } from "@allaround/upload";
+
+import { BaseProps, Size } from "../../../utils";
 
 type Props = BaseProps<HTMLImageElement> &
   Pick<React.CSSProperties, "objectFit"> &
