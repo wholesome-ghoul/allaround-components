@@ -28,10 +28,11 @@ const Textarea = ({
   label,
   counterIsInside,
   flex,
+  setIsError,
   className,
   ...rest
 }: Props) => {
-  const [_isError, setIsError] = useState(isError);
+  const [_isError, _setIsError] = useState(isError);
   const [showCounter, setShowCounter] = useState(false);
   const [totalChars, setTotalChars] = useState(current ?? 0);
   const parentContainerRef = useRef(null);
@@ -46,9 +47,11 @@ const Textarea = ({
     if (current !== undefined) setTotalChars(current);
 
     if (totalChars > max) {
-      setIsError(true);
+      _setIsError(true);
+      setIsError && setIsError(true);
     } else {
-      setIsError(false);
+      _setIsError(false);
+      setIsError && setIsError(false);
     }
   }, [max, totalChars, current]);
 
@@ -100,6 +103,7 @@ const Textarea = ({
             </Label>
           </Container>
         )}
+
         <Container noGrid>
           {children ?? (
             <StyledTextarea
@@ -121,6 +125,7 @@ const Textarea = ({
             />
           )}
         </Container>
+
         <Utilities
           {...{
             showCounter,

@@ -24,6 +24,8 @@ type Props = BaseProps<HTMLImageElement> &
     inheritBorderColor?: boolean;
 
     clickHandlerTooltip?: TooltipProps;
+
+    variant?: "youtube-thumbnail";
   };
 
 export default Props;

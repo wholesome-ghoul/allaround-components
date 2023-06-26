@@ -14,16 +14,26 @@
   margin: 4px;
 }
 
+.youtube-thumbnailContainer {
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.youtube-thumbnailImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .inheritBorderColor {
   border-color: inherit;
 }
 
 .iconButton {
   position: absolute;
-
-  &:hover {
-    background-color: transparent;
-  }
 }
 
 .centerIcon {

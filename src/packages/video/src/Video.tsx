@@ -60,8 +60,10 @@ const Video = ({
         const text = `Video duration is too long. Max ${maxDuration} seconds.`;
         const show = true;
         setError({ text, show });
+        setIsError && setIsError(true);
       } else {
         setError({ text: "", show: false });
+        setIsError && setIsError(false);
       }
     },
     videoRef

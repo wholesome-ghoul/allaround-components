@@ -26,6 +26,7 @@ type Props = BaseProps<HTMLTextAreaElement> &
     value?: string;
 
     isError?: boolean;
+    setIsError?: (isError: boolean) => void;
     onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   };
 

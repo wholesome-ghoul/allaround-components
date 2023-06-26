@@ -27,6 +27,7 @@ const Image = ({
   objectFit,
   editable,
   inheritBorderColor,
+  variant,
   ...rest
 }: Props) => {
   const [_src, _setSrc] = useState("");
@@ -48,9 +49,13 @@ const Image = ({
 
   return (
     <Container
-      className={cx(styles.imageContainer, {
-        [styles.inheritBorderColor]: inheritBorderColor,
-      })}
+      className={cx(
+        styles.imageContainer,
+        {
+          [styles.inheritBorderColor]: inheritBorderColor,
+        },
+        styles[`${variant}Container`]
+      )}
       noGrid
     >
       <StyledImage
@@ -60,6 +65,7 @@ const Image = ({
             [styles.fill]: fill,
           },
           styles[`${size}Image`],
+          styles[`${variant}Image`],
           className
         )}
         ref={innerRef}
@@ -83,15 +89,15 @@ const Image = ({
       )}
 
       {!clickHandler && editable && (
-          <Upload
-            accept={rest.accept ?? ["image/png"]}
-            maxSize={rest.maxSize}
-            setIsError={rest.setIsError}
-            setFile={rest.setFile ?? (() => {})}
-            icon={<Icons.EditIcon size="small" />}
-            className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
-            noBorder
-          />
+        <Upload
+          accept={rest.accept ?? ["image/png"]}
+          maxSize={rest.maxSize}
+          setIsError={rest.setIsError}
+          setFile={rest.setFile ?? (() => {})}
+          icon={<Icons.EditIcon size="small" />}
+          className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
+          noBorder
+        />
       )}
     </Container>
   );

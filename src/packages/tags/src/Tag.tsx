@@ -19,6 +19,15 @@ const Tag = ({ value, handleTagChange, handleTagDel }: any) => {
         value={_value}
         onChange={handleOnChange}
         className={styles.tagInput}
+        styles={{
+          width: _value.length + 2 + "ch",
+          minWidth: "3ch",
+          maxWidth: "20ch",
+        }}
+        tooltip={{
+          children: _value,
+          preferredPosition: "top",
+        }}
       />
       <Button
         onClick={() => handleTagDel(_value)}
