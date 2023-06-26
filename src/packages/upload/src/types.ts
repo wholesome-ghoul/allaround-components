@@ -6,7 +6,7 @@ type Props = BaseProps<HTMLDivElement> & {
   text?: string;
   accept?: string[];
   /**
-   * in kilobytes
+   * in megabytes
    */
   maxSize?: number;
 

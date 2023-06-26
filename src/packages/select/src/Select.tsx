@@ -95,7 +95,7 @@ const Select = ({
         transparent
         fill
       >
-        <Text className={cx(styles.text)}>{options[selectedIndex].label}</Text>
+        <Text className={cx(styles.text)}>{options[selectedIndex]?.label}</Text>
         <Icons.ArrowDownIcon className={cx(styles.arrow)} />
       </Button>
       <Container

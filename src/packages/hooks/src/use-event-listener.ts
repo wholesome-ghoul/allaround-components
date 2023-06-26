@@ -1,13 +1,86 @@
 import { useLayoutEffect, useEffect, useRef } from "react";
 
-import {
-  UseEventListenerEventHandler as EventHandler,
-  UseEventListenerElement as TargetElement,
-} from "./types";
+import { UseEventListenerElement as TargetElement } from "./types";
 
-function useEventListener<T extends HTMLElement | Element | Document | Window>(
-  eventName: string,
-  eventHandler: EventHandler,
+function useEventListener<
+  K extends keyof HTMLElementEventMap,
+  T extends HTMLElement
+>(
+  eventName: K,
+  eventHandler: (event: HTMLElementEventMap[K]) => void,
+  element: TargetElement<T> | null | undefined,
+  deps?: any[]
+): void;
+
+function useEventListener<K extends keyof WindowEventMap, T extends Window>(
+  eventName: K,
+  eventHandler: (event: WindowEventMap[K]) => void,
+  element: TargetElement<T> | null | undefined,
+  deps?: any[]
+): void;
+
+function useEventListener<K extends keyof DocumentEventMap, T extends Document>(
+  eventName: K,
+  eventHandler: (event: DocumentEventMap[K]) => void,
+  element: TargetElement<T> | null | undefined,
+  deps?: any[]
+): void;
+
+function useEventListener<
+  K extends keyof IDBRequestEventMap,
+  T extends IDBRequest
+>(
+  eventName: K,
+  eventHandler: (event: IDBRequestEventMap[K]) => void,
+  element: TargetElement<T> | null | undefined,
+  deps?: any[]
+): void;
+
+function useEventListener<
+  K extends keyof IDBOpenDBRequestEventMap,
+  T extends IDBOpenDBRequest
+>(
+  eventName: K,
+  eventHandler: (event: IDBOpenDBRequestEventMap[K]) => void,
+  element: TargetElement<T> | null | undefined,
+  deps?: any[]
+): void;
+
+function useEventListener<
+  K extends keyof IDBTransactionEventMap,
+  T extends IDBTransaction
+>(
+  eventName: K,
+  eventHandler: (event: IDBTransactionEventMap[K]) => void,
+  element: TargetElement<T> | null | undefined,
+  deps?: any[]
+): void;
+
+function useEventListener<
+  KW extends keyof WindowEventMap,
+  KD extends keyof DocumentEventMap,
+  KE extends keyof HTMLElementEventMap,
+  IR extends keyof IDBRequestEventMap,
+  IO extends keyof IDBOpenDBRequestEventMap,
+  IT extends keyof IDBTransactionEventMap,
+  T extends
+    | Window
+    | HTMLElement
+    | Document
+    | IDBRequest
+    | IDBOpenDBRequest
+    | IDBTransaction
+>(
+  eventName: KW | KE | IR | IO | KD | IT,
+  eventHandler: (
+    event:
+      | WindowEventMap[KW]
+      | HTMLElementEventMap[KE]
+      | IDBRequestEventMap[IR]
+      | IDBOpenDBRequestEventMap[IO]
+      | DocumentEventMap[KD]
+      | IDBTransactionEventMap[IT]
+  ) => void,
   element: TargetElement<T> | null | undefined,
   deps: any[] = []
 ) {

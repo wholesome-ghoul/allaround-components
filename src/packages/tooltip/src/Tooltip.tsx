@@ -110,8 +110,6 @@ const Tooltip = <Elem extends HTMLElement>({
   useEventListener(
     "mouseleave",
     (e) => {
-      if (!visible) return;
-
       if (
         componentRef?.current &&
         componentRef?.current === (e.target as Node)

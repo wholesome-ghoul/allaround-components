@@ -57,7 +57,7 @@ const Video = ({
       if (!videoRef.current) return;
 
       if (videoRef.current.duration > maxDuration) {
-        const text = `Video duration is too long. Max ${maxDuration} seconds.`;
+        const text = `Video is longer than ${maxDuration / 60} minutes`;
         const show = true;
         setError({ text, show });
         setIsError && setIsError(true);

@@ -23,9 +23,9 @@ const fileValidator = (file: File, accept?: string[], maxSize?: number) => {
     return { text: "Invalid file type", show: true };
   }
 
-  if (maxSize !== undefined && file.size > maxSize * 1024) {
+  if (maxSize !== undefined && file.size > maxSize * 1024 * 1024) {
     return {
-      text: "File is too big",
+      text: `File is larger than ${maxSize}MB`,
       show: true,
     };
   }
@@ -177,7 +177,6 @@ const Upload = ({
 Upload.defaultProps = {
   size: "small",
   dataCy: "upload-component",
-  maxSize: 1,
   noBorder: false,
 };
 
