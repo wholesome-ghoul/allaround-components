@@ -10,8 +10,8 @@ type Props = BaseProps<HTMLVideoElement> & {
 
   maxDuration?: number;
 
-  handleError: ({ text, show }: { text: string; show: boolean }) => void;
-  isError?: boolean;
+  setIsError?: (isError: boolean) => void;
+  handleRemove: () => void;
 };
 
 export default Props;

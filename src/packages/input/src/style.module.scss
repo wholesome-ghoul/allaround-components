@@ -47,3 +47,9 @@
 .isError, .isError:focus-visible {
   outline: 0.1rem solid var(--error-color);
 }
+
+.errorContainer{
+  color: var(--error-color);
+  padding: 4px;
+  font-style: italic;
+}

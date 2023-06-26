@@ -44,6 +44,11 @@ const iconSize = {
 type IconSize = keyof typeof iconSize;
 const isIconSize = (size: string): size is IconSize => size in iconSize;
 
+type DisplayError = {
+  text: string;
+  show: boolean;
+};
+
 type BaseProps<Elem> = {
   className?: string;
   gridPosition?: GridPos | GridPosList;
@@ -66,5 +71,6 @@ export type {
   GridBpRequired,
   Size,
   IconSize,
+  DisplayError,
 };
 export { isIconSize, iconSize };

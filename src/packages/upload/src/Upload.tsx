@@ -5,10 +5,12 @@ import hooks from "@allaround/hooks";
 import Input from "@allaround/input";
 import Label from "@allaround/label";
 import Icons from "@allaround/icons";
+import Container from "@allaround/container";
 
 import Props from "./types";
 import styles from "./style.module.scss";
 import StyledUpload from "./StyledUpload";
+import { DisplayError } from "../../../utils";
 
 const { useEventListener } = hooks;
 
@@ -34,7 +36,6 @@ const fileValidator = (file: File, accept?: string[], maxSize?: number) => {
 const Upload = ({
   children,
   size,
-  isError,
   gridPosition,
   fill,
   dataCy,
@@ -42,15 +43,16 @@ const Upload = ({
   text,
   className,
   accept,
-  handleError,
   setFile,
   maxSize,
   icon,
   noBorder,
+  setIsError,
   ...rest
 }: Props) => {
   const uploadRef = useRef<HTMLLabelElement | null>(null);
   const [isOnUpload, setIsOnUpload] = useState(false);
+  const [error, setError] = useState<DisplayError>({ text: "", show: false });
   const inputId = useMemo(() => uuidv4(), []);
   const handleDrop = useCallback(
     (e: any) => {
@@ -62,15 +64,17 @@ const Upload = ({
       const { text, show } = fileValidator(file, accept, maxSize);
 
       if (show) {
-        handleError({ text, show });
+        setError({ text, show });
+        setIsError && setIsError(true);
         return;
       } else {
-        handleError({ text: "", show: false });
+        setError({ text: "", show: false });
+        setIsError && setIsError(false);
       }
 
       setFile(file);
     },
-    [accept, maxSize, setFile, handleError]
+    [accept, maxSize, setFile]
   );
 
   useEventListener(
@@ -129,7 +133,7 @@ const Upload = ({
         innerRef={uploadRef}
         htmlFor={inputId}
         className={cx(styles.label, {
-          [styles.isError]: isError,
+          [styles.isError]: error.show,
           [styles.active]: isOnUpload,
           [styles.noBorder]: noBorder,
         })}
@@ -146,10 +150,12 @@ const Upload = ({
           const { text, show } = fileValidator(file, accept, maxSize);
 
           if (show) {
-            handleError({ text, show });
+            setError({ text, show });
+            setIsError && setIsError(true);
             return;
           } else {
-            handleError({ text: "", show: false });
+            setError({ text: "", show: false });
+            setIsError && setIsError(false);
           }
 
           setFile(file);
@@ -158,6 +164,12 @@ const Upload = ({
         className={cx(styles.input)}
         id={inputId}
       />
+
+      {setIsError && error.show && (
+        <Container className={cx(styles.errorContainer)} noGrid>
+          {error.text}
+        </Container>
+      )}
     </StyledUpload>
   );
 };
@@ -165,7 +177,6 @@ const Upload = ({
 Upload.defaultProps = {
   size: "small",
   dataCy: "upload-component",
-  isError: false,
   maxSize: 1,
   noBorder: false,
 };

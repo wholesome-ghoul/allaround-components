@@ -1,10 +1,14 @@
-import { useRef, useEffect } from "react";
-import cx from "classnames";
+import { useRef, useEffect, useState } from "react";
+import Container from "@allaround/container";
 import hooks from "@allaround/hooks";
+import Button from "@allaround/button";
+import Icons from "@allaround/icons";
+import cx from "classnames";
 
 import Props from "./types";
 import styles from "./style.module.scss";
 import StyledVideo from "./StyledVideo";
+import { DisplayError } from "../../../utils";
 
 const { useEventListener } = hooks;
 
@@ -19,12 +23,13 @@ const Video = ({
   width,
   height,
   className,
-  handleError,
-  isError,
+  setIsError,
+  handleRemove,
   maxDuration = 60 * 15,
   ...rest
 }: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [error, setError] = useState<DisplayError>({ text: "", show: false });
 
   useEffect(() => {
     if (videoRef.current && file) {
@@ -41,10 +46,10 @@ const Video = ({
   useEffect(() => {
     if (!videoRef.current) return;
 
-    if (isError) {
+    if (error.show) {
       videoRef.current.src = "";
     }
-  }, [isError]);
+  }, [error]);
 
   useEventListener(
     "loadedmetadata",
@@ -52,35 +57,62 @@ const Video = ({
       if (!videoRef.current) return;
 
       if (videoRef.current.duration > maxDuration) {
-        const text = `Video duration is too long. Max duration is ${maxDuration} seconds.`;
+        const text = `Video duration is too long. Max ${maxDuration} seconds.`;
         const show = true;
-        handleError({ text, show });
+        setError({ text, show });
+      } else {
+        setError({ text: "", show: false });
       }
     },
     videoRef
   );
 
   return (
-    <StyledVideo
-      className={cx(
-        styles.video,
-        {
-          [styles.fill]: fill,
-          [styles.isError]: isError,
-        },
-        styles[`${size}Video`],
-        className
-      )}
-      ref={videoRef}
+    <Container
+      className={cx(styles.videoContainer)}
       gridPosition={gridPosition}
-      {...rest}
-      data-cy={dataCy}
-      width={width}
-      height={height}
-      controls
+      noGrid
+      flex
     >
-      {children}
-    </StyledVideo>
+      <StyledVideo
+        className={cx(
+          styles.video,
+          {
+            [styles.fill]: fill,
+            [styles.isError]: error.show,
+          },
+          styles[`${size}Video`],
+          className
+        )}
+        ref={videoRef}
+        {...rest}
+        data-cy={dataCy}
+        width={width}
+        height={height}
+        controls
+      >
+        {children}
+      </StyledVideo>
+
+      {setIsError && error.show && (
+        <>
+          <Container className={cx(styles.errorContainer)} noGrid>
+            {error.text}
+          </Container>
+
+          <Button
+            onClick={handleRemove}
+            icon={<Icons.DelIcon size="large" />}
+            className={cx(styles.removeButton)}
+            tooltip={{
+              children: "remove video",
+              preferredPosition: "bottom",
+            }}
+            noBorder
+          />
+        </>
+      )}
+    </Container>
   );
 };
 

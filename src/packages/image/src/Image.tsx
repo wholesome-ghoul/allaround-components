@@ -83,16 +83,15 @@ const Image = ({
       )}
 
       {!clickHandler && editable && (
-        <Upload
-          accept={rest.accept ?? ["image/png"]}
-          maxSize={rest.maxSize}
-          isError={rest.isError}
-          handleError={rest.handleError ?? (() => {})}
-          setFile={rest.setFile ?? (() => {})}
-          icon={<Icons.EditIcon size="small" />}
-          className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
-          noBorder
-        />
+          <Upload
+            accept={rest.accept ?? ["image/png"]}
+            maxSize={rest.maxSize}
+            setIsError={rest.setIsError}
+            setFile={rest.setFile ?? (() => {})}
+            icon={<Icons.EditIcon size="small" />}
+            className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
+            noBorder
+          />
       )}
     </Container>
   );
@@ -104,7 +103,7 @@ Image.defaultProps = {
   width: "100%",
   height: "100%",
   icon: <Icons.DelIcon size="large" />,
-  iconPosition: "topRight",
+  iconPosition: "topLeft",
   inheritBorderColor: false,
 };
 

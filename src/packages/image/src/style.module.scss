@@ -35,8 +35,18 @@
   right: 0;
 }
 
+.topLeftIcon {
+  top: 0;
+  left: 0;
+}
+
+.topIcon {
+  top: 0;
+}
+
 .bottomIcon {
-  bottom: 0;
+  top: 100%;
+  transform: translateY(-25px);
 }
 
 .smallImage {

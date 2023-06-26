@@ -3,6 +3,15 @@
   font-family: inherit;
   position: relative;
   font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorContainer{
+  color: var(--error-color);
+  padding: 4px;
+  font-style: italic;
 }
 
 .isError {
@@ -17,9 +26,14 @@
   opacity: 0;
   z-index: -1;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
 }
 
 .label {
+  width: fit-content;
   color: var(--fg-color);
   cursor: pointer;
   display: flex;

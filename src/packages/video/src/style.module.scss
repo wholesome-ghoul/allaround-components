@@ -16,6 +16,33 @@
   }
 }
 
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.errorContainer{
+  color: var(--error-color);
+  padding: 4px;
+  font-style: italic;
+}
+
+.isError {
+  border: 2px solid var(--error-color);
+}
+
+.removeButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.none {
+  display: none;
+}
+
 .smallVideo {
   font-size: var(--font-size-small);
 }

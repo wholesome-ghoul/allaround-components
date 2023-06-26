@@ -5,8 +5,6 @@ type Props = BaseProps<HTMLDivElement> & {
   size?: Size;
   text?: string;
   accept?: string[];
-  isError?: boolean;
-  handleError: ({ text, show }: { text: string; show: boolean }) => void;
   /**
    * in kilobytes
    */
@@ -15,6 +13,8 @@ type Props = BaseProps<HTMLDivElement> & {
   setFile: (file: File | null) => void;
   icon?: React.ReactNode;
   noBorder?: boolean;
+
+  setIsError?: (isError: boolean) => void;
 };
 
 export default Props;

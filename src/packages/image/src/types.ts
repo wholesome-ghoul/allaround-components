@@ -1,3 +1,4 @@
+import { TooltipProps } from "@allaround/tooltip";
 import { BaseProps, Size } from "../../../utils";
 import type { UploadProps } from "@allaround/upload";
 
@@ -12,7 +13,7 @@ type Props = BaseProps<HTMLImageElement> &
     height?: string;
 
     icon?: React.ReactNode;
-    iconPosition?: "center" | "topRight" | "bottom";
+    iconPosition?: "center" | "topRight" | "topLeft" | "bottom" | "top";
 
     /**
      * enables icon and calls user handler
@@ -21,6 +22,8 @@ type Props = BaseProps<HTMLImageElement> &
 
     editable?: boolean;
     inheritBorderColor?: boolean;
+
+    clickHandlerTooltip?: TooltipProps;
   };
 
 export default Props;

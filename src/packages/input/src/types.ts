@@ -15,6 +15,8 @@ type Props = BaseProps<HTMLInputElement> & {
   accept?: string;
 
   tooltip?: Omit<TooltipProps, "componentRef">;
+  required?: boolean;
+  setIsError?: (isError: boolean) => void;
 };
 
 export default Props;
