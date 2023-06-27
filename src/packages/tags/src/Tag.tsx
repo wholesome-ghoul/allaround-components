@@ -5,12 +5,15 @@ import Icons from "@allaround/icons";
 
 import styles from "./style.module.scss";
 
-const Tag = ({ value, handleTagChange, handleTagDel }: any) => {
+const Tag = ({ value, index, handleTagChange, handleTagDel }: any) => {
   const [_value, _setValue] = useState(value);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     _setValue(e.target.value);
-    handleTagChange(e.target.value, _value);
+  };
+
+  const onblur = () => {
+    handleTagChange(index, _value);
   };
 
   return (
@@ -28,9 +31,10 @@ const Tag = ({ value, handleTagChange, handleTagDel }: any) => {
           children: _value,
           preferredPosition: "top",
         }}
+        onBlur={onblur}
       />
       <Button
-        onClick={() => handleTagDel(_value)}
+        onClick={() => handleTagDel(index)}
         icon={<Icons.DelIcon />}
         noBorder
       />

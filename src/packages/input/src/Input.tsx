@@ -27,6 +27,8 @@ const Input = forwardRef(function Input(
     tooltip,
     required,
     setIsError,
+    onFocus,
+    onBlur,
     isError = false,
     className,
     ...rest
@@ -86,6 +88,8 @@ const Input = forwardRef(function Input(
         onChange={onChange}
         gridPosition={gridPosition}
         accept={accept}
+        onFocus={onFocus}
+        onBlur={onBlur}
         ref={inputRef}
         {...styledProps}
         {...rest}

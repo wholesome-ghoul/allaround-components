@@ -31,7 +31,7 @@
   border: 2px solid var(--bg-color-secondary);
   outline: none;
 
-  &:focus-within {
+  &:focus-within, &:hover {
     border: 2px solid var(--fg-color);
   }
 }
@@ -50,7 +50,7 @@
 .isError {
   color: var(--error-color);
 
-  &:focus-within {
+  &:focus-within, &:hover {
     color: var(--error-color);
   }
 }
@@ -58,7 +58,7 @@
 .isErrorContainer {
   border: 2px solid var(--error-color);
 
-  &:focus-within {
+  &:focus-within, &:hover {
     border: 2px solid var(--error-color);
   }
 }

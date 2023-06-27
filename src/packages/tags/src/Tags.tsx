@@ -10,9 +10,16 @@ import StyledTags from "./StyledTags";
 
 const { useEventListener } = hooks;
 
+function areArraysEqual(arr1: string[], arr2: string[]) {
+  if (arr1.length !== arr2.length) return false;
+
+  return arr1.every((element: string) => arr2.includes(element));
+}
+
 type TagElement = {
   name: string;
-  elem: React.ReactNode;
+  value: string;
+  index: string;
 };
 
 const Tags = ({
@@ -24,11 +31,27 @@ const Tags = ({
   innerRef,
   onChange,
   className,
+  initialTags = [],
   ...rest
 }: Props) => {
   const [currentValue, setCurrentValue] = useState("");
   const [elements, setElements] = useState<TagElement[]>([]);
   const ref = useRef(null);
+
+  useEffect(() => {
+    if (initialTags && initialTags.length > 0) {
+      const newElements: TagElement[] = Array.from(new Set(initialTags)).map(
+        (value: string) => {
+          const trimmedValue = value.trim();
+          const index = `${trimmedValue}-${initialTags.length}`;
+
+          return { name: trimmedValue, value: trimmedValue, index };
+        }
+      );
+
+      setElements(newElements);
+    }
+  }, [initialTags]);
 
   useEventListener(
     "keydown",
@@ -36,56 +59,52 @@ const Tags = ({
       if ((e.keyCode === 13 || e.keyCode === 188) && ref.current) {
         e.preventDefault();
         const trimmedValue = currentValue.trim();
-        const newElement = (
-          <Tag
-            value={trimmedValue}
-            key={`${trimmedValue}-${elements.length}}`}
-            handleTagChange={handleTagChange}
-            handleTagDel={handleTagDel}
-          />
-        );
+        const index = `${trimmedValue}-${elements.length}`;
 
         if (
-          elements.find(
+          !elements.find(
             (element: TagElement) => element.name === trimmedValue
-          ) ||
-          trimmedValue === ""
+          ) &&
+          trimmedValue !== ""
         ) {
-          setCurrentValue("");
-          return;
+          setElements((prevElements: TagElement[]) => {
+            const newElements = [...prevElements];
+            newElements.push({
+              name: trimmedValue,
+              value: trimmedValue,
+              index,
+            });
+            return newElements;
+          });
         }
 
-        setElements((prevElements: TagElement[]) => {
-          const newElements = [...prevElements];
-          newElements.push({ name: trimmedValue, elem: newElement });
-          return newElements;
-        });
         setCurrentValue("");
       }
     },
     ref
   );
 
-  const handleTagDel = (currValue: string) => {
-    setElements((prevElements: TagElement[]) => {
-      return prevElements.filter(
-        (element: TagElement) => element.name !== currValue
-      );
-    });
+  const handleTagDel = (index: string) => {
+    const newElements = (prevElements: TagElement[]) =>
+      prevElements.filter((element: TagElement) => element.index !== index);
+
+    setElements(newElements);
   };
 
-  const handleTagChange = (newValue: string, currValue: string) => {
-    setElements((prevElements: TagElement[]) => {
-      return prevElements
+  const handleTagChange = (index: string, newTag: string) => {
+    const newElements = (prevElements: TagElement[]) =>
+      prevElements
+        .filter((element: TagElement) => element.name !== newTag)
         .map((element: TagElement) => {
-          if (element.name === currValue) {
-            return { ...element, name: newValue };
+          if (element.index === index) {
+            return { ...element, name: newTag };
           }
 
           return element;
         })
         .filter((element: TagElement) => element.name !== "");
-    });
+
+    setElements(newElements);
   };
 
   const handleMainInputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -95,6 +114,7 @@ const Tags = ({
 
       newValues.forEach((value: string) => {
         const trimmedValue = value.trim();
+        const index = `${trimmedValue}-${elements.length}`;
 
         if (
           elements.find(
@@ -105,16 +125,7 @@ const Tags = ({
           return;
         }
 
-        const newElement = (
-          <Tag
-            value={trimmedValue}
-            key={`${trimmedValue}-${elements.length}}`}
-            handleTagChange={handleTagChange}
-            handleTagDel={handleTagDel}
-          />
-        );
-
-        newElements.push({ name: trimmedValue, elem: newElement });
+        newElements.push({ name: trimmedValue, value: trimmedValue, index });
       });
 
       setElements((prevElements: TagElement[]) => {
@@ -138,6 +149,14 @@ const Tags = ({
   };
 
   useEffect(() => {
+    if (
+      areArraysEqual(
+        elements.map((element) => element.name),
+        initialTags
+      )
+    )
+      return;
+
     onChange && onChange(elements.map((element: TagElement) => element.name));
   }, [elements]);
 
@@ -162,7 +181,15 @@ const Tags = ({
       data-cy={dataCy}
     >
       <div className={cx(styles.tags)}>
-        {elements.map((element: TagElement) => element.elem)}
+        {elements.map((element: TagElement) => (
+          <Tag
+            key={element.index}
+            index={element.index}
+            value={element.value}
+            handleTagChange={handleTagChange}
+            handleTagDel={handleTagDel}
+          />
+        ))}
         <div className={cx(styles.tagMainInputContainer)} ref={ref}>
           <Input
             value={currentValue}

@@ -17,6 +17,9 @@ type Props = BaseProps<HTMLInputElement> & {
   tooltip?: Omit<TooltipProps, "componentRef">;
   required?: boolean;
   setIsError?: (isError: boolean) => void;
+
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
 };
 
 export default Props;
