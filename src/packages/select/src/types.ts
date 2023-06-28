@@ -2,14 +2,14 @@ import { BaseProps, Size } from "../../../utils";
 
 type Option = {
   label: string;
-  value: number;
+  value: string | number;
 };
 
 type Props = BaseProps<HTMLDivElement> & {
   children?: React.ReactNode | React.ReactNode[];
   size?: Size;
-  selectedIndex: number;
-  setSelectedIndex: (value: number) => void;
+  selectedOption: Option;
+  setSelectedOption: (option: Option) => void;
   options: Option[];
   maxHeight?: string;
 };

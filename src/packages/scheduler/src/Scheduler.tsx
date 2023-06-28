@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import cx from "classnames";
 import Container from "@allaround/container";
 import Icons from "@allaround/icons";
@@ -42,6 +42,7 @@ const Scheduler = ({
   dataCy,
   className,
   setDate,
+  initialDate,
   ...rest
 }: Props) => {
   const documentRef = useRef<Document>(document);
@@ -51,6 +52,12 @@ const Scheduler = ({
     date.setMinutes(15);
     return date;
   });
+
+  useEffect(() => {
+    if (initialDate) {
+      _setDate(new Date(initialDate));
+    }
+  }, [initialDate]);
 
   const [isOpen, setIsOpen] = useState(false);
   const [direction, setDirection] = useState<"up" | "down">("down");
@@ -66,7 +73,7 @@ const Scheduler = ({
   ) => {
     const newDate = new Date(year, month, day, hours, minutes);
     _setDate(newDate);
-    setDate(newDate);
+    setDate(newDate.getTime());
   };
 
   const toggleCalendar = () => {

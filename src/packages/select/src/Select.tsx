@@ -19,8 +19,8 @@ const Select = ({
   fill,
   dataCy,
   className,
-  setSelectedIndex,
-  selectedIndex,
+  setSelectedOption,
+  selectedOption,
   options,
   maxHeight,
   ...rest
@@ -35,9 +35,9 @@ const Select = ({
     setIsOpen(!isOpen);
   };
 
-  const handleSelect = (index: number) => {
+  const handleSelect = (option: Option) => {
     setIsOpen(false);
-    setSelectedIndex(index);
+    setSelectedOption(option);
   };
 
   useEventListener(
@@ -95,7 +95,7 @@ const Select = ({
         transparent
         fill
       >
-        <Text className={cx(styles.text)}>{options[selectedIndex]?.label}</Text>
+        <Text className={cx(styles.text)}>{selectedOption.label}</Text>
         <Icons.ArrowDownIcon className={cx(styles.arrow)} />
       </Button>
       <Container
@@ -104,12 +104,12 @@ const Select = ({
         })}
         noGrid
       >
-        {options.map((option, index) => (
+        {options.map((option) => (
           <Option
             key={option.value}
-            index={index}
+            option={option}
             handleSelect={handleSelect}
-            isSelected={selectedIndex === index}
+            isSelected={selectedOption.value === option.value}
             {...option}
           />
         ))}
@@ -118,22 +118,22 @@ const Select = ({
   );
 };
 
-type OptionProps = Option & {
-  index: number;
-  handleSelect: (index: number) => void;
+type OptionProps = {
+  option: Option;
+  handleSelect: (option: Option) => void;
   isSelected: boolean;
 };
 
-const Option = ({ label, index, handleSelect, isSelected }: OptionProps) => {
+const Option = ({ option, handleSelect, isSelected }: OptionProps) => {
   return (
     <Container
       className={cx(styles.option, {
         [styles.selectedOption]: isSelected,
       })}
-      onClick={() => handleSelect(index)}
+      onClick={() => handleSelect(option)}
       noGrid
     >
-      {label}
+      {option.label}
     </Container>
   );
 };

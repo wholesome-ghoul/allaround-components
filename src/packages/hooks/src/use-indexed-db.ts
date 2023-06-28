@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import useEventListener from "./use-event-listener";
 
@@ -31,6 +31,7 @@ const useIndexedDb = ({
   const [db, setDb] = useState<IDBDatabase | null>(null);
   const transactionRef = useRef<IDBTransaction | null>(null);
   const [_dbValues, _setDbValues] = useState<any[]>(dbValues);
+  const [isFetched, setIsFetched] = useState(false);
 
   useEffect(() => {
     request.current = window.indexedDB.open(name, version);
@@ -107,6 +108,7 @@ const useIndexedDb = ({
             cursor.continue();
           } else {
             _setDbValues(values);
+            setIsFetched(true);
           }
         };
 
@@ -136,7 +138,7 @@ const useIndexedDb = ({
     _setDbValues(values);
   };
 
-  return { request, setDbValues, dbValues: _dbValues };
+  return { request, setDbValues, dbValues: _dbValues, isFetched };
 };
 
 export default useIndexedDb;
