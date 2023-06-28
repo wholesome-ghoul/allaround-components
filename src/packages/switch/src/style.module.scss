@@ -1,0 +1,108 @@
+.switch {
+  color: var(--fg-color);
+  font-family: inherit;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+.switchContainer {
+  position: relative;
+  display: flex;
+  text-align: center;
+  width: min-content;
+  // slider height
+  min-height: 40px;
+  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.label {
+  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 68px;
+  height: 40px;
+
+  background-color: var(--bg-color);
+  transition: 0.4s;
+  border: 2px solid var(--bg-color-secondary);
+  border-radius: 34px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 5px;
+
+    background-color: var(--bg-color);
+    border: 2px solid var(--bg-color-secondary);
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    top: 9px;
+    transition: transform 0.4s;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 13px;
+    border: solid var(--bg-color-secondary);
+    border-width: 0 3px 3px 0;
+    height: 15px;
+    width: 8px;
+  }
+
+  &.checked {
+    border-color: var(--fg-color);
+
+    &::before {
+      transform: translateX(26px);
+      background-color: var(--fg-color);
+      border-color: var(--fg-color);
+    }
+
+    &::after {
+      transform: translateX(26px) rotate(45deg);
+      border-color: #fff;
+    }
+  }
+}
+
+.leftLabel {
+  left: 100%;
+  margin-left: 12px;
+}
+
+.smallSwitch {
+  font-size: var(--font-size-small);
+}
+
+.mediumSwitch {
+  font-size: var(--font-size-medium);
+}
+
+.largeSwitch {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

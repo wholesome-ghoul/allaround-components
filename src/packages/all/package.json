@@ -43,6 +43,7 @@
     "@allaround/image": "^1.0.0",
     "@allaround/checkbox": "^1.0.0",
     "@allaround/modal": "^1.0.0",
-    "@allaround/tooltip": "^1.0.0"
+    "@allaround/tooltip": "^1.0.0",
+    "@allaround/switch": "^1.0.0"
   }
 }
