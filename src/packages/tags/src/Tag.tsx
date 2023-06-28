@@ -13,6 +13,8 @@ const Tag = ({ value, index, handleTagChange, handleTagDel }: any) => {
   };
 
   const onblur = () => {
+    if (value === _value) return;
+
     handleTagChange(index, _value);
   };
 

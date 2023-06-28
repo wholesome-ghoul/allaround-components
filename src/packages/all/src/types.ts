@@ -20,3 +20,4 @@ export type { ImageProps } from "@allaround/image";
 export type { CheckboxProps } from "@allaround/checkbox";
 export type { ModalProps } from "@allaround/modal";
 export type { TooltipProps } from "@allaround/tooltip";
+export type { SwitchProps } from "@allaround/switch";

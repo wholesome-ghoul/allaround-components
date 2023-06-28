@@ -80,6 +80,9 @@
     },
     "src/packages/tooltip": {
       "release-type": "node"
+    },
+    "src/packages/switch": {
+      "release-type": "node"
     }
   }
 }
