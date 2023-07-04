@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.6.0](https://github.com/wholesome-ghoul/allaround-components/compare/container-v1.5.0...container-v1.6.0) (2023-07-04)
+
+
+### Features
+
+* add `ref` ([5c7e813](https://github.com/wholesome-ghoul/allaround-components/commit/5c7e8137a67b265787ec364103bd135420187ece))
+* add `select` component ([#52](https://github.com/wholesome-ghoul/allaround-components/issues/52)) ([2f10de8](https://github.com/wholesome-ghoul/allaround-components/commit/2f10de8098e70fe963551158190f7c39a9eab38c))
+* add `sidebar` component ([#44](https://github.com/wholesome-ghoul/allaround-components/issues/44)) ([9dbe0dc](https://github.com/wholesome-ghoul/allaround-components/commit/9dbe0dcb3f92c103349bf0b01fe5f97dbd42936e))
+* add `textarea` component ([#48](https://github.com/wholesome-ghoul/allaround-components/issues/48)) ([263d0ff](https://github.com/wholesome-ghoul/allaround-components/commit/263d0ff58c10f8644ef6d119ed43432663fc5ebf))
+
+
+### Bug Fixes
+
+* remove redundant prop ([4c7d666](https://github.com/wholesome-ghoul/allaround-components/commit/4c7d6661c930467d05983ff042950828e9874c4d))
+
 ## [1.5.0](https://github.com/wholesome-ghoul/allaround-components/compare/container-v1.4.0...container-v1.5.0) (2023-06-09)
 
 
