@@ -1,0 +1,46 @@
+.progressBarContainer {
+  color: var(--fg-color);
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  height: unset;
+  padding: 4px;
+}
+
+.progressBarWrapper {
+  width: 100%;
+  height: 24px;
+  background-color: transparent;
+  border: 4px solid var(--bg-color-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--fg-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.progressText {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.smallProgressBar {
+  font-size: var(--font-size-small);
+}
+
+.mediumProgressBar {
+  font-size: var(--font-size-medium);
+}
+
+.largeProgressBar {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

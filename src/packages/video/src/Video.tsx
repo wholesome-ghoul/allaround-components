@@ -19,7 +19,7 @@ const Video = ({
   gridPosition,
   fill,
   dataCy,
-  file,
+  src,
   innerRef,
   width,
   clickHandler,
@@ -32,26 +32,28 @@ const Video = ({
   maxDuration = 60 * 15,
   ...rest
 }: Props) => {
+  const [_src, _setSrc] = useState("");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [error, setError] = useState<DisplayError>({ text: "", show: false });
 
   useEffect(() => {
-    if (videoRef.current && file) {
+    if (!src) return;
+
+    if (typeof src === "string") _setSrc(src);
+    else if (src instanceof File) {
       const reader = new FileReader();
 
       reader.onload = (e) => {
-        videoRef.current!.src = e.target?.result as string;
+        _setSrc(e.target?.result as string);
       };
 
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(src);
     }
-  }, [file]);
+  }, [src]);
 
   useEffect(() => {
-    if (!videoRef.current) return;
-
     if (error.show) {
-      videoRef.current.src = "";
+      _setSrc("");
     }
   }, [error]);
 
@@ -91,6 +93,7 @@ const Video = ({
           className
         )}
         ref={videoRef}
+        src={_src}
         {...rest}
         data-cy={dataCy}
         width={width}

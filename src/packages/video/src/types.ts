@@ -8,7 +8,7 @@ type Props = BaseProps<HTMLVideoElement> &
     children?: React.ReactNode;
     size?: Size;
 
-    file?: File | null;
+    src?: File | string | null;
     width?: string;
     height?: string;
 

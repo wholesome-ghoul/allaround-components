@@ -83,6 +83,9 @@
     },
     "src/packages/switch": {
       "release-type": "node"
+    },
+    "src/packages/progress-bar": {
+      "release-type": "node"
     }
   }
 }

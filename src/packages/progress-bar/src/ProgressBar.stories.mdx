@@ -1,0 +1,13 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import ProgressBar from "./ProgressBar";
+
+<Meta title="ProgressBar" component={ProgressBar} />
+
+export const Template = (args) => <ProgressBar {...args} />;
+
+# ProgressBar
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>

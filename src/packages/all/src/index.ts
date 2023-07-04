@@ -23,3 +23,4 @@ export { default as Checkbox } from "@allaround/checkbox";
 export { default as Modal } from "@allaround/modal";
 export { default as Tooltip } from "@allaround/tooltip";
 export { default as Switch } from "@allaround/switch";
+export { default as ProgressBar } from "@allaround/progress-bar";
