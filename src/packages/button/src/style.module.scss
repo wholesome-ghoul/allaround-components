@@ -126,6 +126,28 @@
   }
 }
 
+.tertiaryVariant {
+  color: var(--tertiary-color);
+  background-color: transparent;
+  border-color: var(--border-color-tertiary);
+
+  &:hover {
+    color: var(--bg-color);
+    background-color: var(--secondary-hover-color);
+    border-color: var(--border-color);
+
+    & > svg {
+      fill: var(--color);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: transparent;
+    border-color: var(--border-color);
+  }
+}
+
 .transparent {
   background: transparent;
 }
