@@ -6,7 +6,7 @@ type Props = BaseProps<HTMLDivElement> & {
   text?: string;
   accept?: string[];
   /**
-   * in megabytes
+   * in bytes
    */
   maxSize?: number;
 
@@ -15,6 +15,9 @@ type Props = BaseProps<HTMLDivElement> & {
   noBorder?: boolean;
 
   setIsError?: (isError: boolean) => void;
+
+  errorText?: string;
+  errorShow?: boolean;
 };
 
 export default Props;

@@ -23,9 +23,23 @@ const fileValidator = (file: File, accept?: string[], maxSize?: number) => {
     return { text: "Invalid file type", show: true };
   }
 
-  if (maxSize !== undefined && file.size > maxSize * 1024 * 1024) {
+  if (maxSize !== undefined && file.size > maxSize) {
+    let postfix = "bytes";
+    let _maxSize = maxSize;
+
+    if (maxSize > 1024 * 1024 * 1024) {
+      postfix = "GB";
+      _maxSize = maxSize / (1024 * 1024 * 1024);
+    } else if (maxSize > 1024 * 1024) {
+      postfix = "MB";
+      _maxSize = maxSize / (1024 * 1024);
+    } else if (maxSize > 1024) {
+      postfix = "KB";
+      _maxSize = maxSize / 1024;
+    }
+
     return {
-      text: `File is larger than ${maxSize}MB`,
+      text: `File is larger than ${_maxSize}${postfix}`,
       show: true,
     };
   }
@@ -48,11 +62,16 @@ const Upload = ({
   icon,
   noBorder,
   setIsError,
+  errorText,
+  errorShow,
   ...rest
 }: Props) => {
   const uploadRef = useRef<HTMLLabelElement | null>(null);
   const [isOnUpload, setIsOnUpload] = useState(false);
-  const [error, setError] = useState<DisplayError>({ text: "", show: false });
+  const [error, setError] = useState<DisplayError>({
+    text: errorText ?? "",
+    show: errorShow ?? false,
+  });
   const inputId = useMemo(() => uuidv4(), []);
   const handleDrop = useCallback(
     (e: any) => {
@@ -67,11 +86,10 @@ const Upload = ({
         setError({ text, show });
         setIsError && setIsError(true);
         return;
-      } else {
-        setError({ text: "", show: false });
-        setIsError && setIsError(false);
       }
 
+      setError({ text: "", show: false });
+      setIsError && setIsError(false);
       setFile(file);
     },
     [accept, maxSize, setFile]
@@ -153,11 +171,10 @@ const Upload = ({
             setError({ text, show });
             setIsError && setIsError(true);
             return;
-          } else {
-            setError({ text: "", show: false });
-            setIsError && setIsError(false);
           }
 
+          setError({ text: "", show: false });
+          setIsError && setIsError(false);
           setFile(file);
         }}
         accept={accept?.join(",")}

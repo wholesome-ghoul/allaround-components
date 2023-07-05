@@ -54,8 +54,11 @@ const Scheduler = ({
   });
 
   useEffect(() => {
+    const now = new Date();
+
     if (initialDate) {
-      _setDate(new Date(initialDate));
+      const _initialDate = initialDate > now ? initialDate : now;
+      _setDate(new Date(_initialDate));
     }
   }, [initialDate]);
 

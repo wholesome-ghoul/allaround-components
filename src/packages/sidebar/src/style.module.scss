@@ -10,8 +10,10 @@
 }
 
 .sticky {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  max-width: 70px;
   height: 100vh;
 }
 

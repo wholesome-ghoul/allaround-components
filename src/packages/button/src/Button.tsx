@@ -43,7 +43,7 @@ const Button = (props: Props) => {
           },
           className
         )}
-        onClick={onClick}
+        onClick={disabled ? () => {} : onClick}
         gridPosition={gridPosition}
         ref={buttonRef}
         {...rest}
@@ -52,7 +52,7 @@ const Button = (props: Props) => {
         {icon}
         {children}
 
-        {tooltip && (
+        {!disabled && tooltip && (
           <Tooltip {...tooltip} componentRef={buttonRef}>
             {tooltip.children}
           </Tooltip>
@@ -76,7 +76,7 @@ const Button = (props: Props) => {
         },
         className
       )}
-      onClick={onClick}
+      onClick={disabled ? () => {} : onClick}
       gridPosition={gridPosition}
       ref={buttonRef}
       {...rest}
@@ -84,7 +84,7 @@ const Button = (props: Props) => {
     >
       {children}
 
-      {tooltip && (
+      {!disabled && tooltip && (
         <Tooltip {...tooltip} componentRef={buttonRef}>
           {tooltip.children}
         </Tooltip>
