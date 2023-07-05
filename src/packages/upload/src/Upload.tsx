@@ -23,9 +23,23 @@ const fileValidator = (file: File, accept?: string[], maxSize?: number) => {
     return { text: "Invalid file type", show: true };
   }
 
-  if (maxSize !== undefined && file.size > maxSize * 1024 * 1024) {
+  if (maxSize !== undefined && file.size > maxSize) {
+    let postfix = "bytes";
+    let _maxSize = maxSize;
+
+    if (maxSize > 1024 * 1024 * 1024) {
+      postfix = "GB";
+      _maxSize = maxSize / (1024 * 1024 * 1024);
+    } else if (maxSize > 1024 * 1024) {
+      postfix = "MB";
+      _maxSize = maxSize / (1024 * 1024);
+    } else if (maxSize > 1024) {
+      postfix = "KB";
+      _maxSize = maxSize / 1024;
+    }
+
     return {
-      text: `File is larger than ${maxSize}MB`,
+      text: `File is larger than ${_maxSize}${postfix}`,
       show: true,
     };
   }
