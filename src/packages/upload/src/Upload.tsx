@@ -48,11 +48,16 @@ const Upload = ({
   icon,
   noBorder,
   setIsError,
+  errorText,
+  errorShow,
   ...rest
 }: Props) => {
   const uploadRef = useRef<HTMLLabelElement | null>(null);
   const [isOnUpload, setIsOnUpload] = useState(false);
-  const [error, setError] = useState<DisplayError>({ text: "", show: false });
+  const [error, setError] = useState<DisplayError>({
+    text: errorText ?? "",
+    show: errorShow ?? false,
+  });
   const inputId = useMemo(() => uuidv4(), []);
   const handleDrop = useCallback(
     (e: any) => {
@@ -67,11 +72,10 @@ const Upload = ({
         setError({ text, show });
         setIsError && setIsError(true);
         return;
-      } else {
-        setError({ text: "", show: false });
-        setIsError && setIsError(false);
       }
 
+      setError({ text: "", show: false });
+      setIsError && setIsError(false);
       setFile(file);
     },
     [accept, maxSize, setFile]
@@ -153,11 +157,10 @@ const Upload = ({
             setError({ text, show });
             setIsError && setIsError(true);
             return;
-          } else {
-            setError({ text: "", show: false });
-            setIsError && setIsError(false);
           }
 
+          setError({ text: "", show: false });
+          setIsError && setIsError(false);
           setFile(file);
         }}
         accept={accept?.join(",")}

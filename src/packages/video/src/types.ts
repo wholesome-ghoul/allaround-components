@@ -26,6 +26,10 @@ type Props = BaseProps<HTMLVideoElement> &
     clickHandlerTooltip?: TooltipProps;
 
     uploadSetIsError?: UploadProps["setIsError"];
+    preload?: "auto" | "metadata" | "none";
+    currentProgress: number;
+    maxProgress: number;
+    onLoadedMetadata?: () => void;
   };
 
 export default Props;

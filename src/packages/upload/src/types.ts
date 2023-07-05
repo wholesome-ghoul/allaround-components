@@ -15,6 +15,9 @@ type Props = BaseProps<HTMLDivElement> & {
   noBorder?: boolean;
 
   setIsError?: (isError: boolean) => void;
+
+  errorText?: string;
+  errorShow?: boolean;
 };
 
 export default Props;
