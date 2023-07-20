@@ -1,0 +1,49 @@
+.notification {
+  color: var(--fg-color);
+  font-family: inherit;
+  display: flex;
+  position: absolute;
+  border-radius: 2px;
+  padding: 6px;
+}
+
+.iconContainer {
+  width: unset;
+  margin-right: 16px;
+}
+
+.textHeading {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.closeContainer {
+  width: unset;
+  margin-left: 16px;
+}
+
+.closeButton {
+  padding: 0;
+}
+
+.infoNotification {
+  background-color: lightblue;
+  border: 1px solid blue;
+  border-left: 4px solid blue;
+}
+
+.smallNotification {
+  font-size: var(--font-size-small);
+}
+
+.mediumNotification {
+  font-size: var(--font-size-medium);
+}
+
+.largeNotification {
+  font-size: var(--font-size-large);
+}
+
+.fill {
+  width: 100%;
+}

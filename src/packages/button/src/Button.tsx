@@ -15,6 +15,7 @@ const Button = (props: Props) => {
     onClick,
     icon,
     transparent,
+    hoverTransparent,
     disabled,
     active,
     fill,
@@ -37,6 +38,7 @@ const Button = (props: Props) => {
             [styles.icon]: !!children,
             [styles.fill]: fill,
             [styles.transparent]: transparent,
+            [styles.hoverTransparent]: hoverTransparent,
             [styles.disabled]: disabled,
             [styles.active]: active,
             [styles.noBorder]: noBorder,
@@ -70,6 +72,7 @@ const Button = (props: Props) => {
         {
           [styles.fill]: fill,
           [styles.transparent]: transparent,
+          [styles.hoverTransparent]: hoverTransparent,
           [styles.disabled]: disabled,
           [styles.active]: active,
           [styles.noBorder]: noBorder,
