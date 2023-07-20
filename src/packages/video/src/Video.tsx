@@ -4,6 +4,7 @@ import hooks from "@allaround/hooks";
 import Button from "@allaround/button";
 import Icons from "@allaround/icons";
 import Upload from "@allaround/upload";
+import ProgressBar from "@allaround/progress-bar";
 import cx from "classnames";
 
 import Props from "./types";
@@ -29,7 +30,11 @@ const Video = ({
   className,
   setIsError,
   editable,
+  preload,
   maxDuration = 60 * 15,
+  maxProgress,
+  currentProgress,
+  onLoadedMetadata,
   ...rest
 }: Props) => {
   const [_src, _setSrc] = useState("");
@@ -44,10 +49,13 @@ const Video = ({
       const reader = new FileReader();
 
       reader.onload = (e) => {
-        _setSrc(e.target?.result as string);
+        const buffer = e.target?.result as ArrayBuffer;
+        const blob = new Blob([buffer], { type: src.type });
+        const url = URL.createObjectURL(blob);
+        _setSrc(url);
       };
 
-      reader.readAsDataURL(src);
+      reader.readAsArrayBuffer(src);
     }
   }, [src]);
 
@@ -62,7 +70,7 @@ const Video = ({
     () => {
       if (!videoRef.current) return;
 
-      if (videoRef.current.duration > maxDuration) {
+      if (maxDuration && videoRef.current.duration > maxDuration) {
         const text = `Video is longer than ${maxDuration / 60} minutes`;
         const show = true;
         setError({ text, show });
@@ -70,67 +78,78 @@ const Video = ({
       } else {
         setError({ text: "", show: false });
         setIsError && setIsError(false);
+
+        onLoadedMetadata && onLoadedMetadata();
       }
     },
     videoRef
   );
 
   return (
-    <Container
-      className={cx(styles.videoContainer)}
-      gridPosition={gridPosition}
-      noGrid
-      flex
-    >
-      <StyledVideo
-        className={cx(
-          styles.video,
-          {
-            [styles.fill]: fill,
-            [styles.isError]: error.show,
-          },
-          styles[`${size}Video`],
-          className
-        )}
-        ref={videoRef}
-        src={_src}
-        {...rest}
-        data-cy={dataCy}
-        width={width}
-        height={height}
-        controls
+    <>
+      <Container
+        className={cx(styles.videoContainer, {
+          [styles.none]: currentProgress < 100 && !error.show,
+        })}
+        gridPosition={gridPosition}
+        noGrid
+        flex
       >
-        {children}
-      </StyledVideo>
+        <StyledVideo
+          className={cx(
+            styles.video,
+            {
+              [styles.fill]: fill,
+              [styles.isError]: error.show,
+            },
+            styles[`${size}Video`],
+            className
+          )}
+          ref={videoRef}
+          src={_src}
+          preload={preload}
+          {...rest}
+          data-cy={dataCy}
+          width={width}
+          height={height}
+          controls
+        >
+          {children}
+        </StyledVideo>
 
-      {clickHandler && !editable && (
-        <Button
-          onClick={clickHandler}
-          icon={icon}
-          className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
-          noBorder
-          transparent
-        />
-      )}
+        {clickHandler && !editable && (
+          <Button
+            onClick={clickHandler}
+            icon={icon}
+            className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
+            noBorder
+            transparent
+          />
+        )}
 
-      {!clickHandler && editable && (
-        <Upload
-          accept={rest.accept ?? ["video/mp4"]}
-          maxSize={rest.maxSize}
-          setIsError={rest.uploadSetIsError}
-          setFile={rest.setFile ?? (() => {})}
-          icon={<Icons.EditIcon size="small" />}
-          className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
-          noBorder
-        />
-      )}
+        {!clickHandler && editable && (
+          <Upload
+            accept={rest.accept ?? ["video/mp4"]}
+            maxSize={rest.maxSize}
+            setIsError={rest.uploadSetIsError}
+            setFile={rest.setFile ?? (() => {})}
+            icon={<Icons.EditIcon size="small" />}
+            className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
+            noBorder
+          />
+        )}
 
-      {setIsError && error.show && (
-        <Container className={cx(styles.errorContainer)} noGrid>
-          {error.text}
-        </Container>
+        {setIsError && error.show && (
+          <Container className={cx(styles.errorContainer)} noGrid>
+            {error.text}
+          </Container>
+        )}
+      </Container>
+
+      {!error.show && currentProgress < 100 && (
+        <ProgressBar progress={currentProgress} maxProgress={maxProgress} />
       )}
-    </Container>
+    </>
   );
 };
 
@@ -141,6 +160,9 @@ Video.defaultProps = {
   height: "100%",
   icon: <Icons.DelIcon size="large" />,
   iconPosition: "topLeft",
+  preload: "metadata",
+  currentProgress: 100,
+  maxProgress: 100,
 };
 
 export default Video;
