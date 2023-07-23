@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2232"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   sodipodi:docname="success.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2236" />
+  <sodipodi:namedview
+     id="namedview2234"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.9522296"
+     inkscape:cx="99.373558"
+     inkscape:cy="305.54808"
+     inkscape:window-width="2560"
+     inkscape:window-height="1570"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2238" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g2238">
+    <path
+       style="fill:#000000;stroke-width:3.30718"
+       d="M 195.22064,504.5535 C 103.02912,480.50572 36.656397,415.8055 10.072873,324.07134 -5.2432852,271.21844 -0.01557761,202.11056 23.121721,151.57204 53.067037,86.162864 106.23706,38.405053 176.27279,14.010381 199.72738,5.8407327 212.05298,3.6725157 241.98719,2.4504595 285.69176,0.66623024 313.81606,4.9652633 348.45342,18.724694 428.82965,50.653543 487.26426,120.02407 504.61579,204.11257 c 8.05045,39.01374 8.02635,65.64506 -0.0953,105.20709 -7.48179,36.44595 -28.54522,81.85331 -49.85916,107.48366 -30.54978,36.73661 -74.47786,66.97109 -120.5389,82.96365 -23.09647,8.01917 -32.12936,9.29026 -71.10459,10.00567 -34.62286,0.63554 -49.8448,-0.5363 -67.79738,-5.21914 z M 336.55022,280.32896 C 450.25038,166.62877 451.52785,165.2007 451.52785,151.79454 c 0,-24.48144 -23.40334,-41.13754 -43.47202,-30.93892 -4.28419,2.17716 -49.08221,45.08444 -99.55115,95.34953 l -91.7617,91.39103 -42.17947,-41.77394 c -23.19872,-22.97569 -45.43018,-43.42321 -49.40324,-45.43895 -12.4233,-6.30294 -24.10544,-4.26287 -34.370502,6.00223 -7.666096,7.66606 -9.667177,12.59027 -9.667177,23.78864 0,13.93151 0.877133,15.00261 65.208119,79.62694 35.86446,36.02801 67.46573,65.50549 70.22502,65.50549 2.75927,0 56.75682,-51.73992 119.99449,-114.97763 z"
+       id="path2242"
+       inkscape:export-filename="/home/jini/ws/images/aa/icons/success.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

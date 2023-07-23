@@ -151,3 +151,9 @@
 .transparent {
   background: transparent;
 }
+
+.hoverTransparent {
+  &:hover {
+    background: transparent;
+  }
+}

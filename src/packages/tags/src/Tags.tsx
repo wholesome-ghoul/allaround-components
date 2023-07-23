@@ -30,6 +30,7 @@ const Tags = ({
   dataCy,
   innerRef,
   onChange,
+  copyCallback,
   className,
   initialTags = [],
   ...rest
@@ -139,6 +140,8 @@ const Tags = ({
   };
 
   const copyAllHandler = () => {
+    copyCallback && copyCallback();
+
     navigator.clipboard.writeText(
       elements.map((element: TagElement) => element.name).join(",")
     );

@@ -86,6 +86,9 @@
     },
     "src/packages/progress-bar": {
       "release-type": "node"
+    },
+    "src/packages/notification": {
+      "release-type": "node"
     }
   }
 }

@@ -8,6 +8,7 @@ type Props = BaseProps<HTMLButtonElement> & {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   icon?: React.ReactNode;
   transparent?: boolean;
+  hoverTransparent?: boolean;
   disabled?: boolean;
   active?: boolean;
   noBorder?: boolean;

@@ -1,0 +1,117 @@
+.notification {
+  color: black;
+  font-family: inherit;
+  display: flex;
+  border-radius: 8px;
+}
+
+.iconContainer {
+  color: white;
+  display: flex;
+  margin-right: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 75px;
+  height: 60px;
+}
+
+.textContainer {
+  padding: 8px;
+}
+
+.textHeading {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.closeContainer {
+  width: unset;
+  margin-left: 16px;
+  padding: 8px;
+}
+
+.closeButton {
+  margin-top: 4px;
+  padding: 0 !important;
+}
+
+.infoNotification {
+  & > .iconContainer {
+    background-color: var(--info-color);
+  }
+
+  & > .timer {
+    background-color: var(--info-color);
+  }
+
+  background-color: var(--info-bg-color);
+}
+
+.successNotification {
+  & > .iconContainer {
+    background-color: var(--success-color);
+  }
+  
+  & > .timer {
+    background-color: var(--success-color);
+  }
+
+  background-color: var(--success-bg-color);
+}
+
+.warningNotification {
+  & > .iconContainer {
+    background-color: var(--warning-color);
+  }
+
+  & > .timer {
+    background-color: var(--warning-color);
+  }
+
+  background-color: var(--warning-bg-color);
+}
+
+.alertNotification {
+  & > .iconContainer {
+    background-color: var(--alert-color);
+  }
+
+  & > .timer {
+    background-color: var(--alert-color);
+  }
+
+  background-color: var(--alert-bg-color);
+}
+
+.smallNotification {
+  font-size: var(--font-size-small);
+}
+
+.mediumNotification {
+  font-size: var(--font-size-medium);
+}
+
+.largeNotification {
+  font-size: var(--font-size-large);
+}
+
+.timer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  transition: width 5s linear;
+}
+
+.fill {
+  width: 100%;
+}
+
+.textHeadingWithoutContent {
+  align-self: center;
+}
+
+.none {
+  display: none;
+}
