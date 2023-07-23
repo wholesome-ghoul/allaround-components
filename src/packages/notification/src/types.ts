@@ -7,6 +7,11 @@ type Props = BaseProps<HTMLDivElement> & {
 
   heading?: React.ReactNode;
   content?: React.ReactNode;
+
+  position: "top" | "bottom" | "top-right";
+  withTimer?: boolean;
+
+  onClose?: () => void;
 };
 
 export default Props;

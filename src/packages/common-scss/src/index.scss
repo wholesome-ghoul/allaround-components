@@ -28,6 +28,16 @@
   --error-color: hsl(0, 100%, 35%);
   --checkmark-green: hsl(145, 100%, 35%);
   --checkmark-blue: hsl(200, 100%, 35%);
+
+  // Notification colors
+  --info-color: hsl(221, 99%, 41%);
+  --info-bg-color: hsl(195,53%,79%);
+  --success-color: hsl(116, 100%, 35%);
+  --success-bg-color: hsl(116,100%,91%);
+  --warning-color: hsl(44, 100%, 50%);
+  --warning-bg-color: hsl(44,100%,91%);
+  --alert-color: hsl(0, 100%, 35%);
+  --alert-bg-color: hsl(0,100%,96%);
 }
 
 [data-theme="light"] {

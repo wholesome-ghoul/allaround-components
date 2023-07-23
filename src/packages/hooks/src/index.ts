@@ -4,6 +4,7 @@ import useConfirm from "./use-confirm";
 import useModal from "./use-modal";
 import useLocalStorage from "./use-local-storage";
 import useIndexedDb from "./use-indexed-db";
+import useNotification from "./use-notification";
 
 export default {
   useResizeObserver,
@@ -12,4 +13,5 @@ export default {
   useModal,
   useLocalStorage,
   useIndexedDb,
+  useNotification,
 };
