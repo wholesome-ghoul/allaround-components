@@ -20,8 +20,11 @@ const Dropdown = ({
   icon,
   selectedIndex,
   text,
+  textOnLeft,
   className,
   enableArrow,
+  arrowOnLeft,
+  arrowDirection,
   popup,
   isOpen,
   setIsOpen,
@@ -57,7 +60,9 @@ const Dropdown = ({
       <Button
         onClick={handleDropdown}
         icon={icon}
-        className={cx(styles.mainButton, styles[`${variant}Button`])}
+        className={cx(styles.mainButton, styles[`${variant}Button`], {
+          [styles.leftArrowButton]: arrowOnLeft,
+        })}
         transparent={popup ? !isOpen : true}
         noBorder={noDropperBorder}
         size={dropperSize}
@@ -66,7 +71,9 @@ const Dropdown = ({
         {text && (
           <Text
             size="medium"
-            className={cx(styles.text)}
+            className={cx(styles.text, {
+              [styles.textOnLeft]: textOnLeft,
+            })}
             oneline={rest.oneline}
             ellipsis={rest.ellipsis}
           >
@@ -75,8 +82,12 @@ const Dropdown = ({
         )}
         {enableArrow && (
           <Icons.ArrowDownIcon
-            className={cx(styles.arrow, {
-              [styles.rotate]: isOpen,
+            className={cx(styles.arrow, styles[`${arrowDirection}Arrow`], {
+              [styles.open180]: isOpen,
+              [styles.open90]: arrowDirection && isOpen,
+              [styles.arrowOnLeft]: arrowOnLeft && !textOnLeft,
+              [styles.arrowOnLeftWithText]: arrowOnLeft && textOnLeft,
+              [styles.arrowOnRight]: !arrowOnLeft,
             })}
           />
         )}

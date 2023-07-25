@@ -4,12 +4,19 @@
 }
 
 .arrow {
-  margin-left: auto !important;
   transition: transform 0.3s ease;
 }
 
-.rotate {
+.rightArrow {
+  transform: rotate(-90deg);
+}
+
+.open180 {
   transform: rotate(180deg);
+}
+
+.open90 {
+  transform: rotate(0deg);
 }
 
 .itemContainerPadding {
@@ -35,6 +42,22 @@
   align-items: center;
 }
 
+.arrowOnRight {
+  margin-left: auto !important;
+}
+
+.arrowOnLeft {
+  margin-right: auto;
+}
+
+.arrowOnLeftWithText {
+  margin-right: 16px;
+}
+
+.leftArrowButton {
+  flex-flow: row-reverse;
+}
+
 .popup {
   position: fixed;
   padding: 8px;
@@ -50,6 +73,10 @@
 
 .text {
   max-width: 70%;
+}
+
+.textOnLeft {
+  margin-right: auto;
 }
 
 .secondaryButton {
