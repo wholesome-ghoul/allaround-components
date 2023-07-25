@@ -29,15 +29,20 @@ type Props = BaseProps<HTMLDivElement> &
     isOpen?: boolean;
     setIsOpen?: (isOpen: boolean) => void;
 
-    enableArrow?: boolean;
     activeIndicator?: boolean;
-    text?: string;
 
     dropdownItemsRef?: React.MutableRefObject<HTMLDivElement | null>;
 
     paddedItemContainer?: boolean;
     paddedItem?: boolean;
     marginedItem?: boolean;
+
+    enableArrow?: boolean;
+    arrowOnLeft?: boolean;
+    arrowDirection?: "right";
+
+    text?: string;
+    textOnLeft?: boolean;
   };
 
 export default Props;
