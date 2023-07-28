@@ -6,11 +6,17 @@
 .imageContainer {
   display: flex;
   position: relative;
-  width: unset;
-  height: unset;
   border: 2px solid;
   border-color: var(--bg-color-secondary);
   border-radius: 6px;
+}
+
+.unsetDimensions {
+  width: unset;
+  height: unset;
+}
+
+.containerMargin {
   margin: 4px;
 }
 

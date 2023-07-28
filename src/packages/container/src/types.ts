@@ -2,7 +2,7 @@ import { BaseProps, Grid, GridList } from "../../../utils";
 
 type Props = Omit<BaseProps<HTMLDivElement>, "fill"> &
   Pick<Grid, "gap"> & {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     grid?: Grid | GridList | string;
     /**
      * determines if container is a grid or grid item

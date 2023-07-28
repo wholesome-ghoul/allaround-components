@@ -23,9 +23,29 @@
   padding-left: 1rem;
 }
 
+.itemContainerMargin {
+  margin-top: 4px;
+}
+
 .item {
   display: inline-flex;
   width: 100%;
+}
+
+.itemBorderTop {
+  border-top: 2px solid var(--bg-color-secondary);
+}
+
+.itemBorderBottom {
+  border-bottom: 2px solid var(--bg-color-secondary);
+}
+
+.itemBorderLeft {
+  border-left: 2px solid var(--bg-color-secondary);
+}
+
+.itemBorderRight {
+  border-right: 2px solid var(--bg-color-secondary);
 }
 
 .itemPadding {

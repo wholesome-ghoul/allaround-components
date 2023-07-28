@@ -25,3 +25,4 @@ export { default as Tooltip } from "@allaround/tooltip";
 export { default as Switch } from "@allaround/switch";
 export { default as ProgressBar } from "@allaround/progress-bar";
 export { default as Notification } from "@allaround/notification";
+export { default as Placeholder } from "@allaround/placeholder";

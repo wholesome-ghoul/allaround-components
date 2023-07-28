@@ -23,3 +23,4 @@ export type { TooltipProps } from "@allaround/tooltip";
 export type { SwitchProps } from "@allaround/switch";
 export type { ProgressBarProps } from "@allaround/progress-bar";
 export type { NotificationProps } from "@allaround/notification";
+export type { PlaceholderProps } from "@allaround/placeholder";

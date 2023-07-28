@@ -46,6 +46,7 @@
     "@allaround/tooltip": "^1.0.0",
     "@allaround/switch": "^1.0.0",
     "@allaround/progress-bar": "^1.0.0",
-    "@allaround/notification": "^1.0.0"
+    "@allaround/notification": "^1.0.0",
+    "@allaround/placeholder": "^1.0.0"
   }
 }

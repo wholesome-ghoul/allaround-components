@@ -89,6 +89,9 @@
     },
     "src/packages/notification": {
       "release-type": "node"
+    },
+    "src/packages/placeholder": {
+      "release-type": "node"
     }
   }
 }

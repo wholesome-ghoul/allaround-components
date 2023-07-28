@@ -14,6 +14,8 @@ const Text = ({
   className,
   oneline,
   ellipsis,
+  maxWidth,
+  maxLines,
   ...rest
 }: Props) => {
   return (
@@ -30,6 +32,8 @@ const Text = ({
       )}
       ref={innerRef}
       gridPosition={gridPosition}
+      maxLines={maxLines}
+      maxWidth={maxWidth}
       {...rest}
       data-cy={dataCy}
     >

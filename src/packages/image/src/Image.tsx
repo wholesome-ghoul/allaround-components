@@ -28,6 +28,9 @@ const Image = ({
   editable,
   inheritBorderColor,
   variant,
+  ratio,
+  noMargin,
+  fitContainer,
   ...rest
 }: Props) => {
   const [_src, _setSrc] = useState("");
@@ -53,6 +56,8 @@ const Image = ({
         styles.imageContainer,
         {
           [styles.inheritBorderColor]: inheritBorderColor,
+          [styles.containerMargin]: !noMargin,
+          [styles.unsetDimensions]: !fitContainer,
         },
         styles[`${variant}Container`]
       )}
@@ -70,6 +75,7 @@ const Image = ({
         )}
         ref={innerRef}
         gridPosition={gridPosition}
+        ratio={ratio}
         src={_src}
         alt={alt}
         width={width}

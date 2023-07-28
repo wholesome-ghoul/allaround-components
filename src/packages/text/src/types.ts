@@ -5,7 +5,10 @@ type Props = BaseProps<HTMLParagraphElement> & {
   size?: Size;
 
   oneline?: boolean;
+  maxLines?: number;
   ellipsis?: boolean;
+
+  maxWidth?: string;
 };
 
 export default Props;

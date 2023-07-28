@@ -14,6 +14,7 @@ const DropdownItem = ({
   activeIndicator,
   icon,
   tooltip,
+  borders,
   ...rest
 }: DropdownItemProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -21,13 +22,17 @@ const DropdownItem = ({
 
   useEffect(() => {
     ref.current = containerRef.current;
-  }, [tooltip])
+  }, [tooltip]);
 
   return (
     <Container
       className={cx(styles.item, {
         [styles.itemPadding]: padded,
         [styles.itemMargin]: margined,
+        [styles.itemBorderTop]: borders?.top,
+        [styles.itemBorderBottom]: borders?.bottom,
+        [styles.itemBorderLeft]: borders?.left,
+        [styles.itemBorderRight]: borders?.right,
       })}
       innerRef={ref}
       noGrid
