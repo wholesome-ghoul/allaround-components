@@ -1,10 +1,18 @@
 import type { TooltipProps } from "@allaround/tooltip";
 import type { ButtonProps } from "@allaround/button";
 import type { TextProps } from "@allaround/text";
+import {ContainerProps} from "@allaround/container";
 
 import { BaseProps, Size } from "../../../utils";
 
-type DropdownItemProps = BaseProps<HTMLDivElement> & {
+type Borders = {
+  top?: boolean;
+  bottom?: boolean;
+  left?: boolean;
+  right?: boolean;
+}
+
+type DropdownItemProps = ContainerProps & {
   children: React.ReactNode[] | React.ReactNode;
   padded?: boolean;
   margined?: boolean;
@@ -12,6 +20,7 @@ type DropdownItemProps = BaseProps<HTMLDivElement> & {
   icon?: ButtonProps["icon"];
 
   tooltip?: Omit<TooltipProps, "componentRef">;
+  borders?: Borders;
 };
 
 type Props = BaseProps<HTMLDivElement> &
@@ -36,6 +45,10 @@ type Props = BaseProps<HTMLDivElement> &
     paddedItemContainer?: boolean;
     paddedItem?: boolean;
     marginedItem?: boolean;
+    /**
+     * add margin to dropdown items container
+     */
+    marginedItems?: boolean;
 
     enableArrow?: boolean;
     arrowOnLeft?: boolean;

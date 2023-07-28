@@ -27,6 +27,10 @@ type Props = BaseProps<HTMLImageElement> &
     clickHandlerTooltip?: TooltipProps;
 
     variant?: "youtube-thumbnail";
+    ratio?: string;
+
+    noMargin?: boolean;
+    fitContainer?: boolean;
   };
 
 export default Props;

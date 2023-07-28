@@ -10,6 +10,16 @@ import styles from "./style.module.scss";
 import StyledDropdown from "./StyledDropdown";
 import DropdownItem from "./DropdownItem";
 
+const reactSuspenseHasDropdownItems = (child: any) => {
+  return (
+    child.props.fallback &&
+    Array.isArray(child.props.fallback) &&
+    child.props.fallback.every(
+      (child: any) => child.type?.name === "DropdownItem"
+    )
+  );
+};
+
 const Dropdown = ({
   children,
   size,
@@ -33,6 +43,7 @@ const Dropdown = ({
   paddedItemContainer,
   paddedItem,
   marginedItem,
+  marginedItems,
   noDropperBorder,
   variant,
   dropperSize,
@@ -101,6 +112,7 @@ const Dropdown = ({
         paddedItemContainer={paddedItemContainer}
         paddedItem={paddedItem}
         marginedItem={marginedItem}
+        marginedItems={marginedItems}
       >
         {children}
       </DropdownItems>
@@ -118,6 +130,7 @@ const DropdownItems = ({
   paddedItemContainer,
   paddedItem,
   marginedItem,
+  marginedItems,
 }: any) => {
   const elem = (
     <Container
@@ -129,6 +142,7 @@ const DropdownItems = ({
       className={cx({
         [styles.popup]: isOpen && popup && children?.length > 0,
         [styles.itemContainerPadding]: paddedItemContainer,
+        [styles.itemContainerMargin]: marginedItems,
       })}
     >
       {isOpen &&
@@ -156,9 +170,18 @@ const DropdownItems = ({
               );
             }
 
+            let isDropdownItem = false;
+
+            if (
+              (child && child.type?.name === "DropdownItem") ||
+              reactSuspenseHasDropdownItems(child)
+            ) {
+              isDropdownItem = true;
+            }
+
             return (
               child &&
-              (child.type?.name === "DropdownItem" ? (
+              (isDropdownItem ? (
                 child
               ) : (
                 <DropdownItem
@@ -194,6 +217,7 @@ Dropdown.defaultProps = {
   noDropperBorder: false,
   marginedItem: false,
 };
+Dropdown.displayName = "Dropdown";
 
 Dropdown.Item = DropdownItem;
 
