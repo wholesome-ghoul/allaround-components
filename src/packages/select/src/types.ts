@@ -12,6 +12,8 @@ type Props = BaseProps<HTMLDivElement> & {
   setSelectedOption: (option: Option) => void;
   options: Option[];
   maxHeight?: string;
+
+  disabled?: boolean;
 };
 
 export default Props;

@@ -23,6 +23,7 @@ const Select = ({
   selectedOption,
   options,
   maxHeight,
+  disabled,
   ...rest
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ const Select = ({
   const [_maxHeight, _setMaxHeight] = useState(maxHeight ?? "");
 
   const handleOpen = () => {
-    setIsOpen(!isOpen);
+    !disabled && setIsOpen(!isOpen);
   };
 
   const handleSelect = (option: Option) => {
@@ -76,6 +77,7 @@ const Select = ({
         {
           [styles.fill]: fill,
           [styles.active]: isOpen,
+          [styles.disabled]: disabled,
         },
         styles[`${size}Select`],
         className
@@ -91,6 +93,7 @@ const Select = ({
       <Button
         onClick={() => {}}
         className={cx(styles.selectButton)}
+        disabled={disabled}
         noBorder
         transparent
         fill
