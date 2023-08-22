@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/wholesome-ghoul/allaround-components/compare/hooks-v1.0.4...hooks-v1.0.5) (2023-08-22)
+
+
+### Bug Fixes
+
+* dependencies 5 ([#82](https://github.com/wholesome-ghoul/allaround-components/issues/82)) ([5a2fc5d](https://github.com/wholesome-ghoul/allaround-components/commit/5a2fc5d15cf3856cd2480deb742adfc3939da889))
+
 ## [1.0.4](https://github.com/wholesome-ghoul/allaround-components/compare/hooks-v1.0.3...hooks-v1.0.4) (2023-08-22)
 
 

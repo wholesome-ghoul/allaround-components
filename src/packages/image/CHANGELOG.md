@@ -8,6 +8,13 @@
     * @allaround/tooltip bumped from ^1.0.3 to ^1.0.4
     * @allaround/button bumped from ^1.8.3 to ^1.8.4
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/upload bumped from ^1.0.4 to ^1.0.5
+    * @allaround/tooltip bumped from ^1.0.4 to ^1.0.5
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/image-v1.0.2...image-v1.0.3) (2023-08-22)
 
 

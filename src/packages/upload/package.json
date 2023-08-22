@@ -1,6 +1,6 @@
 {
   "name": "@allaround/upload",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "AllAround React Upload component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -14,8 +14,8 @@
     "build": "../../scripts/build.sh"
   },
   "dependencies": {
-    "@allaround/hooks": "^1.0.4",
-    "@allaround/input": "^2.8.4",
+    "@allaround/hooks": "^1.0.5",
+    "@allaround/input": "^2.8.5",
     "@allaround/label": "^1.6.2",
     "@allaround/icons": "^1.0.1",
     "@allaround/container": "^1.6.2",
