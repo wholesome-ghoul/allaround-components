@@ -13,16 +13,14 @@
   "scripts": {
     "build": "../../scripts/build.sh"
   },
-  "peerDependencies": {
+  "devDependencies": {
     "@allaround/container": "^1.6.1",
     "@allaround/text": "^1.0.1",
     "@allaround/button": "^1.8.1",
     "@allaround/modal": "^1.0.1",
     "@allaround/notification": "^1.0.1",
     "react-dom": "^18.2.0",
-    "react": "^18.0.0"
-  },
-  "devDependencies": {
+    "react": "^18.0.0",
     "@allaround/configs-tsconfig": "^1.0.0",
     "@cypress/react18": "^2.0.0",
     "cypress": "^12.13.0"

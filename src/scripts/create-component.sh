@@ -184,7 +184,7 @@ echo "{
   \"scripts\": {
     \"build\": \"../../scripts/build.sh\"
   },
-  \"peerDependencies\": {
+  \"dependecies\": {
     \"react\": \"^18.0.0\",
     \"classnames\": \"^2.3.2\",
     \"styled-components\": \"^5.3.11\"
