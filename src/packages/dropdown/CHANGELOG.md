@@ -7,6 +7,12 @@
     * @allaround/button bumped from ^1.8.3 to ^1.8.4
     * @allaround/tooltip bumped from ^1.0.3 to ^1.0.4
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/tooltip bumped from ^1.0.4 to ^1.0.5
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/dropdown-v1.0.2...dropdown-v1.0.3) (2023-08-22)
 
 
