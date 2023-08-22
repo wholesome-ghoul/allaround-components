@@ -2,7 +2,7 @@ import cx from "classnames";
 import Label from "@allaround/label";
 import Container from "@allaround/container";
 import Tooltip from "@allaround/tooltip";
-import { useEffect, useId, useRef, useState } from "react";
+import { useId, useRef } from "react";
 
 import Props from "./types";
 import styles from "./style.module.scss";
