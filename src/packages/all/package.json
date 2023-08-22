@@ -1,6 +1,6 @@
 {
   "name": "@allaround/all-components",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "description": "AllAround React Button component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -39,7 +39,7 @@
     "@allaround/select": "^1.0.2",
     "@allaround/upload": "^1.0.2",
     "@allaround/scheduler": "^1.0.2",
-    "@allaround/video": "^1.0.2",
+    "@allaround/video": "^1.0.3",
     "@allaround/image": "^1.0.2",
     "@allaround/checkbox": "^1.0.2",
     "@allaround/modal": "^1.0.1",

@@ -97,6 +97,12 @@
     * @allaround/notification bumped from ^1.0.1 to ^1.0.2
     * @allaround/placeholder bumped from ^1.0.1 to ^1.0.2
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/video bumped from ^1.0.2 to ^1.0.3
+
 ## [1.8.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.7.0...all-components-v1.8.0) (2023-08-22)
 
 
