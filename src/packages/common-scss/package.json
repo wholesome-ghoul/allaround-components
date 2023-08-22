@@ -6,7 +6,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/packages/common-scss/src/index.js",
+  "main": "dist/index.js",
   "files": [
     "dist/**/*"
   ],

@@ -1,6 +1,7 @@
 class CommonScss {
   PATH =
-    process.env.NODE_ENV === "development" ? "." : "./packages/common-scss/src";
+    // process.env.NODE_ENV === "development" ? "." : "./packages/common-scss/src";
+    "."
 
   common() {
     import(`${this.PATH}/index.scss`).then(() => {});
