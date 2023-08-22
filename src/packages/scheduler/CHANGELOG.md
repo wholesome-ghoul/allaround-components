@@ -1,5 +1,13 @@
 # Changelog
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/hooks bumped from ^1.0.3 to ^1.0.4
+    * @allaround/select bumped from ^1.0.3 to ^1.0.4
+    * @allaround/button bumped from ^1.8.3 to ^1.8.4
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/scheduler-v1.0.2...scheduler-v1.0.3) (2023-08-22)
 
 

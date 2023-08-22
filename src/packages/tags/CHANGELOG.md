@@ -1,5 +1,14 @@
 # Changelog
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/hooks bumped from ^1.0.3 to ^1.0.4
+    * @allaround/input bumped from ^2.8.3 to ^2.8.4
+    * @allaround/button bumped from ^1.8.3 to ^1.8.4
+    * @allaround/textarea bumped from ^1.0.3 to ^1.0.4
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/tags-v1.0.2...tags-v1.0.3) (2023-08-22)
 
 

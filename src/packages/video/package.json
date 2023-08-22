@@ -1,6 +1,6 @@
 {
   "name": "@allaround/video",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "AllAround React Video component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -16,11 +16,11 @@
   "dependencies": {
     "@allaround/progress-bar": "^1.0.3",
     "@allaround/icons": "^1.0.1",
-    "@allaround/button": "^1.8.3",
-    "@allaround/hooks": "^1.0.3",
+    "@allaround/button": "^1.8.4",
+    "@allaround/hooks": "^1.0.4",
     "@allaround/container": "^1.6.2",
-    "@allaround/tooltip": "^1.0.3",
-    "@allaround/upload": "^1.0.3",
+    "@allaround/tooltip": "^1.0.4",
+    "@allaround/upload": "^1.0.4",
     "react": "^18.0.0",
     "classnames": "^2.3.2",
     "styled-components": "^5.3.11"
