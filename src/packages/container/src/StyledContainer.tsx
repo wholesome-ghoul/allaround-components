@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 
 import {
   Grid,
-  GridGap,
   GridList,
   applyGridPosition,
   applyGrid,

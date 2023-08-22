@@ -185,7 +185,9 @@ echo "{
     \"build\": \"../../scripts/build.sh\"
   },
   \"peerDependencies\": {
-    \"react\": \"^18.0.0\"
+    \"react\": \"^18.0.0\",
+    \"classnames\": \"^2.3.2\",
+    \"styled-components\": \"^5.3.11\"
   },
   \"devDependencies\": {
     \"@allaround/configs-tsconfig\": \"^1.0.0\",
