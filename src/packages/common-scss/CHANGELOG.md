@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/wholesome-ghoul/allaround-components/compare/common-scss-v1.2.2...common-scss-v1.2.3) (2023-08-22)
+
+
+### Bug Fixes
+
+* dependencies 8 WTF ([#88](https://github.com/wholesome-ghoul/allaround-components/issues/88)) ([cfad45f](https://github.com/wholesome-ghoul/allaround-components/commit/cfad45f338f1213bd906cbe0a2ddd8914d66e5b3))
+
 ## [1.2.2](https://github.com/wholesome-ghoul/allaround-components/compare/common-scss-v1.2.1...common-scss-v1.2.2) (2023-08-22)
 
 

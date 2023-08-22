@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/wholesome-ghoul/allaround-components/compare/navbar-v1.0.4...navbar-v1.0.5) (2023-08-22)
+
+
+### Bug Fixes
+
+* dependencies 7 ([#86](https://github.com/wholesome-ghoul/allaround-components/issues/86)) ([fa6bcbe](https://github.com/wholesome-ghoul/allaround-components/commit/fa6bcbe7f489d08c51b9bd2071e82a2e628a291a))
+
 ## [1.0.4](https://github.com/wholesome-ghoul/allaround-components/compare/navbar-v1.0.3...navbar-v1.0.4) (2023-08-22)
 
 

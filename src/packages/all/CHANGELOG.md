@@ -146,6 +146,13 @@
     * @allaround/sidebar bumped from ^1.0.3 to ^1.0.4
     * @allaround/navbar bumped from ^1.0.3 to ^1.0.4
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/common-scss bumped from ^1.2.2 to ^1.2.3
+    * @allaround/navbar bumped from ^1.0.4 to ^1.0.5
+
 ## [1.8.4](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.8.3...all-components-v1.8.4) (2023-08-22)
 
 
