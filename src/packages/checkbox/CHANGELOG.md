@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/checkbox-v1.0.2...checkbox-v1.0.3) (2023-08-22)
+
+
+### Bug Fixes
+
+* dependencies 2 ([#77](https://github.com/wholesome-ghoul/allaround-components/issues/77)) ([53b4626](https://github.com/wholesome-ghoul/allaround-components/commit/53b4626c084a1ffe25655ad5fc216dfbed14b98f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/label bumped from ^1.6.1 to ^1.6.2
+    * @allaround/container bumped from ^1.6.1 to ^1.6.2
+    * @allaround/tooltip bumped from ^1.0.1 to ^1.0.3
+    * @allaround/input bumped from ^2.8.1 to ^2.8.3
+
 ## [1.0.2](https://github.com/wholesome-ghoul/allaround-components/compare/checkbox-v1.0.1...checkbox-v1.0.2) (2023-08-22)
 
 

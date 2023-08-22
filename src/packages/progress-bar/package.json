@@ -1,6 +1,6 @@
 {
   "name": "@allaround/progress-bar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "AllAround React ProgressBar component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -14,8 +14,8 @@
     "build": "../../scripts/build.sh"
   },
   "dependencies": {
-    "@allaround/label": "^1.6.1",
-    "@allaround/container": "^1.6.1",
+    "@allaround/label": "^1.6.2",
+    "@allaround/container": "^1.6.2",
     "react": "^18.0.0",
     "classnames": "^2.3.2",
     "styled-components": "^5.3.11"
