@@ -42,6 +42,37 @@
   * dependencies
     * @allaround/input bumped from ^2.4.0 to ^2.5.0
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/button bumped from ^1.8.0 to ^1.8.1
+    * @allaround/input bumped from ^2.8.0 to ^2.8.1
+    * @allaround/container bumped from ^1.6.0 to ^1.6.1
+    * @allaround/label bumped from ^1.6.0 to ^1.6.1
+    * @allaround/list bumped from ^1.3.0 to ^1.3.1
+    * @allaround/heading bumped from ^1.2.0 to ^1.2.1
+    * @allaround/link bumped from ^1.1.0 to ^1.1.1
+    * @allaround/sidebar bumped from ^1.0.0 to ^1.0.1
+    * @allaround/navbar bumped from ^1.0.0 to ^1.0.1
+    * @allaround/hooks bumped from ^1.0.0 to ^1.0.1
+    * @allaround/text bumped from ^1.0.0 to ^1.0.1
+    * @allaround/textarea bumped from ^1.0.0 to ^1.0.1
+    * @allaround/tags bumped from ^1.0.0 to ^1.0.1
+    * @allaround/dropdown bumped from ^1.0.0 to ^1.0.1
+    * @allaround/select bumped from ^1.0.0 to ^1.0.1
+    * @allaround/upload bumped from ^1.0.0 to ^1.0.1
+    * @allaround/scheduler bumped from ^1.0.0 to ^1.0.1
+    * @allaround/video bumped from ^1.0.0 to ^1.0.1
+    * @allaround/image bumped from ^1.0.0 to ^1.0.1
+    * @allaround/checkbox bumped from ^1.0.0 to ^1.0.1
+    * @allaround/modal bumped from ^1.0.0 to ^1.0.1
+    * @allaround/tooltip bumped from ^1.0.0 to ^1.0.1
+    * @allaround/switch bumped from ^1.0.0 to ^1.0.1
+    * @allaround/progress-bar bumped from ^1.0.0 to ^1.0.1
+    * @allaround/notification bumped from ^1.0.0 to ^1.0.1
+    * @allaround/placeholder bumped from ^1.0.0 to ^1.0.1
+
 ## [1.8.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.7.0...all-components-v1.8.0) (2023-08-22)
 
 

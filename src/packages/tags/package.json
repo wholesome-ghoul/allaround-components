@@ -1,6 +1,6 @@
 {
   "name": "@allaround/tags",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AllAround React Tags component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "@allaround/configs-tsconfig": "^1.0.0",
-    "@allaround/input": "^2.8.0",
-    "@allaround/hooks": "^1.0.0",
+    "@allaround/input": "^2.8.1",
+    "@allaround/hooks": "^1.0.1",
     "@cypress/react18": "^2.0.0",
     "cypress": "^12.13.0"
   }

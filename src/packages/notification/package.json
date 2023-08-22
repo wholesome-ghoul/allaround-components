@@ -1,6 +1,6 @@
 {
   "name": "@allaround/notification",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AllAround React Notification component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
