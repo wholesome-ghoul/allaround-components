@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.8.3](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.8.2...button-v1.8.3) (2023-08-22)
+
+
+### Bug Fixes
+
+* dependencies 2 ([#77](https://github.com/wholesome-ghoul/allaround-components/issues/77)) ([53b4626](https://github.com/wholesome-ghoul/allaround-components/commit/53b4626c084a1ffe25655ad5fc216dfbed14b98f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/tooltip bumped from ^1.0.1 to ^1.0.3
+
 ## [1.8.2](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.8.1...button-v1.8.2) (2023-08-22)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@allaround/container",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "AllAround React Container component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
