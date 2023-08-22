@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/wholesome-ghoul/allaround-components/compare/sidebar-v1.0.3...sidebar-v1.0.4) (2023-08-22)
+
+
+### Bug Fixes
+
+* dependencies 6 ([#84](https://github.com/wholesome-ghoul/allaround-components/issues/84)) ([2df5f2b](https://github.com/wholesome-ghoul/allaround-components/commit/2df5f2b5d8d20e7a482bf012fafe0dedc208c689))
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/sidebar-v1.0.2...sidebar-v1.0.3) (2023-08-22)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@allaround/common-scss",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "AllAround React CommonScss component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
