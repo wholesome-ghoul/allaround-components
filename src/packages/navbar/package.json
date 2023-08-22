@@ -6,7 +6,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
+  "main": "dist/packages/navbar/src/index.js",
   "files": [
     "dist/**/*"
   ],
