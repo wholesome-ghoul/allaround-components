@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.2](https://github.com/wholesome-ghoul/allaround-components/compare/textarea-v1.0.1...textarea-v1.0.2) (2023-08-22)
+
+
+### Bug Fixes
+
+* internal dependencies ([#71](https://github.com/wholesome-ghoul/allaround-components/issues/71)) ([657df22](https://github.com/wholesome-ghoul/allaround-components/commit/657df22f42ca6b8479dfdbad1c6acfd7fbf659fc))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @allaround/button bumped from ^1.8.1 to ^1.8.2
+
 ## [1.0.1](https://github.com/wholesome-ghoul/allaround-components/compare/textarea-v1.0.0...textarea-v1.0.1) (2023-08-22)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.8.1...button-v1.8.2) (2023-08-22)
+
+
+### Bug Fixes
+
+* internal dependencies ([#71](https://github.com/wholesome-ghoul/allaround-components/issues/71)) ([657df22](https://github.com/wholesome-ghoul/allaround-components/commit/657df22f42ca6b8479dfdbad1c6acfd7fbf659fc))
+
 ## [1.8.1](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.8.0...button-v1.8.1) (2023-08-22)
 
 
