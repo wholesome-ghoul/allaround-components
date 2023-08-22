@@ -14,6 +14,13 @@ fi
 npx tsc --build --verbose
 
 if [[ $COMPILE_SASS == 1 ]]; then
+  mkdir -p $OUT
+
+  if [[ $CWD == "common-scss" || $CWD == "navbar"  || $CWD == "sidebar"  || $CWD == "tags" ]]; then
+    mv dist/*.* $OUT
+    mv $OUT/tsconfig.tsbuildinfo dist/
+  fi
+
   yarn node-sass src/ -o $OUT --output-style compressed &&
   grep -rlZ '\.scss' ./$OUT | xargs -0 -r sed -i 's/\.scss/\.css/g'
 fi
