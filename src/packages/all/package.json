@@ -13,13 +13,11 @@
   "scripts": {
     "build": "npx tsc --build --verbose"
   },
-  "peerDependencies": {
-    "react": "^18.0.0"
-  },
   "devDependencies": {
     "@allaround/configs-tsconfig": "^1.3.0"
   },
   "dependencies": {
+    "react": "^18.0.0",
     "@allaround/button": "^1.8.2",
     "@allaround/input": "^2.8.2",
     "@allaround/container": "^1.6.1",
