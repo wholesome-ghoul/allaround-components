@@ -1,5 +1,11 @@
 # Changelog
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/button bumped from ^1.8.3 to ^1.8.4
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/textarea-v1.0.2...textarea-v1.0.3) (2023-08-22)
 
 

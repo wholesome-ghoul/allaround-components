@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.0.4](https://github.com/wholesome-ghoul/allaround-components/compare/hooks-v1.0.3...hooks-v1.0.4) (2023-08-22)
+
+
+### Bug Fixes
+
+* dependencies 4 ([#80](https://github.com/wholesome-ghoul/allaround-components/issues/80)) ([46f5b1f](https://github.com/wholesome-ghoul/allaround-components/commit/46f5b1f80128e66a9c2f64fc317d222e38d7a609))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @allaround/button bumped from ^1.8.1 to ^1.8.4
+    * @allaround/notification bumped from ^1.0.1 to ^1.0.4
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/hooks-v1.0.2...hooks-v1.0.3) (2023-08-22)
 
 

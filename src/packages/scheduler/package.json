@@ -1,6 +1,6 @@
 {
   "name": "@allaround/scheduler",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "AllAround React Scheduler component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -14,10 +14,10 @@
     "build": "../../scripts/build.sh"
   },
   "dependencies": {
-    "@allaround/hooks": "^1.0.3",
-    "@allaround/select": "^1.0.3",
+    "@allaround/hooks": "^1.0.4",
+    "@allaround/select": "^1.0.4",
     "@allaround/text": "^1.0.2",
-    "@allaround/button": "^1.8.3",
+    "@allaround/button": "^1.8.4",
     "@allaround/icons": "^1.0.1",
     "@allaround/container": "^1.6.2",
     "react": "^18.0.0",
