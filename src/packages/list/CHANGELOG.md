@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/wholesome-ghoul/allaround-components/compare/list-v1.3.0...list-v1.3.1) (2023-08-22)
+
+
+### Bug Fixes
+
+* 3rd party libraries ([#69](https://github.com/wholesome-ghoul/allaround-components/issues/69)) ([3082f37](https://github.com/wholesome-ghoul/allaround-components/commit/3082f3774505776d89e605bebddd567098400fba))
+
 ## [1.3.0](https://github.com/wholesome-ghoul/allaround-components/compare/list-v1.2.0...list-v1.3.0) (2023-08-22)
 
 

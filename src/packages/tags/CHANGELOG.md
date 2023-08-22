@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.0.1](https://github.com/wholesome-ghoul/allaround-components/compare/tags-v1.0.0...tags-v1.0.1) (2023-08-22)
+
+
+### Bug Fixes
+
+* 3rd party libraries ([#69](https://github.com/wholesome-ghoul/allaround-components/issues/69)) ([3082f37](https://github.com/wholesome-ghoul/allaround-components/commit/3082f3774505776d89e605bebddd567098400fba))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @allaround/input bumped from ^2.8.0 to ^2.8.1
+    * @allaround/hooks bumped from ^1.0.0 to ^1.0.1
+
 ## 1.0.0 (2023-08-22)
 
 
