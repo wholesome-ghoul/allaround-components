@@ -42,6 +42,46 @@
   * dependencies
     * @allaround/input bumped from ^2.4.0 to ^2.5.0
 
+## [1.8.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.7.0...all-components-v1.8.0) (2023-08-22)
+
+
+### Features
+
+* add `checkbox` component ([#58](https://github.com/wholesome-ghoul/allaround-components/issues/58)) ([ecad5ea](https://github.com/wholesome-ghoul/allaround-components/commit/ecad5eaf2c9a7111eb4be96b6d3c6e2c91a3b37b))
+* add `dropdown` component ([#51](https://github.com/wholesome-ghoul/allaround-components/issues/51)) ([f360151](https://github.com/wholesome-ghoul/allaround-components/commit/f360151c081b931c3304eadd40b33324d512c03b))
+* add `hooks` component ([#46](https://github.com/wholesome-ghoul/allaround-components/issues/46)) ([733d84b](https://github.com/wholesome-ghoul/allaround-components/commit/733d84bd4dd9fbb40847c4afe3b6cb84ffc33f5d))
+* add `icons` component ([#43](https://github.com/wholesome-ghoul/allaround-components/issues/43)) ([204ca5d](https://github.com/wholesome-ghoul/allaround-components/commit/204ca5debd90f26da316749c8b23ba79b90beb4b))
+* add `image` component ([#56](https://github.com/wholesome-ghoul/allaround-components/issues/56)) ([39051d4](https://github.com/wholesome-ghoul/allaround-components/commit/39051d449e5bd1bb4fd9022640e46e451791a947))
+* add `modal` component ([#60](https://github.com/wholesome-ghoul/allaround-components/issues/60)) ([002f332](https://github.com/wholesome-ghoul/allaround-components/commit/002f332142af7a4579f50565bf1565f1169c9181))
+* add `navbar` component ([#45](https://github.com/wholesome-ghoul/allaround-components/issues/45)) ([7a44140](https://github.com/wholesome-ghoul/allaround-components/commit/7a441407937a8ab54255536b76fdb5f73fadeba3))
+* add `notification` component ([#65](https://github.com/wholesome-ghoul/allaround-components/issues/65)) ([eb10aa4](https://github.com/wholesome-ghoul/allaround-components/commit/eb10aa4390cb6bed47b99ff37aa630ffe82bfa19))
+* add `placeholder` component ([#67](https://github.com/wholesome-ghoul/allaround-components/issues/67)) ([a8f5dc7](https://github.com/wholesome-ghoul/allaround-components/commit/a8f5dc79c457ff6c88d44c43c9a56e9a9077b8c7))
+* add `progress-bar` component ([#63](https://github.com/wholesome-ghoul/allaround-components/issues/63)) ([471bb05](https://github.com/wholesome-ghoul/allaround-components/commit/471bb0595c871dfb7862fda077054abf38e4ab53))
+* add `scheduler` component ([#54](https://github.com/wholesome-ghoul/allaround-components/issues/54)) ([d1802b1](https://github.com/wholesome-ghoul/allaround-components/commit/d1802b1fabccd6d44738e398f7dfc464d377358c))
+* add `select` component ([#52](https://github.com/wholesome-ghoul/allaround-components/issues/52)) ([2f10de8](https://github.com/wholesome-ghoul/allaround-components/commit/2f10de8098e70fe963551158190f7c39a9eab38c))
+* add `sidebar` component ([#44](https://github.com/wholesome-ghoul/allaround-components/issues/44)) ([9dbe0dc](https://github.com/wholesome-ghoul/allaround-components/commit/9dbe0dcb3f92c103349bf0b01fe5f97dbd42936e))
+* add `switch` component ([#62](https://github.com/wholesome-ghoul/allaround-components/issues/62)) ([55c2da7](https://github.com/wholesome-ghoul/allaround-components/commit/55c2da7e453e9d32cde391e694482c3d604fb0d6))
+* add `tags` component ([#49](https://github.com/wholesome-ghoul/allaround-components/issues/49)) ([b4d999b](https://github.com/wholesome-ghoul/allaround-components/commit/b4d999b07b08340f94e43b2236b0c1ee52a38745))
+* add `textarea` component ([#48](https://github.com/wholesome-ghoul/allaround-components/issues/48)) ([263d0ff](https://github.com/wholesome-ghoul/allaround-components/commit/263d0ff58c10f8644ef6d119ed43432663fc5ebf))
+* add `tooltip` component ([#61](https://github.com/wholesome-ghoul/allaround-components/issues/61)) ([92fb628](https://github.com/wholesome-ghoul/allaround-components/commit/92fb62829a51ef676d706b32850fded22be26980))
+* add `upload` component ([#53](https://github.com/wholesome-ghoul/allaround-components/issues/53)) ([62e2855](https://github.com/wholesome-ghoul/allaround-components/commit/62e2855c92da845d0326a02f1e71acc5a5381de4))
+* add `video` component ([#55](https://github.com/wholesome-ghoul/allaround-components/issues/55)) ([04dce09](https://github.com/wholesome-ghoul/allaround-components/commit/04dce092e4cbdd7a487b539a416842215e34a867))
+* add text component ([#47](https://github.com/wholesome-ghoul/allaround-components/issues/47)) ([43325e7](https://github.com/wholesome-ghoul/allaround-components/commit/43325e76d09bece9d1a3269c495e9887dd94c720))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/button bumped from ^1.7.0 to ^1.8.0
+    * @allaround/input bumped from ^2.7.0 to ^2.8.0
+    * @allaround/container bumped from ^1.5.0 to ^1.6.0
+    * @allaround/label bumped from ^1.5.0 to ^1.6.0
+    * @allaround/list bumped from ^1.2.0 to ^1.3.0
+    * @allaround/common-scss bumped from ^1.1.0 to ^1.2.0
+    * @allaround/heading bumped from ^1.1.0 to ^1.2.0
+    * @allaround/link bumped from ^1.0.0 to ^1.1.0
+
 ## [1.7.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.6.0...all-components-v1.7.0) (2023-06-09)
 
 

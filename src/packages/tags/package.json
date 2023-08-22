@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@allaround/configs-tsconfig": "^1.0.0",
-    "@allaround/input": "^2.7.0",
+    "@allaround/input": "^2.8.0",
     "@allaround/hooks": "^1.0.0",
     "@cypress/react18": "^2.0.0",
     "cypress": "^12.13.0"

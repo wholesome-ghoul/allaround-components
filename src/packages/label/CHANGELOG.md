@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.6.0](https://github.com/wholesome-ghoul/allaround-components/compare/label-v1.5.0...label-v1.6.0) (2023-08-22)
+
+
+### Features
+
+* add `ref` ([5c7e813](https://github.com/wholesome-ghoul/allaround-components/commit/5c7e8137a67b265787ec364103bd135420187ece))
+* add `sidebar` component ([#44](https://github.com/wholesome-ghoul/allaround-components/issues/44)) ([9dbe0dc](https://github.com/wholesome-ghoul/allaround-components/commit/9dbe0dcb3f92c103349bf0b01fe5f97dbd42936e))
+* add text component ([#47](https://github.com/wholesome-ghoul/allaround-components/issues/47)) ([43325e7](https://github.com/wholesome-ghoul/allaround-components/commit/43325e76d09bece9d1a3269c495e9887dd94c720))
+
 ## [1.5.0](https://github.com/wholesome-ghoul/allaround-components/compare/label-v1.4.0...label-v1.5.0) (2023-06-09)
 
 

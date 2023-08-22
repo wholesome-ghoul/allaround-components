@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/heading-v1.1.0...heading-v1.2.0) (2023-08-22)
+
+
+### Features
+
+* add `ref` ([5c7e813](https://github.com/wholesome-ghoul/allaround-components/commit/5c7e8137a67b265787ec364103bd135420187ece))
+* add `sidebar` component ([#44](https://github.com/wholesome-ghoul/allaround-components/issues/44)) ([9dbe0dc](https://github.com/wholesome-ghoul/allaround-components/commit/9dbe0dcb3f92c103349bf0b01fe5f97dbd42936e))
+
 ## [1.1.0](https://github.com/wholesome-ghoul/allaround-components/compare/heading-v1.0.0...heading-v1.1.0) (2023-06-09)
 
 
