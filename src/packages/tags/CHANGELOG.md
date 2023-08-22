@@ -1,0 +1,18 @@
+# Changelog
+
+## 1.0.0 (2023-08-22)
+
+
+### Features
+
+* add `notification` component ([#65](https://github.com/wholesome-ghoul/allaround-components/issues/65)) ([eb10aa4](https://github.com/wholesome-ghoul/allaround-components/commit/eb10aa4390cb6bed47b99ff37aa630ffe82bfa19))
+* add `switch` component ([#62](https://github.com/wholesome-ghoul/allaround-components/issues/62)) ([55c2da7](https://github.com/wholesome-ghoul/allaround-components/commit/55c2da7e453e9d32cde391e694482c3d604fb0d6))
+* add `tags` component ([#49](https://github.com/wholesome-ghoul/allaround-components/issues/49)) ([b4d999b](https://github.com/wholesome-ghoul/allaround-components/commit/b4d999b07b08340f94e43b2236b0c1ee52a38745))
+* new release ([d6023da](https://github.com/wholesome-ghoul/allaround-components/commit/d6023da6de01374d99554d3752abee62135a431f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @allaround/input bumped from ^2.7.0 to ^2.8.0

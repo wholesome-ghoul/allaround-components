@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.8.0](https://github.com/wholesome-ghoul/allaround-components/compare/input-v2.7.0...input-v2.8.0) (2023-08-22)
+
+
+### Features
+
+* add `checkbox` component ([#58](https://github.com/wholesome-ghoul/allaround-components/issues/58)) ([ecad5ea](https://github.com/wholesome-ghoul/allaround-components/commit/ecad5eaf2c9a7111eb4be96b6d3c6e2c91a3b37b))
+* add `ref` ([5c7e813](https://github.com/wholesome-ghoul/allaround-components/commit/5c7e8137a67b265787ec364103bd135420187ece))
+* add `sidebar` component ([#44](https://github.com/wholesome-ghoul/allaround-components/issues/44)) ([9dbe0dc](https://github.com/wholesome-ghoul/allaround-components/commit/9dbe0dcb3f92c103349bf0b01fe5f97dbd42936e))
+* add `tooltip` component ([#61](https://github.com/wholesome-ghoul/allaround-components/issues/61)) ([92fb628](https://github.com/wholesome-ghoul/allaround-components/commit/92fb62829a51ef676d706b32850fded22be26980))
+* add `upload` component ([#53](https://github.com/wholesome-ghoul/allaround-components/issues/53)) ([62e2855](https://github.com/wholesome-ghoul/allaround-components/commit/62e2855c92da845d0326a02f1e71acc5a5381de4))
+* add `video` component ([#55](https://github.com/wholesome-ghoul/allaround-components/issues/55)) ([04dce09](https://github.com/wholesome-ghoul/allaround-components/commit/04dce092e4cbdd7a487b539a416842215e34a867))
+* add text component ([#47](https://github.com/wholesome-ghoul/allaround-components/issues/47)) ([43325e7](https://github.com/wholesome-ghoul/allaround-components/commit/43325e76d09bece9d1a3269c495e9887dd94c720))
+
 ## [2.7.0](https://github.com/wholesome-ghoul/allaround-components/compare/input-v2.6.0...input-v2.7.0) (2023-06-09)
 
 

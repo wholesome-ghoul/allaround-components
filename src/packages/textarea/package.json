@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     "@allaround/configs-tsconfig": "^1.0.0",
-    "@allaround/container": "^1.5.0",
-    "@allaround/label": "^1.5.0",
+    "@allaround/container": "^1.6.0",
+    "@allaround/label": "^1.6.0",
     "@allaround/icons": "^1.0.0",
-    "@allaround/button": "^1.0.0",
+    "@allaround/button": "^1.8.0",
     "@cypress/react18": "^2.0.0",
     "cypress": "^12.13.0"
   }

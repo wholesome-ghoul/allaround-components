@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.8.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.7.0...button-v1.8.0) (2023-08-22)
+
+
+### Features
+
+* add `checkbox` component ([#58](https://github.com/wholesome-ghoul/allaround-components/issues/58)) ([ecad5ea](https://github.com/wholesome-ghoul/allaround-components/commit/ecad5eaf2c9a7111eb4be96b6d3c6e2c91a3b37b))
+* add `dropdown` component ([#51](https://github.com/wholesome-ghoul/allaround-components/issues/51)) ([f360151](https://github.com/wholesome-ghoul/allaround-components/commit/f360151c081b931c3304eadd40b33324d512c03b))
+* add `modal` component ([#60](https://github.com/wholesome-ghoul/allaround-components/issues/60)) ([002f332](https://github.com/wholesome-ghoul/allaround-components/commit/002f332142af7a4579f50565bf1565f1169c9181))
+* add `notification` component ([#65](https://github.com/wholesome-ghoul/allaround-components/issues/65)) ([eb10aa4](https://github.com/wholesome-ghoul/allaround-components/commit/eb10aa4390cb6bed47b99ff37aa630ffe82bfa19))
+* add `ref` ([5c7e813](https://github.com/wholesome-ghoul/allaround-components/commit/5c7e8137a67b265787ec364103bd135420187ece))
+* add `sidebar` component ([#44](https://github.com/wholesome-ghoul/allaround-components/issues/44)) ([9dbe0dc](https://github.com/wholesome-ghoul/allaround-components/commit/9dbe0dcb3f92c103349bf0b01fe5f97dbd42936e))
+* add `tags` component ([#49](https://github.com/wholesome-ghoul/allaround-components/issues/49)) ([b4d999b](https://github.com/wholesome-ghoul/allaround-components/commit/b4d999b07b08340f94e43b2236b0c1ee52a38745))
+* add `tooltip` component ([#61](https://github.com/wholesome-ghoul/allaround-components/issues/61)) ([92fb628](https://github.com/wholesome-ghoul/allaround-components/commit/92fb62829a51ef676d706b32850fded22be26980))
+* add text component ([#47](https://github.com/wholesome-ghoul/allaround-components/issues/47)) ([43325e7](https://github.com/wholesome-ghoul/allaround-components/commit/43325e76d09bece9d1a3269c495e9887dd94c720))
+
 ## [1.7.0](https://github.com/wholesome-ghoul/allaround-components/compare/button-v1.6.0...button-v1.7.0) (2023-06-09)
 
 
