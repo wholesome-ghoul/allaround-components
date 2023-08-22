@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.2](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.9.1...allaround-components-v2.9.2) (2023-08-22)
+
+
+### Bug Fixes
+
+* internal dependencies ([#71](https://github.com/wholesome-ghoul/allaround-components/issues/71)) ([657df22](https://github.com/wholesome-ghoul/allaround-components/commit/657df22f42ca6b8479dfdbad1c6acfd7fbf659fc))
+
 ## [2.9.1](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.9.0...allaround-components-v2.9.1) (2023-08-22)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@allaround/progress-bar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AllAround React ProgressBar component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
