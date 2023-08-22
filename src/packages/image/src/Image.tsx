@@ -87,11 +87,19 @@ const Image = ({
       {clickHandler && !editable && (
         <Button
           onClick={clickHandler}
-          icon={icon}
+          icon={<Icons.DelIcon size="medium" />}
           className={cx(styles.iconButton, styles[`${iconPosition}Icon`])}
           noBorder
           transparent
         />
+      )}
+
+      {icon && !clickHandler && !editable && (
+        <div
+          className={cx(styles.iconContainer, styles[`${iconPosition}Icon`])}
+        >
+          {icon}
+        </div>
       )}
 
       {!clickHandler && editable && (
@@ -114,7 +122,6 @@ Image.defaultProps = {
   dataCy: "image-component",
   width: "100%",
   height: "100%",
-  icon: <Icons.DelIcon size="large" />,
   iconPosition: "topLeft",
   inheritBorderColor: false,
 };

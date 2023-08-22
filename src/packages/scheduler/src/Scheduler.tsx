@@ -58,7 +58,34 @@ const Scheduler = ({
 
     if (initialDate) {
       const _initialDate = initialDate > now ? initialDate : now;
-      _setDate(new Date(_initialDate));
+
+      const date = new Date(_initialDate);
+
+      let day = date.getDate();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+
+      const remainder = minutes % 5;
+
+      if (remainder !== 0) {
+        minutes = minutes - remainder + 5;
+
+        if (minutes === 60) {
+          hours += 1;
+          minutes = 0;
+        }
+
+        if (hours === 24) {
+          hours = 0;
+          day += 1;
+        }
+
+        date.setHours(hours);
+        date.setMinutes(minutes);
+        date.setDate(day);
+      }
+
+      _setDate(date);
     }
   }, [initialDate]);
 

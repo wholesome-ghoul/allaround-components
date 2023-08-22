@@ -8,14 +8,18 @@ import styles from "./style.module.scss";
 
 const DatePicker = ({ setTime, date, ...rest }: any) => {
   const [minute, setMinute] = useState<OptionProps>(() => {
-    const minutes = Math.floor(date.getMinutes() / 5);
+    const index = Math.floor(date.getMinutes() / 5);
 
-    return { label: (minutes * 5).toString(), value: minutes };
+    const label = `${index <= 1 ? "0" : ""}${(index * 5).toString()}`;
+
+    return { label, value: index };
   });
   const [hour, setHour] = useState<OptionProps>(() => {
     const hours = date.getHours();
 
-    return { label: hours, value: hours };
+    const label = `${hours <= 9 ? "0" : ""}${hours.toString()}`;
+
+    return { label, value: hours };
   });
 
   useEffect(() => {

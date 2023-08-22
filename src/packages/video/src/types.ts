@@ -27,8 +27,8 @@ type Props = BaseProps<HTMLVideoElement> &
 
     uploadSetIsError?: UploadProps["setIsError"];
     preload?: "auto" | "metadata" | "none";
-    currentProgress: number;
-    maxProgress: number;
+    currentProgress?: number;
+    maxProgress?: number;
     onLoadedMetadata?: () => void;
   };
 

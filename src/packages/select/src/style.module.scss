@@ -18,6 +18,10 @@
   border-color: var(--fg-color);
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 .optionsContainer {
   position: absolute;
   left: 0;
