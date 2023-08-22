@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.3](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.9.2...allaround-components-v2.9.3) (2023-08-22)
+
+
+### Bug Fixes
+
+* video dependencies ([#73](https://github.com/wholesome-ghoul/allaround-components/issues/73)) ([e9287ca](https://github.com/wholesome-ghoul/allaround-components/commit/e9287ca10f33c8bc5dbf32026d85f36dc051e6db))
+
 ## [2.9.2](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.9.1...allaround-components-v2.9.2) (2023-08-22)
 
 

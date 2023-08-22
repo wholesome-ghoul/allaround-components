@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/video-v1.0.2...video-v1.0.3) (2023-08-22)
+
+
+### Bug Fixes
+
+* video dependencies ([#73](https://github.com/wholesome-ghoul/allaround-components/issues/73)) ([e9287ca](https://github.com/wholesome-ghoul/allaround-components/commit/e9287ca10f33c8bc5dbf32026d85f36dc051e6db))
+
 ## [1.0.2](https://github.com/wholesome-ghoul/allaround-components/compare/video-v1.0.1...video-v1.0.2) (2023-08-22)
 
 
