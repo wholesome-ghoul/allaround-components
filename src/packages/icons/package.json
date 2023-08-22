@@ -14,7 +14,7 @@
     "build": "npm run generate:icons && ../../scripts/build.sh",
     "generate:icons": "npx @svgr/cli ../../svgs -d ./src"
   },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^18.0.0"
   },
   "devDependencies": {

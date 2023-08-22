@@ -13,7 +13,7 @@
   "scripts": {
     "build": "../../scripts/build.sh"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@allaround/container": "^1.6.1",
     "@allaround/text": "^1.0.1",
     "@allaround/button": "^1.8.1",

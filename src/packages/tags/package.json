@@ -13,7 +13,7 @@
   "scripts": {
     "build": "../../scripts/build.sh"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@allaround/hooks": "^1.0.1",
     "@allaround/input": "^2.8.1",
     "@allaround/icons": "^1.0.0",
@@ -24,8 +24,6 @@
   },
   "devDependencies": {
     "@allaround/configs-tsconfig": "^1.0.0",
-    "@allaround/input": "^2.8.2",
-    "@allaround/hooks": "^1.0.2",
     "@cypress/react18": "^2.0.0",
     "cypress": "^12.13.0"
   }
