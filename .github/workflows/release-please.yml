@@ -37,6 +37,7 @@ jobs:
           npm ci
           npx lerna bootstrap
           npm run build
+          npm run build # run twice for dependent packages
 
       - name: Publish to NPM
         if: ${{ steps.release.outputs.releases_created }}
