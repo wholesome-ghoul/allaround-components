@@ -1,32 +1,69 @@
-export { default as AaIcon } from "./Aa";
-export { default as AlertIcon } from "./Alert";
-export { default as AnalyticsIcon } from "./Analytics";
-export { default as ArrowDownIcon } from "./ArrowDown";
-export { default as CopyIcon } from "./Copy";
-export { default as CreateIcon } from "./Create";
-export { default as DefaultAvatarIcon } from "./DefaultAvatar";
-export { default as DelIcon } from "./Del";
-export { default as DelNoBorderIcon } from "./DelNoBorder";
-export { default as DropdownItemIcon } from "./DropdownItem";
-export { default as DropdownLastItemIcon } from "./DropdownLastItem";
-export { default as EditIcon } from "./Edit";
-export { default as FacebookIcon } from "./Facebook";
-export { default as HamburgerIcon } from "./Hamburger";
-export { default as InfoIcon } from "./Info";
-export { default as InstagramIcon } from "./Instagram";
-export { default as LinkedinIcon } from "./Linkedin";
-export { default as MoonIcon } from "./Moon";
-export { default as PlusIcon } from "./Plus";
-export { default as PostsIcon } from "./Posts";
-export { default as RemoveIcon } from "./Remove";
-export { default as SchedulerIcon } from "./Scheduler";
-export { default as SignOutIcon } from "./SignOut";
-export { default as SuccessIcon } from "./Success";
-export { default as SunIcon } from "./Sun";
-export { default as TiktokIcon } from "./Tiktok";
-export { default as TrashIcon } from "./Trash";
-export { default as TwitterIcon } from "./Twitter";
-export { default as UploadIcon } from "./Upload";
-export { default as ViewIcon } from "./View";
-export { default as WarningIcon } from "./Warning";
-export { default as YoutubeIcon } from "./Youtube";
+import AaIcon from "./Aa";
+import AlertIcon from "./Alert";
+import AnalyticsIcon from "./Analytics";
+import ArrowDownIcon from "./ArrowDown";
+import CopyIcon from "./Copy";
+import CreateIcon from "./Create";
+import DefaultAvatarIcon from "./DefaultAvatar";
+import DelIcon from "./Del";
+import DelNoBorderIcon from "./DelNoBorder";
+import DropdownItemIcon from "./DropdownItem";
+import DropdownLastItemIcon from "./DropdownLastItem";
+import EditIcon from "./Edit";
+import FacebookIcon from "./Facebook";
+import HamburgerIcon from "./Hamburger";
+import InfoIcon from "./Info";
+import InstagramIcon from "./Instagram";
+import LinkedinIcon from "./Linkedin";
+import MoonIcon from "./Moon";
+import PlusIcon from "./Plus";
+import PostsIcon from "./Posts";
+import RemoveIcon from "./Remove";
+import SchedulerIcon from "./Scheduler";
+import SignOutIcon from "./SignOut";
+import SuccessIcon from "./Success";
+import SunIcon from "./Sun";
+import TiktokIcon from "./Tiktok";
+import TrashIcon from "./Trash";
+import TwitterIcon from "./Twitter";
+import UploadIcon from "./Upload";
+import ViewIcon from "./View";
+import WarningIcon from "./Warning";
+import YoutubeIcon from "./Youtube";
+
+const Icons = {
+  AaIcon,
+  AlertIcon,
+  AnalyticsIcon,
+  ArrowDownIcon,
+  CopyIcon,
+  CreateIcon,
+  DefaultAvatarIcon,
+  DelIcon,
+  DelNoBorderIcon,
+  DropdownItemIcon,
+  DropdownLastItemIcon,
+  EditIcon,
+  FacebookIcon,
+  HamburgerIcon,
+  InfoIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  MoonIcon,
+  PlusIcon,
+  PostsIcon,
+  RemoveIcon,
+  SchedulerIcon,
+  SignOutIcon,
+  SuccessIcon,
+  SunIcon,
+  TiktokIcon,
+  TrashIcon,
+  TwitterIcon,
+  UploadIcon,
+  ViewIcon,
+  WarningIcon,
+  YoutubeIcon,
+};
+
+export default Icons;

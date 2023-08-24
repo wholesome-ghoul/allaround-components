@@ -28,15 +28,24 @@ ${exports};
 };
 
 function indexTemplate(filePaths) {
+  const iconNames = [];
+
   return filePaths
     .map((filePath) =>
       path.basename(filePath.path, path.extname(filePath.path))
     )
     .map((basename) => {
       const exportName = /^\d/.test(basename) ? `Svg${basename}` : basename;
-      return `export { default as ${exportName}Icon } from './${basename}'`;
+      iconNames.push(exportName + "Icon");
+
+      const importString = `import ${exportName}Icon from './${basename}'`;
+
+      return importString;
     })
-    .join("\n");
+    .join("\n")
+    .concat(
+      `\n\nconst Icons = { ${iconNames.join(", ")} }\n\nexport default Icons`
+    );
 }
 
 module.exports = {
