@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.9.10](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.9.9...allaround-components-v2.9.10) (2023-08-24)
+
+
+### Bug Fixes
+
+* dependencies 9 WTF ([e53c6f1](https://github.com/wholesome-ghoul/allaround-components/commit/e53c6f18b2a9ae6f966144702732e58552343e64))
+* icon export ([#90](https://github.com/wholesome-ghoul/allaround-components/issues/90)) ([a54901f](https://github.com/wholesome-ghoul/allaround-components/commit/a54901f54337fdd36f1643ad5ff3329426120154))
+
 ## [2.9.9](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.9.8...allaround-components-v2.9.9) (2023-08-22)
 
 
