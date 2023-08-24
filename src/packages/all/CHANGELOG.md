@@ -153,6 +153,25 @@
     * @allaround/common-scss bumped from ^1.2.2 to ^1.2.3
     * @allaround/navbar bumped from ^1.0.4 to ^1.0.5
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/input bumped from ^2.8.5 to ^2.8.6
+    * @allaround/icons bumped from ^1.0.1 to ^1.0.2
+    * @allaround/hooks bumped from ^1.0.5 to ^1.0.6
+    * @allaround/textarea bumped from ^1.0.4 to ^1.0.5
+    * @allaround/tags bumped from ^1.0.5 to ^1.0.6
+    * @allaround/dropdown bumped from ^1.0.5 to ^1.0.6
+    * @allaround/select bumped from ^1.0.5 to ^1.0.6
+    * @allaround/upload bumped from ^1.0.5 to ^1.0.6
+    * @allaround/scheduler bumped from ^1.0.5 to ^1.0.6
+    * @allaround/video bumped from ^1.0.6 to ^1.0.7
+    * @allaround/image bumped from ^1.0.5 to ^1.0.6
+    * @allaround/checkbox bumped from ^1.0.5 to ^1.0.6
+    * @allaround/tooltip bumped from ^1.0.5 to ^1.0.6
+    * @allaround/notification bumped from ^1.0.4 to ^1.0.5
+
 ## [1.8.4](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.8.3...all-components-v1.8.4) (2023-08-22)
 
 

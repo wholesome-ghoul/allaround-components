@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/wholesome-ghoul/allaround-components/compare/icons-v1.0.1...icons-v1.0.2) (2023-08-24)
+
+
+### Bug Fixes
+
+* icon export ([#90](https://github.com/wholesome-ghoul/allaround-components/issues/90)) ([a54901f](https://github.com/wholesome-ghoul/allaround-components/commit/a54901f54337fdd36f1643ad5ff3329426120154))
+
 ## [1.0.1](https://github.com/wholesome-ghoul/allaround-components/compare/icons-v1.0.0...icons-v1.0.1) (2023-08-22)
 
 
