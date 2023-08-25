@@ -1,6 +1,7 @@
 import { BaseProps, Grid, GridList } from "../../../utils";
 
-type Props = Omit<BaseProps<HTMLDivElement>, "fill"> &
+type Props = Pick<HTMLDivElement, "onmouseenter" | "onmouseleave" | "onmouseover"> &
+  Omit<BaseProps<HTMLDivElement>, "fill"> &
   Pick<Grid, "gap"> & {
     children?: React.ReactNode;
     grid?: Grid | GridList | string;
