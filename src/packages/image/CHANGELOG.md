@@ -23,6 +23,14 @@
     * @allaround/tooltip bumped from ^1.0.5 to ^1.0.6
     * @allaround/icons bumped from ^1.0.1 to ^1.0.2
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/upload bumped from ^1.0.6 to ^1.0.7
+    * @allaround/tooltip bumped from ^1.0.6 to ^1.0.7
+    * @allaround/container bumped from ^1.6.2 to ^1.7.0
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/image-v1.0.2...image-v1.0.3) (2023-08-22)
 
 

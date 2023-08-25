@@ -18,6 +18,12 @@
   * dependencies
     * @allaround/hooks bumped from ^1.0.5 to ^1.0.6
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/hooks bumped from ^1.0.6 to ^1.0.7
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/tooltip-v1.0.2...tooltip-v1.0.3) (2023-08-22)
 
 
