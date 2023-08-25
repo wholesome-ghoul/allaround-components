@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.1](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.10.0...allaround-components-v2.10.1) (2023-08-25)
+
+
+### Bug Fixes
+
+* make event props partial ([#93](https://github.com/wholesome-ghoul/allaround-components/issues/93)) ([be0eae5](https://github.com/wholesome-ghoul/allaround-components/commit/be0eae5e4c2875f2b4e74ecddf18fb4d3eab9fe0))
+
 ## [2.10.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.9.10...allaround-components-v2.10.0) (2023-08-25)
 
 

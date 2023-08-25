@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/wholesome-ghoul/allaround-components/compare/container-v1.7.0...container-v1.7.1) (2023-08-25)
+
+
+### Bug Fixes
+
+* make event props partial ([#93](https://github.com/wholesome-ghoul/allaround-components/issues/93)) ([be0eae5](https://github.com/wholesome-ghoul/allaround-components/commit/be0eae5e4c2875f2b4e74ecddf18fb4d3eab9fe0))
+
 ## [1.7.0](https://github.com/wholesome-ghoul/allaround-components/compare/container-v1.6.2...container-v1.7.0) (2023-08-25)
 
 
