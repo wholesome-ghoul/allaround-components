@@ -30,6 +30,14 @@
     * @allaround/input bumped from ^2.8.6 to ^2.8.7
     * @allaround/container bumped from ^1.6.2 to ^1.7.0
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/hooks bumped from ^1.0.7 to ^1.0.8
+    * @allaround/input bumped from ^2.8.7 to ^2.8.8
+    * @allaround/container bumped from ^1.7.0 to ^1.7.1
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/upload-v1.0.2...upload-v1.0.3) (2023-08-22)
 
 

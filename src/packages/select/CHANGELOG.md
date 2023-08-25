@@ -27,6 +27,13 @@
     * @allaround/container bumped from ^1.6.2 to ^1.7.0
     * @allaround/hooks bumped from ^1.0.6 to ^1.0.7
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/container bumped from ^1.7.0 to ^1.7.1
+    * @allaround/hooks bumped from ^1.0.7 to ^1.0.8
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/select-v1.0.2...select-v1.0.3) (2023-08-22)
 
 
