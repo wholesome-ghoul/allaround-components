@@ -1,6 +1,6 @@
 {
   "name": "@allaround/tooltip",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "AllAround React Tooltip component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -14,7 +14,7 @@
     "build": "../../scripts/build.sh"
   },
   "dependencies": {
-    "@allaround/hooks": "^1.0.6",
+    "@allaround/hooks": "^1.0.7",
     "react": "^18.0.0",
     "react-dom": "^18.2.0",
     "classnames": "^2.3.2",

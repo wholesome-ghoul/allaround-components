@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/wholesome-ghoul/allaround-components/compare/container-v1.6.2...container-v1.7.0) (2023-08-25)
+
+
+### Features
+
+* add mouse event props ([#91](https://github.com/wholesome-ghoul/allaround-components/issues/91)) ([a0ed0cb](https://github.com/wholesome-ghoul/allaround-components/commit/a0ed0cbe07195318db6c14443bea9749d69db0e8))
+
 ## [1.6.2](https://github.com/wholesome-ghoul/allaround-components/compare/container-v1.6.1...container-v1.6.2) (2023-08-22)
 
 

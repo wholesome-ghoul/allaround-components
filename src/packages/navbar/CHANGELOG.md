@@ -1,5 +1,11 @@
 # Changelog
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/container bumped from ^1.6.2 to ^1.7.0
+
 ## [1.0.5](https://github.com/wholesome-ghoul/allaround-components/compare/navbar-v1.0.4...navbar-v1.0.5) (2023-08-22)
 
 

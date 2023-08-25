@@ -1,6 +1,6 @@
 {
   "name": "@allaround/hooks",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "AllAround React Hooks component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -14,11 +14,11 @@
     "build": "../../scripts/build.sh"
   },
   "devDependencies": {
-    "@allaround/container": "^1.6.1",
+    "@allaround/container": "^1.7.0",
     "@allaround/text": "^1.0.1",
     "@allaround/button": "^1.8.4",
     "@allaround/modal": "^1.0.1",
-    "@allaround/notification": "^1.0.5",
+    "@allaround/notification": "^1.0.6",
     "react-dom": "^18.2.0",
     "react": "^18.0.0",
     "@allaround/configs-tsconfig": "^1.0.0",

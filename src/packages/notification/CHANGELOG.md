@@ -12,6 +12,12 @@
   * dependencies
     * @allaround/icons bumped from ^1.0.1 to ^1.0.2
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/container bumped from ^1.6.2 to ^1.7.0
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/notification-v1.0.2...notification-v1.0.3) (2023-08-22)
 
 

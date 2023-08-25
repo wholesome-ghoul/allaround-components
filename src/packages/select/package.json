@@ -1,6 +1,6 @@
 {
   "name": "@allaround/select",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "AllAround React Select component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -14,11 +14,11 @@
     "build": "../../scripts/build.sh"
   },
   "dependencies": {
-    "@allaround/container": "^1.6.2",
+    "@allaround/container": "^1.7.0",
     "@allaround/button": "^1.8.4",
     "@allaround/icons": "^1.0.2",
     "@allaround/text": "^1.0.2",
-    "@allaround/hooks": "^1.0.6",
+    "@allaround/hooks": "^1.0.7",
     "react": "^18.0.0",
     "classnames": "^2.3.2",
     "styled-components": "^5.3.11"
