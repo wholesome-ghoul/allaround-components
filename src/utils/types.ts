@@ -59,6 +59,10 @@ type BaseProps<Elem> = {
   innerRef?: React.RefObject<Elem>;
   ref?: React.RefObject<Elem>;
   onClick?: (e: React.MouseEvent<Elem>) => void;
+  onMouseOver?: (e: React.MouseEvent<Elem>) => void;
+  onMouseOut?: (e: React.MouseEvent<Elem>) => void;
+  onMouseDown?: (e: React.MouseEvent<Elem>) => void;
+  onMouseUp?: (e: React.MouseEvent<Elem>) => void;
 };
 
 export type {
