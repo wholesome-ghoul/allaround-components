@@ -29,6 +29,7 @@ const Input = forwardRef(function Input(
     setIsError,
     onFocus,
     onBlur,
+    icon,
     isError = false,
     className,
     ...rest
@@ -65,21 +66,28 @@ const Input = forwardRef(function Input(
   );
 
   useEffect(() => {
-    if (required && value && value.length > 0) {
+    if (required && value && value.toString().length > 0) {
       noError();
     }
   }, [required, value]);
 
   return (
-    <>
+    <Container className={cx(styles.container)} noGrid>
+      {icon && (
+        <Container className={cx(styles.iconContainer)} noGrid>
+          {icon}
+        </Container>
+      )}
+
       <StyledInput
         className={cx(
           styles.input,
+          styles[`${size}Input`],
           {
             [styles.fill]: fill,
+            [styles.withIcon]: !!icon,
             [styles.isError]: isError || error.show,
           },
-          styles[`${size}Input`],
           className
         )}
         placeholder={placeholder}
@@ -107,7 +115,7 @@ const Input = forwardRef(function Input(
           {tooltip.children}
         </Tooltip>
       )}
-    </>
+    </Container>
   );
 });
 

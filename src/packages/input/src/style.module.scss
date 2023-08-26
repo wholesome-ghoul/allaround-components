@@ -1,3 +1,24 @@
+.container {
+  height: unset;
+  width: unset;
+  position: relative;
+}
+
+.iconContainer {
+  position: absolute;
+  // bottom: 50%;
+  left: 5px;
+  height: unset;
+  width: unset;
+  transform: translateY(9px);
+  // display: flex;
+  // align-items: unset;
+}
+
+.withIcon {
+  padding-left: 25px !important;
+}
+
 .input {
   border-radius: 1rem;
   caret-color: var(--fg-color);
