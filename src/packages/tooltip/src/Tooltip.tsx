@@ -11,6 +11,8 @@ const { useEventListener } = hooks;
 
 type Direction = Pick<Props, "preferredPosition">["preferredPosition"];
 
+const defaultPreferredPosition: Direction = "bottom";
+
 const Tooltip = <Elem extends HTMLElement>({
   children,
   size,
@@ -24,8 +26,14 @@ const Tooltip = <Elem extends HTMLElement>({
 }: Props<Elem>) => {
   const [visible, setVisible] = useState(false);
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
-  const [direction, setDirection] = useState<Direction>(preferredPosition);
+  const [direction, setDirection] = useState<Direction>(
+    defaultPreferredPosition
+  );
   const innerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setDirection(preferredPosition);
+  }, [preferredPosition]);
 
   useEventListener(
     "mouseover",
@@ -72,7 +80,9 @@ const Tooltip = <Elem extends HTMLElement>({
           },
         };
 
-        const canBeRight = left + width + margin > tooltipRect.width;
+        // const canBeRight = left + width + margin > tooltipRect.width;
+        const canBeRight =
+          left + width + margin + tooltipRect.width < window.innerWidth;
         const canBeLeft = left - margin > tooltipRect.width;
         const canBeBottom = top + height + margin > tooltipRect.height;
         const canBeTop = top - margin > tooltipRect.height;
@@ -163,7 +173,7 @@ const Tooltip = <Elem extends HTMLElement>({
 Tooltip.defaultProps = {
   size: "small",
   dataCy: "tooltip-component",
-  preferredPosition: "bottom",
+  preferredPosition: defaultPreferredPosition,
 };
 
 export default Tooltip;

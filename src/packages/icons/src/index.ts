@@ -4,6 +4,7 @@ import AnalyticsIcon from "./Analytics";
 import ArrowDownIcon from "./ArrowDown";
 import CopyIcon from "./Copy";
 import CreateIcon from "./Create";
+import CreditsIcon from "./Credits";
 import DefaultAvatarIcon from "./DefaultAvatar";
 import DelIcon from "./Del";
 import DelNoBorderIcon from "./DelNoBorder";
@@ -38,6 +39,7 @@ const Icons = {
   ArrowDownIcon,
   CopyIcon,
   CreateIcon,
+  CreditsIcon,
   DefaultAvatarIcon,
   DelIcon,
   DelNoBorderIcon,
