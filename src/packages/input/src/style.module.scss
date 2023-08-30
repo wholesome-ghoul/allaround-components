@@ -22,13 +22,13 @@
 .input {
   border-radius: 1rem;
   caret-color: var(--fg-color);
-  color: white;
+  color: var(--fg-color);
 
   border: none;
   outline: none;
 
   background-color: var(--bg-color);
-  box-shadow: inset -15px -15px 15px hsl(250, 13%, 12%), inset 15px 15px 15px hsl(250, 13%, 10%);
+  box-shadow: inset -15px -15px 15px var(--box-shadow-1), inset 15px 15px 15px var(--box-shadow-2);
 }
 
 // get rid of autofill background color WTF
