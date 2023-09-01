@@ -39,6 +39,15 @@
     * @allaround/select bumped from ^1.0.7 to ^1.0.8
     * @allaround/container bumped from ^1.7.0 to ^1.7.1
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/hooks bumped from ^1.0.8 to ^1.1.0
+    * @allaround/select bumped from ^1.0.8 to ^1.0.9
+    * @allaround/icons bumped from ^1.0.2 to ^1.1.0
+    * @allaround/container bumped from ^1.7.1 to ^1.8.0
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/scheduler-v1.0.2...scheduler-v1.0.3) (2023-08-22)
 
 
