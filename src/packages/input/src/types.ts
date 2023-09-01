@@ -2,11 +2,11 @@ import type { TooltipProps } from "@allaround/tooltip";
 
 import { BaseProps, Size } from "../../../utils";
 
-type InputType = "text" | "password" | "email" | "file" | "checkbox";
+type InputType = "text" | "password" | "email" | "file" | "checkbox" | "number";
 
-type Props = BaseProps<HTMLInputElement> & {
+type Props = Partial<Pick<HTMLInputElement, "min">> & BaseProps<HTMLInputElement> & {
   type?: InputType;
-  value?: string;
+  value?: string | number;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   size?: Size;
@@ -20,6 +20,8 @@ type Props = BaseProps<HTMLInputElement> & {
 
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
+
+  icon?: React.ReactNode;
 };
 
 export default Props;

@@ -28,13 +28,15 @@ const CommonHeading = (props: Props) => {
   );
 };
 
-const createHeadingElement = (headingStyle: any) => (props: Props) => {
-  return (
-    <CommonHeading className={cx(headingStyle, props.className)} {...props}>
-      {props.children}
-    </CommonHeading>
-  );
-};
+const createHeadingElement =
+  (headingStyle: any) =>
+  ({ className, children, ...rest }: Props) => {
+    return (
+      <CommonHeading className={cx(headingStyle, className)} {...rest}>
+        {children}
+      </CommonHeading>
+    );
+  };
 
 const Heading = {
   h1: createHeadingElement(styles.h1),

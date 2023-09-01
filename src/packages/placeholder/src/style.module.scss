@@ -69,3 +69,16 @@
 .fill {
   width: 100%;
 }
+
+@keyframes fadeInOut {
+  0%, 100% {
+    background-color: var(--bg-color-secondary);
+  }
+  50% {
+    background-color: var(--bg-color-tertiary);
+  }
+}
+
+.animate {
+  animation: fadeInOut 3s ease-in-out infinite;
+}

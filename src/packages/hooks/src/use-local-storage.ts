@@ -1,9 +1,11 @@
 import React from "react";
 
-const useLocalStorage = <T>(
+type F<T> = (s: T) => T;
+
+function useLocalStorage <T>(
   key: string,
   initialValue?: string | boolean | number | T
-) => {
+): [T, React.Dispatch<React.SetStateAction<T>>] {
   const [state, setState] = React.useState(() => {
     try {
       const value = window.localStorage.getItem(key);
@@ -13,9 +15,9 @@ const useLocalStorage = <T>(
     }
   });
 
-  const setValue = (value: string | ((s: string) => string)) => {
+  const setValue = (value: T | F<T>) => {
     try {
-      value = typeof value === "function" ? value(state) : value;
+      value = typeof value === "function" ? (value as F<T>)(state) : value;
       setState(value);
       window.localStorage.setItem(key, JSON.stringify(value));
     } catch (e) {}

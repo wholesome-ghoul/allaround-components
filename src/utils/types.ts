@@ -63,6 +63,8 @@ type BaseProps<Elem> = {
   onMouseOut?: (e: React.MouseEvent<Elem>) => void;
   onMouseDown?: (e: React.MouseEvent<Elem>) => void;
   onMouseUp?: (e: React.MouseEvent<Elem>) => void;
+  onMouseEnter?: (e: React.MouseEvent<Elem>) => void;
+  onMouseLeave?: (e: React.MouseEvent<Elem>) => void;
 };
 
 export type {
