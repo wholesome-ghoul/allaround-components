@@ -1,6 +1,6 @@
 {
   "name": "@allaround/switch",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "AllAround React Switch component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@allaround/label": "^1.6.2",
-    "@allaround/container": "^1.7.1",
+    "@allaround/container": "^1.8.0",
     "react": "^18.0.0",
     "classnames": "^2.3.2",
     "styled-components": "^5.3.11"

@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.11.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.10.1...allaround-components-v2.11.0) (2023-09-01)
+
+
+### Features
+
+* add mouse event props ([#95](https://github.com/wholesome-ghoul/allaround-components/issues/95)) ([8780086](https://github.com/wholesome-ghoul/allaround-components/commit/878008683f20f514ab4c26bbed91e0d57db7f487))
+* modifications ([#97](https://github.com/wholesome-ghoul/allaround-components/issues/97)) ([4e293a5](https://github.com/wholesome-ghoul/allaround-components/commit/4e293a529d5f3a31deea4b16c6bf78a289ab27a1))
+
 ## [2.10.1](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.10.0...allaround-components-v2.10.1) (2023-08-25)
 
 

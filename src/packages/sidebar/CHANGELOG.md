@@ -12,6 +12,12 @@
   * dependencies
     * @allaround/container bumped from ^1.7.0 to ^1.7.1
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/container bumped from ^1.7.1 to ^1.8.0
+
 ## [1.0.4](https://github.com/wholesome-ghoul/allaround-components/compare/sidebar-v1.0.3...sidebar-v1.0.4) (2023-08-22)
 
 
