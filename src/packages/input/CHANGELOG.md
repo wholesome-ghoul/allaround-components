@@ -37,6 +37,13 @@
     * @allaround/container bumped from ^1.7.0 to ^1.7.1
     * @allaround/tooltip bumped from ^1.0.7 to ^1.0.8
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/hooks bumped from ^1.1.0 to ^1.1.1
+    * @allaround/tooltip bumped from ^1.1.0 to ^1.1.1
+
 ## [2.9.0](https://github.com/wholesome-ghoul/allaround-components/compare/input-v2.8.8...input-v2.9.0) (2023-09-01)
 
 

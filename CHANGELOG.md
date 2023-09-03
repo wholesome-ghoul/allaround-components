@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.11.0...allaround-components-v2.12.0) (2023-09-03)
+
+
+### Features
+
+* add newtab icon ([#98](https://github.com/wholesome-ghoul/allaround-components/issues/98)) ([efc7dc9](https://github.com/wholesome-ghoul/allaround-components/commit/efc7dc904d51ba238da2259b6faec3865f29a591))
+
 ## [2.11.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.10.1...allaround-components-v2.11.0) (2023-09-01)
 
 

@@ -220,6 +220,25 @@
     * @allaround/notification bumped from ^1.0.6 to ^1.0.7
     * @allaround/placeholder bumped from ^1.0.4 to ^1.0.5
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/input bumped from ^2.9.0 to ^2.9.1
+    * @allaround/icons bumped from ^1.1.0 to ^1.2.0
+    * @allaround/hooks bumped from ^1.1.0 to ^1.1.1
+    * @allaround/textarea bumped from ^1.0.8 to ^1.0.9
+    * @allaround/tags bumped from ^1.0.9 to ^1.0.10
+    * @allaround/dropdown bumped from ^1.0.9 to ^1.0.10
+    * @allaround/select bumped from ^1.0.9 to ^1.0.10
+    * @allaround/upload bumped from ^1.0.9 to ^1.0.10
+    * @allaround/scheduler bumped from ^1.0.9 to ^1.0.10
+    * @allaround/video bumped from ^1.0.10 to ^1.0.11
+    * @allaround/image bumped from ^1.0.9 to ^1.0.10
+    * @allaround/checkbox bumped from ^1.0.9 to ^1.0.10
+    * @allaround/tooltip bumped from ^1.1.0 to ^1.1.1
+    * @allaround/notification bumped from ^1.0.8 to ^1.0.9
+
 ## [1.9.0](https://github.com/wholesome-ghoul/allaround-components/compare/all-components-v1.8.11...all-components-v1.9.0) (2023-09-01)
 
 
