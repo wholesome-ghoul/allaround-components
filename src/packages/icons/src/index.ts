@@ -17,6 +17,7 @@ import InfoIcon from "./Info";
 import InstagramIcon from "./Instagram";
 import LinkedinIcon from "./Linkedin";
 import MoonIcon from "./Moon";
+import NewtabIcon from "./Newtab";
 import PlusIcon from "./Plus";
 import PostsIcon from "./Posts";
 import RemoveIcon from "./Remove";
@@ -52,6 +53,7 @@ const Icons = {
   InstagramIcon,
   LinkedinIcon,
   MoonIcon,
+  NewtabIcon,
   PlusIcon,
   PostsIcon,
   RemoveIcon,
