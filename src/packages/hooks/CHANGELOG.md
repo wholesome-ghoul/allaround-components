@@ -26,6 +26,12 @@
   * devDependencies
     * @allaround/notification bumped from ^1.0.8 to ^1.0.9
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @allaround/notification bumped from ^1.0.9 to ^1.0.10
+
 ## [1.1.0](https://github.com/wholesome-ghoul/allaround-components/compare/hooks-v1.0.8...hooks-v1.1.0) (2023-09-01)
 
 

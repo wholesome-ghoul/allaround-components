@@ -55,6 +55,14 @@
     * @allaround/input bumped from ^2.9.0 to ^2.9.1
     * @allaround/icons bumped from ^1.1.0 to ^1.2.0
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/hooks bumped from ^1.1.1 to ^1.1.2
+    * @allaround/input bumped from ^2.9.1 to ^2.9.2
+    * @allaround/icons bumped from ^1.2.0 to ^1.3.0
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/upload-v1.0.2...upload-v1.0.3) (2023-08-22)
 
 

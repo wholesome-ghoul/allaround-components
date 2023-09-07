@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/wholesome-ghoul/allaround-components/compare/icons-v1.2.0...icons-v1.3.0) (2023-09-07)
+
+
+### Features
+
+* add new icons ([#100](https://github.com/wholesome-ghoul/allaround-components/issues/100)) ([4caf898](https://github.com/wholesome-ghoul/allaround-components/commit/4caf898816a0c160c74f1829836b3030082853f6))
+
 ## [1.2.0](https://github.com/wholesome-ghoul/allaround-components/compare/icons-v1.1.0...icons-v1.2.0) (2023-09-03)
 
 

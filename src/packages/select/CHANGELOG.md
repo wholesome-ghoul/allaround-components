@@ -49,6 +49,13 @@
     * @allaround/icons bumped from ^1.1.0 to ^1.2.0
     * @allaround/hooks bumped from ^1.1.0 to ^1.1.1
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/icons bumped from ^1.2.0 to ^1.3.0
+    * @allaround/hooks bumped from ^1.1.1 to ^1.1.2
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/select-v1.0.2...select-v1.0.3) (2023-08-22)
 
 

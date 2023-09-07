@@ -1,6 +1,6 @@
 {
   "name": "@allaround/image",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "AllAround React Image component",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -14,9 +14,9 @@
     "build": "../../scripts/build.sh"
   },
   "dependencies": {
-    "@allaround/upload": "^1.0.10",
-    "@allaround/tooltip": "^1.1.1",
-    "@allaround/icons": "^1.2.0",
+    "@allaround/upload": "^1.0.11",
+    "@allaround/tooltip": "^1.1.2",
+    "@allaround/icons": "^1.3.0",
     "@allaround/button": "^1.8.4",
     "@allaround/container": "^1.8.0",
     "react": "^18.0.0",

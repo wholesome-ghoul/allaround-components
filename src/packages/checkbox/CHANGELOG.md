@@ -52,6 +52,13 @@
     * @allaround/tooltip bumped from ^1.1.0 to ^1.1.1
     * @allaround/input bumped from ^2.9.0 to ^2.9.1
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/tooltip bumped from ^1.1.1 to ^1.1.2
+    * @allaround/input bumped from ^2.9.1 to ^2.9.2
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/checkbox-v1.0.2...checkbox-v1.0.3) (2023-08-22)
 
 

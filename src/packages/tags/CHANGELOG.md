@@ -59,6 +59,15 @@
     * @allaround/icons bumped from ^1.1.0 to ^1.2.0
     * @allaround/textarea bumped from ^1.0.8 to ^1.0.9
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/hooks bumped from ^1.1.1 to ^1.1.2
+    * @allaround/input bumped from ^2.9.1 to ^2.9.2
+    * @allaround/icons bumped from ^1.2.0 to ^1.3.0
+    * @allaround/textarea bumped from ^1.0.9 to ^1.0.10
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/tags-v1.0.2...tags-v1.0.3) (2023-08-22)
 
 
