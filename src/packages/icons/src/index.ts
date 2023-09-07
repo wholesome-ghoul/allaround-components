@@ -8,14 +8,17 @@ import CreditsIcon from "./Credits";
 import DefaultAvatarIcon from "./DefaultAvatar";
 import DelIcon from "./Del";
 import DelNoBorderIcon from "./DelNoBorder";
+import DiscordIcon from "./Discord";
 import DropdownItemIcon from "./DropdownItem";
 import DropdownLastItemIcon from "./DropdownLastItem";
 import EditIcon from "./Edit";
 import FacebookIcon from "./Facebook";
+import GithubIcon from "./Github";
 import HamburgerIcon from "./Hamburger";
 import InfoIcon from "./Info";
 import InstagramIcon from "./Instagram";
 import LinkedinIcon from "./Linkedin";
+import MailIcon from "./Mail";
 import MoonIcon from "./Moon";
 import NewtabIcon from "./Newtab";
 import PlusIcon from "./Plus";
@@ -44,14 +47,17 @@ const Icons = {
   DefaultAvatarIcon,
   DelIcon,
   DelNoBorderIcon,
+  DiscordIcon,
   DropdownItemIcon,
   DropdownLastItemIcon,
   EditIcon,
   FacebookIcon,
+  GithubIcon,
   HamburgerIcon,
   InfoIcon,
   InstagramIcon,
   LinkedinIcon,
+  MailIcon,
   MoonIcon,
   NewtabIcon,
   PlusIcon,
