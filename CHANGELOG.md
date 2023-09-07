@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.12.0...allaround-components-v2.13.0) (2023-09-07)
+
+
+### Features
+
+* add new icons ([#100](https://github.com/wholesome-ghoul/allaround-components/issues/100)) ([4caf898](https://github.com/wholesome-ghoul/allaround-components/commit/4caf898816a0c160c74f1829836b3030082853f6))
+
 ## [2.12.0](https://github.com/wholesome-ghoul/allaround-components/compare/allaround-components-v2.11.0...allaround-components-v2.12.0) (2023-09-03)
 
 

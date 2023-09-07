@@ -78,6 +78,15 @@
     * @allaround/tooltip bumped from ^1.1.0 to ^1.1.1
     * @allaround/upload bumped from ^1.0.9 to ^1.0.10
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @allaround/icons bumped from ^1.2.0 to ^1.3.0
+    * @allaround/hooks bumped from ^1.1.1 to ^1.1.2
+    * @allaround/tooltip bumped from ^1.1.1 to ^1.1.2
+    * @allaround/upload bumped from ^1.0.10 to ^1.0.11
+
 ## [1.0.3](https://github.com/wholesome-ghoul/allaround-components/compare/video-v1.0.2...video-v1.0.3) (2023-08-22)
 
 
